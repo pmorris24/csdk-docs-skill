@@ -2,48 +2,40 @@ Answer the following question about the Sisense Compose SDK using the documentat
 
 ## Instructions
 
-1. Determine the framework from the question or project context. Default to React if unclear.
+1. Determine the framework from the question or project context. Default to React if unclear. Use `fw` = react, vue, or angular.
 
-2. Based on the question, read ONLY the relevant files — do NOT read everything:
+2. **Start by reading the indexes** to decide which files are relevant:
+   - `docs/{fw}/INDEX.md` — lists all API and interface files for the framework
+   - `docs/guides/INDEX.md` — lists all guide topics
 
-   **Framework-specific API** (pick one framework):
-   - `docs/{react,vue,angular}/charts.md` — Chart components
-   - `docs/{react,vue,angular}/dashboards.md` — Dashboard and widget components
-   - `docs/{react,vue,angular}/contexts.md` — Context providers and configuration
-   - `docs/{react,vue,angular}/interfaces.md` — Type definitions (ONLY if you need specific interface details)
+3. Based on the question, read ONLY the relevant files — never read everything:
 
-   **Data API** (shared across frameworks):
-   - `docs/data/factories.md` — filterFactory, measureFactory, analyticsFactory
-   - `docs/data/functions.md` — Individual function reference (ONLY if you need a specific function)
+   **Framework API** (`docs/{fw}/`):
+   - `charts.md` — Chart components
+   - `dashboards.md` — Dashboard and widget components, hooks
+   - `contexts.md` — Context providers and configuration
+   - `chart-interfaces.md` — Chart style options and props
+   - `dashboard-interfaces.md` — Dashboard/widget types
+   - `filter-interfaces.md` — Filter types
+   - `theme-interfaces.md` — Theme settings
+   - `data-interfaces.md` — Data options types
+   - `ai-interfaces.md` — NLG, NLQ, Chatbot types
+   - `interaction-interfaces.md` — Drilldown, selection types
+   - `other-interfaces.md` — Everything else
 
-   **Guides** (pick by topic):
-   - `docs/guides/quickstart-{react,vue,angular}.md` — Getting started
-   - `docs/guides/authentication.md` — Auth, CORS, cookies
-   - `docs/guides/embedded-dashboards.md` — Embedding dashboards
-   - `docs/guides/drilldown.md` — Drilldown functionality
-   - `docs/guides/chart-types.md` — Chart type overview and options
-   - `docs/guides/external-charts.md` — Third-party chart libraries
-   - `docs/guides/custom-widgets.md` — Custom widget creation
-   - `docs/guides/theming.md` — Theming and styling
-   - `docs/guides/generative-ai.md` — NLG, NLQ, Chatbot
-   - `docs/guides/data-model.md` — Data model generation and usage
-   - `docs/guides/number-date-formatting.md` — Formatting numbers and dates
-   - `docs/guides/internationalization.md` — i18n support
-   - `docs/guides/tutorials.md` — Step-by-step tutorials
-   - `docs/guides/troubleshooting.md` — Common issues and fixes
-   - `docs/guides/formula-functions.md` — Formula function reference
-   - `docs/guides/migration-0x-to-1x.md` — Migration from 0.x to 1.0
-   - `docs/guides/migration-1x-to-2x.md` — Migration from 1.x to 2.0
+   **Data API** (`docs/data/`):
+   - `factories.md` — filterFactory, measureFactory, analyticsFactory
+   - `functions.md` — Individual function reference
+
+   **Guides** (`docs/guides/`) — pick by topic from the index.
 
    **Design/UX**:
-   - `docs/csdk_chart_design.md`
-   - `docs/csdk_ui_ux_skill.md`
-   - `docs/csdk_supplemental.md`
+   - `docs/csdk_chart_design.md`, `docs/csdk_ui_ux_skill.md`, `docs/csdk_supplemental.md`
 
-3. Provide an accurate answer with code examples from the docs when relevant.
-4. If the answer isn't in the docs, say so clearly.
+4. Provide accurate answers with code examples from the docs.
+5. If the answer isn't in the docs, say so.
 
-**Tip:** For framework-specific commands, use `/csdk-react`, `/csdk-vue`, or `/csdk-angular` instead.
+**Tip:** For faster results, use `/csdk-react`, `/csdk-vue`, or `/csdk-angular` directly.
 For quick lookups, use `/csdk-quick`.
 
 ## Question

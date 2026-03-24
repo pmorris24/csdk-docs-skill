@@ -485,13 +485,3 @@ These properties include:
 
 
 <!-- Source: guides/custom-widgets/index.md -->
-# Custom Widgets
-
-Here you'll find guides that will help get started with the custom widgets in Compose SDK.
-
-<SectionIndex />
-
-
-<!-- Source: guides/custom-widgets/custom-widgets-angular.md -->
-
-d -->

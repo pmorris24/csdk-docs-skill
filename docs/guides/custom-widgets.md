@@ -6,6 +6,16 @@ Here you'll find guides that will help get started with the custom widgets in Co
 
 
 <!-- Source: guides/custom-widgets/custom-widgets-angular.md -->
+
+d -->
+# Custom Widgets
+
+Here you'll find guides that will help get started with the custom widgets in Compose SDK.
+
+<SectionIndex />
+
+
+<!-- Source: guides/custom-widgets/custom-widgets-angular.md -->
 # Custom Widgets
 
 > **Note**:

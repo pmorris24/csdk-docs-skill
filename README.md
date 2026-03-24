@@ -75,15 +75,102 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 
 ## Examples
 
+### Quick lookups
+
 ```
-/csdk-quick what props does useExecuteQuery accept?
+/csdk-quick what props does useExecuteQuery accept
 ```
 
 ```
-/csdk-react how do I embed a dashboard with custom filters?
+/csdk-quick how do I filter revenue greater than 1000
 ```
 
-With the MCP server, Claude will automatically use `search_csdk_docs` when it needs SDK documentation — no slash command needed.
+```
+/csdk-quick what is filterFactory.members
+```
+
+### React
+
+```
+/csdk-react how do I embed a dashboard with custom filters
+```
+
+```
+/csdk-react create a bar chart showing revenue by country with a date range filter
+```
+
+```
+/csdk-react how do I use useComposedDashboard for a custom layout
+```
+
+```
+/csdk-react how do I style a chart using onBeforeRender
+```
+
+```
+/csdk-react how do I set up SisenseContextProvider with SSO authentication
+```
+
+### Vue
+
+```
+/csdk-vue how do I create a pie chart with drilldown
+```
+
+```
+/csdk-vue how do I use the DashboardById component
+```
+
+```
+/csdk-vue how do I apply a theme to all charts
+```
+
+### Angular
+
+```
+/csdk-angular how do I set up SdkUiModule in my app
+```
+
+```
+/csdk-angular how do I create an indicator chart with gauge styling
+```
+
+```
+/csdk-angular how do I use the DashboardComponent with custom widget panels
+```
+
+### General
+
+```
+/csdk-docs what changed in the migration from 1.x to 2.0
+```
+
+```
+/csdk-docs how do I use external chart libraries like Recharts with Sisense data
+```
+
+```
+/csdk-docs how do I set up the NLG chatbot
+```
+
+```
+/csdk-docs what formula functions are available for calculated measures
+```
+
+```
+/csdk-docs how do I troubleshoot CORS issues
+```
+
+### MCP server (automatic)
+
+With the MCP server running, Claude will automatically use `search_csdk_docs` when it needs SDK documentation — no slash command needed. Just ask naturally:
+
+```
+"How do I create a scatter chart with custom tooltips?"
+"What are the props for ChartWidget?"
+"Show me how to use measureFactory.sum with useExecuteQuery"
+"How do I add cross-filtering between dashboard widgets?"
+```
 
 ## Updating docs
 

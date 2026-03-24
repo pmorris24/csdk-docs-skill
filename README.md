@@ -1,69 +1,23 @@
-# CSDK Docs — Claude Code Skill + MCP Server
+# CSDK Docs — Claude Code Skill
 
-Claude Code slash commands and an MCP server that give Claude access to the full Sisense Compose SDK documentation for accurate, context-aware answers.
-
-## Two ways to use it
-
-| Method | How it works | Best for |
-|--------|-------------|----------|
-| **Slash commands** | Claude reads index files, picks relevant docs | Quick questions, browsing docs |
-| **MCP server** | TF-IDF search returns the most relevant chunks automatically | Precise lookups, code-aware search |
+Claude Code slash commands that give Claude access to the full Sisense Compose SDK documentation for accurate, context-aware answers.
 
 ## Install
 
 ```bash
 git clone https://github.com/pmorris24/CSDK-Docs-Claude-Code-Skill-MCP-Server.git
-cd csdk-docs-skill
+cd CSDK-Docs-Claude-Code-Skill-MCP-Server
+claude
 ```
 
-### Slash commands (works immediately)
-
-Just open Claude Code in this directory — the `/csdk-*` commands are available automatically.
-
-### MCP server (TF-IDF search)
-
-Build and connect:
+Or add to an existing project:
 
 ```bash
-cd mcp-server && npm install && npm run build && cd ..
+git submodule add https://github.com/pmorris24/CSDK-Docs-Claude-Code-Skill-MCP-Server.git .csdk-docs
+cp -r .csdk-docs/.claude/commands/csdk-*.md .claude/commands/
 ```
 
-The `.mcp.json` is already configured. Claude Code will detect it and connect automatically. You can also add it to any project:
-
-```json
-{
-  "mcpServers": {
-    "csdk-docs": {
-      "command": "node",
-      "args": ["/absolute/path/to/csdk-docs-skill/mcp-server/dist/index.js"]
-    }
-  }
-}
-```
-
-Or for Claude Desktop (`~/Library/Application Support/Claude/claude_desktop_config.json`):
-
-```json
-{
-  "mcpServers": {
-    "csdk-docs": {
-      "command": "node",
-      "args": ["/absolute/path/to/csdk-docs-skill/mcp-server/dist/index.js"]
-    }
-  }
-}
-```
-
-## MCP server tools
-
-| Tool | Description |
-|------|-------------|
-| `search_csdk_docs` | TF-IDF search over 2,000+ doc chunks. Accepts query, optional framework filter, and optional code context for smarter results. |
-| `list_csdk_topics` | Lists all available documentation topics and categories. |
-
-The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the current file's code and it will extract SDK imports, components, hooks, and factories to boost relevant docs. This is the same algorithm used in the playground's AI agent.
-
-## Slash commands
+## Commands
 
 | Command | Use case | Context loaded |
 |---------|----------|----------------|
@@ -75,7 +29,7 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 
 ## Examples
 
-### Quick lookups — fast answers to common questions
+### Quick lookups
 
 ```
 /csdk-quick what props does useExecuteQuery accept
@@ -93,7 +47,7 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 /csdk-quick how do I set dataOptions on a chart
 ```
 
-### React — building dashboards and charts
+### React
 
 ```
 /csdk-react how do I set up SisenseContextProvider with authentication
@@ -139,7 +93,7 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 /csdk-react how do I set up the Chatbot component for natural language queries
 ```
 
-### Vue — same features, Vue syntax
+### Vue
 
 ```
 /csdk-vue how do I set up SisenseContextProvider in a Vue app
@@ -157,7 +111,7 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 /csdk-vue how do I create a PieChart with filterFactory.members
 ```
 
-### Angular — same features, Angular syntax
+### Angular
 
 ```
 /csdk-angular how do I configure SdkUiModule in my app module
@@ -175,7 +129,7 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 /csdk-angular how do I use widgetModelTranslator to customize a Fusion widget
 ```
 
-### General — guides, migration, troubleshooting
+### General
 
 ```
 /csdk-docs how do I generate a data model from my Sisense instance
@@ -205,19 +159,24 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 /csdk-docs how do I add internationalization to my Compose SDK app
 ```
 
-### MCP server — automatic, no slash command needed
+## How it works
 
-With the MCP server running, Claude will automatically search the docs when it needs SDK information. Just ask naturally:
+Each command uses an **index-first approach**:
 
-```
-"How do I create a scatter chart with custom tooltips?"
-"What are the props for ChartWidget?"
-"Show me how to use measureFactory.sum with useExecuteQuery"
-"How do I add cross-filtering between dashboard widgets?"
-"What's the difference between Dashboard and DashboardById?"
-"How do I use filterFactory.dateRange to filter the last 30 days?"
-"How do I customize the pivot table columns and styling?"
-```
+1. Claude reads a small INDEX.md file (~4 KB) that lists every doc file and what it contains
+2. Based on your question, Claude picks only the relevant files to read
+3. This keeps context usage minimal — typically 20-100 KB instead of the full 3 MB doc set
+
+Docs are split into ~50 focused files organized by:
+
+- **Framework** (`docs/react/`, `docs/vue/`, `docs/angular/`) — charts, dashboards, contexts, and interface files split by category
+- **Data API** (`docs/data/`) — factories and individual functions
+- **Guides** (`docs/guides/`) — 22 topic-specific guides
+- **Design** — chart design, UX guidance, supplemental notes
+
+## Want TF-IDF search instead?
+
+Check out [csdk-docs-mcp](https://github.com/pmorris24/csdk-docs-mcp) — an MCP server that provides real TF-IDF search over the same docs. Works with Claude Code, Claude Desktop, or any MCP client.
 
 ## Updating docs
 
@@ -225,15 +184,7 @@ When Sisense releases a new SDK version:
 
 ```bash
 ./scripts/update-docs.sh https://ai-playground-prod-2.vercel.app/rag_index/chunks.json
-cd mcp-server && npm run build
 ```
-
-## Complements the Sisense MCP Server
-
-This works alongside the official [sisense-mcp-server](https://github.com/sisense/sisense-mcp-server):
-
-- **Sisense MCP** — "What data sources and fields do I have?"
-- **This MCP** — "How do I write the code to use that data with the Compose SDK?"
 
 ## Supported frameworks
 

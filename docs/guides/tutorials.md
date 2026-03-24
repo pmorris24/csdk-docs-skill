@@ -1,58 +1,7 @@
-# Tutorials
+---
+title: Lesson 1 | Setup
+---
 
-Step-by-step tutorials for building with Compose SDK
-================================================================================
-
-
-<!-- Source: tutorials/index.md -->
-# Tutorials
-
-Here you'll find tutorials that will walk you through building your first projects with Compose SDK.
-
-<SectionIndex />
-
-
-<!-- Source: tutorials/tutorial-charts/index.md -->
-# Tutorial
-
-In this tutorial, we’ll walk you through the steps of creating your first project with Compose SDK. We’ll work with charts and learn several ways to customize them. After completing this tutorial, you’ll have the fundamental skills necessary to start your own Compose SDK projects.
-
-ith Compose SDK. We’ll work with charts and learn several ways to customize them. After completing this tutorial, you’ll have the fundamental skills necessary to start your own Compose SDK projects.
-
-## What you'll learn
-
-Along the way, you’ll learn how to:
-
-- Setup a new project to work with Compose SDK
-- Work with chart data from a Sisense instance
-- Filter and highlight the chart data
-- Use callbacks to customize the look and behavior of your charts
-- Dynamically change the contents and layout a chart
-
-## What you'll build
-
-While developing our project, we’ll focus on functionality and try to minimize any code that will distract from that goal. So, while what we build might not look too pretty, it will be packed with features that you can apply to lots of different situations.
-
-When done, we’ll have built a page that includes two charts. The charts use the Sample Retail data model from a Sisense instance. The top chart shows sales revenue per product category. The bottom chart also shows sales revenue per product category, but broken down by either product color, country region, or team manager.
-
-We’ll build the first chart so that you can highlight certain data using toggle buttons or by clicking on data in the chart. Highlighting data in the top chart changes which data is displayed in the bottom chart.
-
-We’ll also add the option to change the chart type from a column chart to bar chart.
-
-![Tutorial result](../../img/tutorial/0-end-product.png 'Tutorial result')
-
-ta is displayed in the bottom chart.
-
-We’ll also add the option to change the chart type from a column chart to bar chart.
-
-![Tutorial result](../../img/tutorial/0-end-product.png 'Tutorial result')
-
-## Get started
-
-Let's get started by setting up a Compose SDK project. Go to [Lesson 1](./lesson1.md).
-
-
-<!-- Source: tutorials/tutorial-charts/lesson1.md -->
 # Lesson 1 | Setup
 
 In this lesson you’ll learn how to set up a new Compose SDK project and display your first chart in that project.
@@ -70,9 +19,6 @@ You’ll also need access to a Sisense instance with:
 - An [API Token](../../getting-started/authentication-security.md#api-token) you can use to query with
 - [CORS settings](../../getting-started/authentication-security.md#set-up-cors) that allow requests from `http://localhost:5173`, the URL that Vite serves your project on locally
 
-n use to query with
-- [CORS settings](../../getting-started/authentication-security.md#set-up-cors) that allow requests from `http://localhost:5173`, the URL that Vite serves your project on locally
-
 ## Project Code
 
 You can follow along with this tutorial, writing the code as you go, to build the project on your own. You can also find the code for the tutorial project in a [GitHub repo](https://github.com/sisense/compose-sdk-charts-tutorial).
@@ -88,8 +34,6 @@ To work with the code from the repository:
 1. Run `npm run dev`
 
 From here on, we’ll assume that you’re writing the code on your own. But always know that you can use the code from the project if you get stuck, to skip ahead, or if you’re just too lazy to write the code yourself. Don’t worry, we won’t tell anybody.
-
-de on your own. But always know that you can use the code from the project if you get stuck, to skip ahead, or if you’re just too lazy to write the code yourself. Don’t worry, we won’t tell anybody.
 
 ## Create a project
 
@@ -117,11 +61,6 @@ To generate the data model:
 
 ```sh
 npx @sisense/sdk-cli@latest get-data-model --token <api-token> --output src/models/sample-retail.ts --dataSource "Sample Retail" --url <your-instance-url>
-```
-
-Be sure to replace the placeholders with your API token and the URL of your Sisense instance.
-
--token> --output src/models/sample-retail.ts --dataSource "Sample Retail" --url <your-instance-url>
 ```
 
 Be sure to replace the placeholders with your API token and the URL of your Sisense instance.
@@ -154,15 +93,6 @@ This will read the Sisense instance URL and API Token from an `.env`, so let’s
 1. Create a file named `.env.local` in your project’s root directory
 1. Add a `VITE_APP_SISENSE_URL` variable and set its value to your Sisense instance’s URL
 1. Add a `VITE_APP_SISENSE_TOKEN` variable and set it value to your API Token
-
-Your `.env.local` file should look something like this:
-
-```
-VITE_APP_SISENSE_URL="http://myinstanceurl/"
-VITE_APP_SISENSE_TOKEN="OiJhbGJeyciIUzI1..."
-```
-
-ariable and set it value to your API Token
 
 Your `.env.local` file should look something like this:
 
@@ -256,19 +186,6 @@ styleOptions={{
 }}
 ```
 
-one of our attributes to create a value for our chart.
-
----
-
-And finally, we set some basic style options to define the size of the chart.
-
-```ts
-styleOptions={{
-  width: 1000,
-  height: 400,
-}}
-```
-
 ## Run
 
 Use the `npm run dev` command to get your project up and running so you can see it in action.
@@ -285,7 +202,12 @@ The code up until this point can be found in branch [1-setup](https://github.com
 Great job creating your first chart. In the next lesson you’ll learn about different ways to show data in a chart. [Go to Lesson 2](./lesson2.md).
 
 
-<!-- Source: tutorials/tutorial-charts/lesson2.md -->
+---
+
+---
+title: Lesson 2 | Chart Data
+---
+
 # Lesson 2 | Chart data
 
 In this lesson you’ll learn how to add more data to your chart. You’ll learn to work with the axes and labels to better indicate what data your chart is showing. You’ll also learn to group the data in a chart.
@@ -295,21 +217,6 @@ In this lesson you’ll learn how to add more data to your chart. You’ll learn
 Let’s begin by duplicating our current chart. Since we’ll now have two components in your return statement, make sure to wrap them in a React fragment.
 
 At this point your code should look something like this, which should cause you to see two of the same chart on the page:
-
-```ts
-return (
-  <>
-    <Chart
-      // Chart details here
-    />
-    <Chart
-      // Chart details here
-    />
-  </>
-);
-```
-
-e this, which should cause you to see two of the same chart on the page:
 
 ```ts
 return (
@@ -348,8 +255,6 @@ But if you have a keen eye, you might have noticed that the top chart’s column
 
 This should tip us off as to the problem here. The quantities are showing up, but they’re being measured on the same scale as the revenue. Since sales revenue is many times greater than sales quantity, the quantity is too small to be seen.
 
-here. The quantities are showing up, but they’re being measured on the same scale as the revenue. Since sales revenue is many times greater than sales quantity, the quantity is too small to be seen.
-
 ## Styled columns
 
 To remedy this situation, we can add a second Y-axis for the quantity. We’ll do this by adding a `StyledMeasureColumn` for our second measure. Doing this lets us add the option to show the second value on an additional Y-axis, which appears on the right side of the chart.
@@ -362,16 +267,6 @@ dataOptions={{
     {
       column: measureFactory.sum(DM.Fact_Sale_orders.OrderQty),
       showOnRightAxis: true,
-    },
-  ],
-}}
-```
-
-That should give you something that looks like this:
-
-![Chart with second Y-axis](../../img/tutorial/2-styled-column.png 'Chart with second Y-axis')
-
-showOnRightAxis: true,
     },
   ],
 }}
@@ -422,12 +317,6 @@ Now you should have a chart that looks like this, including clear axes labels an
 The code up until this point can be found in branch [2a-chart-data](https://github.com/sisense/compose-sdk-charts-tutorial/tree/2a-chart-data).
 :::
 
-utorial/2-labels.png 'Chart with labels')
-
-::: tip
-The code up until this point can be found in branch [2a-chart-data](https://github.com/sisense/compose-sdk-charts-tutorial/tree/2a-chart-data).
-:::
-
 ## Break by
 
 Now let’s turn our attention to the bottom chart on the page. Let’s break down each of the categories in the chart by color.
@@ -440,15 +329,6 @@ You know the drill by now. We use the imported data model to get the attribute a
 dataOptions={{
   category: [DM.DimProducts.CategoryName],
   value: [measureFactory.sum(DM.Fact_Sale_orders.OrderRevenue)],
-  breakBy: [DM.DimProducts.Color],
-}}
-```
-
-That should give you a chart that looks like this:
-
-![Chart with break by](../../img/tutorial/2-break-by.png 'Chart with break by')
-
-_orders.OrderRevenue)],
   breakBy: [DM.DimProducts.Color],
 }}
 ```
@@ -489,18 +369,17 @@ Now our chart should look like this, with the colors matching:
 The code up until this point can be found in branch [2b-chart-data](https://github.com/sisense/compose-sdk-charts-tutorial/tree/2b-chart-data).
 :::
 
-ries-to-color.png 'Chart with color map')
-
-::: tip
-The code up until this point can be found in branch [2b-chart-data](https://github.com/sisense/compose-sdk-charts-tutorial/tree/2b-chart-data).
-:::
-
 ## Up next
 
 By now, you should feel pretty comfortable populating charts with data. In the next lesson you’ll learn how to filter and highlight the chart data. [Go to Lesson 3](./lesson3.md).
 
 
-<!-- Source: tutorials/tutorial-charts/lesson3.md -->
+---
+
+---
+title: Lesson 3 | Filters & Highlights
+---
+
 # Lesson 3 | Filters & Highlights
 
 In this lesson you’ll learn how to filter and highlight data in charts. You’ll learn to work with pre-built filtering components and to build your own filtering experiences.
@@ -515,21 +394,6 @@ Before we do that, let’s revert our top chart to only show the sale order reve
   chartType={'column'}
   dataOptions={{
     category: [DM.DimProducts.CategoryName],
-    value: [
-      measureFactory.sum(
-        DM.Fact_Sale_orders.OrderRevenue,
-        'Total Revenue'
-      )
-    ],
-  }}
-  styleOptions={{
-    width: 1000,
-    height: 400,
-  }}
-/>
-```
-
-oryName],
     value: [
       measureFactory.sum(
         DM.Fact_Sale_orders.OrderRevenue,
@@ -559,10 +423,6 @@ const chartFilters = useMemo(
 ```
 
 This is a common pattern to use when working with filters. In our case, we’re using only one filter criteria, but this pattern can be extended to using multiple filter criteria. In that case you would add a new state variable for each additional filter criteria and build the single memoized array accordingly.
-
-We’ll start without any filters set, but we could just as easily use our state variable to set an initial filter when the page loads.
-
-ilter criteria and build the single memoized array accordingly.
 
 We’ll start without any filters set, but we could just as easily use our state variable to set an initial filter when the page loads.
 
@@ -613,12 +473,6 @@ Finally, we set what happens when a user changes the filter criteria using the f
 onChange = { setCategoryFilter };
 ```
 
-et what happens when a user changes the filter criteria using the filter tile. In this case we want to call the function that updates our state variable.
-
-```ts
-onChange = { setCategoryFilter };
-```
-
 ## Chart filter
 
 The last step is to set our chart filter. To do that all we need to do is set the chart’s `filters` property to the variable holding our filters.
@@ -664,10 +518,6 @@ After adding that code, when you use the filter tile to set a filter, it filters
 
 ![Two charts with filter](../../img/tutorial/3-double-filter.png 'Two charts with filter')
 
-r adding that code, when you use the filter tile to set a filter, it filters both charts at the same time.
-
-![Two charts with filter](../../img/tutorial/3-double-filter.png 'Two charts with filter')
-
 ## Highlighting
 
 Highlighting works similarly to filtering. In fact, we can use just about everything we’ve built to add filtering to our charts to add highlighting instead. You create a highlight by applying a filter. Just keep in mind that when highlighting you can only use filters where the filter attribute matches the grouping of the chart.
@@ -698,12 +548,6 @@ In our case, let’s change the filtering in the top chart to highlight instead.
 After changing that code, when you use the filter tile to set a filter, it highlights in the top chart and filters in the bottom chart.
 
 ![Charts with highlight and filter](../../img/tutorial/3-highlight-filter.png 'Charts with highlight and filter')
-
-::: tip
-The code up until this point can be found in branch [3a-filters-and-highlights](https://github.com/sisense/compose-sdk-charts-tutorial/tree/3a-filters-and-highlights).
-:::
-
-ight and filter')
 
 ::: tip
 The code up until this point can be found in branch [3a-filters-and-highlights](https://github.com/sisense/compose-sdk-charts-tutorial/tree/3a-filters-and-highlights).
@@ -799,23 +643,18 @@ You can now go back to your charts and see that the functionality is the same, b
 The code up until this point can be found in branch [3b-filters-and-highlights](https://github.com/sisense/compose-sdk-charts-tutorial/tree/3b-filters-and-highlights).
 :::
 
-e button filter')
-
-::: tip
-The code up until this point can be found in branch [3b-filters-and-highlights](https://github.com/sisense/compose-sdk-charts-tutorial/tree/3b-filters-and-highlights).
-:::
-
 ## Up next
 
 At this point, you should know how to display the data you want in a chart and work with the way that data is displayed. In the next lesson you’ll learn how to take a bit more control of how a chart behaves. [Go to Lesson 4](./lesson4.md).
 
 
-<!-- Source: tutorials/tutorial-charts/lesson4.md -->
+---
+
+---
+title: Lesson 4 | Callbacks
+---
+
 # Lesson 4 | Callbacks
-
-Chart callbacks are functions that run when specific events happen to a chart. You can use these callbacks to change the look and feel of a chart as well as add functionality to a chart.
-
-Callbacks
 
 Chart callbacks are functions that run when specific events happen to a chart. You can use these callbacks to change the look and feel of a chart as well as add functionality to a chart.
 
@@ -871,12 +710,6 @@ This is very similar to the callback that we added to the top chart. The differe
 The code up until this point can be found in branch [4a-callbacks](https://github.com/sisense/compose-sdk-charts-tutorial/tree/4a-callbacks).
 :::
 
-ltip-break.png 'Chart with custom tooltip')
-
-::: tip
-The code up until this point can be found in branch [4a-callbacks](https://github.com/sisense/compose-sdk-charts-tutorial/tree/4a-callbacks).
-:::
-
 ## Data point click
 
 In addition to the before render callback, there are other callbacks you can use to handle user interactions with a chart. To see how to use these, we’ll build an interaction that happens when a user clicks a data point.
@@ -902,27 +735,22 @@ Here, the callback gets the current category that was clicked. It then checks if
 The code up until this point can be found in branch [4b-callbacks](https://github.com/sisense/compose-sdk-charts-tutorial/tree/4b-callbacks).
 :::
 
-o affect which toggle buttons are selected.
-
-::: tip
-The code up until this point can be found in branch [4b-callbacks](https://github.com/sisense/compose-sdk-charts-tutorial/tree/4b-callbacks).
-:::
-
 ## Up next
 
 At this point, you’ve learned the basics of working with charts and their properties. In the next lesson, you’ll learn how to dynamically change the data displayed in a chart and the layout of the chart itself. [Go to Lesson 5](./lesson5.md).
 
 
-<!-- Source: tutorials/tutorial-charts/lesson5.md -->
+---
+
+---
+title: Lesson 5 | Dynamic Charts
+---
+
 # Lesson 5 | Dynamic Charts
 
 One of the main advantages to creating charts in code, is that you can build them and manipulate them dynamically with code.
 
 In this lesson we change our charts dynamically in a couple of ways. First, we’ll add functionality so our users can change what dimension the bottom chart is broken down by. Then, we also let users decide if they want to see the chart data in a column chart, as we’ve been presenting it until now, or as a bar chart.
-
-These are only some examples of how you can dynamically change a chart. You can, of course, choose to change just about anything in a chart dynamically.
-
-presenting it until now, or as a bar chart.
 
 These are only some examples of how you can dynamically change a chart. You can, of course, choose to change just about anything in a chart dynamically.
 
@@ -1002,15 +830,6 @@ seriesToColorMap: {
 The code up until this point can be found in branch [5a-dynamic-charts](https://github.com/sisense/compose-sdk-charts-tutorial/tree/5a-dynamic-charts).
 :::
 
-08b',
-  Europe: '#dc143c',
-},
-```
-
-::: tip
-The code up until this point can be found in branch [5a-dynamic-charts](https://github.com/sisense/compose-sdk-charts-tutorial/tree/5a-dynamic-charts).
-:::
-
 ## Dynamic chart type
 
 For the final feature of this tutorial, we’ll let users decide what type of chart they want use to view the data. A lot of what we need to do should be familiar to you already.
@@ -1063,45 +882,20 @@ Now you can go back to your charts and use the toggle button to change the chart
 The code up until this point can be found in branch [5b-dynamic-charts](https://github.com/sisense/compose-sdk-charts-tutorial/tree/5b-dynamic-charts).
 :::
 
-button to change the chart types.
-
-::: tip
-The code up until this point can be found in branch [5b-dynamic-charts](https://github.com/sisense/compose-sdk-charts-tutorial/tree/5b-dynamic-charts).
-:::
-
 ## The end
 
 That concludes our tutorial. You now have a great foundation to go out and integrate Compose SDK into your own projects.
 
 
-<!-- Source: tutorials/tutorial-genai/index.md -->
-# Tutorial
+---
 
-In this tutorial, we’ll walk you through the setup and customization of the Compose SDK Generative AI components.
+---
+title: Lesson 1 | Setup
+---
 
-::: tip Note
-For more information on requirements for enabling Generative AI features, please refer to the [Generative AI documentation](https://docs.sisense.com/main/SisenseLinux/genai.htm)
-:::
-
-## What you'll learn
-
-Along the way, you’ll learn how to:
-
-- Setup a new project to work with Compose SDK
-- Render chatbots and customize them
-- Display natural language textual insights from a query
-
-## Get started
-
-Let's get started by setting up a Compose SDK project with your first Generative AI component, the `Chatbot`. Go to [Lesson 1](./lesson1.md).
-
-
-<!-- Source: tutorials/tutorial-genai/lesson1.md -->
 # Lesson 1 | Setup
 
 In this lesson, you’ll learn how to set up a new Compose SDK project and display a chatbot in that project. If you've gone through the Charts Tutorial, you'll notice that it's similar to [Lesson 1](../tutorial-charts/lesson1.md).
-
-w to set up a new Compose SDK project and display a chatbot in that project. If you've gone through the Charts Tutorial, you'll notice that it's similar to [Lesson 1](../tutorial-charts/lesson1.md).
 
 ## Prerequisites
 
@@ -1127,10 +921,6 @@ Let’s start by creating a React project and installing dependencies. We’ll u
 1. Select `React` as the framework
 1. Select `TypeScript` as the variant
 1. Run `cd compose-sdk-genai-tutorial` to navigate to your project directory
-1. Run `npm install` to install your project and dependencies
-1. Run `npm i @sisense/sdk-ui @sisense/sdk-data` to install Sisense packages
-
-e-sdk-genai-tutorial` to navigate to your project directory
 1. Run `npm install` to install your project and dependencies
 1. Run `npm i @sisense/sdk-ui @sisense/sdk-data` to install Sisense packages
 
@@ -1191,16 +981,6 @@ This component internally uses the `SisenseContextProvider`, so we'll go ahead a
 </SisenseContextProvider>
 ```
 
-ContextProvider
-  url={import.meta.env.VITE_APP_SISENSE_URL}
-  token={import.meta.env.VITE_APP_SISENSE_TOKEN}
->
-  <AiContextProvider>
-    <App />
-  </AiContextProvider>
-</SisenseContextProvider>
-```
-
 ## Add a chatbot
 
 Finally, with all the setup out of the way, we can add a chatbot to our project.
@@ -1235,19 +1015,12 @@ Nice! We now have a chatbot that shows available data topics. Clicking on a data
 In the next lesson, you'll learn how to customize the chatbot and render multiple chatbots on the same page. [Go to Lesson 2](./lesson2.md).
 
 
-<!-- Source: tutorials/tutorial-genai/lesson2.md -->
+---
 
-xt
+---
+title: Lesson 2 | Chatbot Customization
+---
 
-In the next lesson, you'll learn how to customize the chatbot and render multiple chatbots on the same page. [Go to Lesson 2](./lesson2.md).
-
-
-<!-- Source: tutorials/tutorial-genai/lesson2.md -->
-# Lesson 2 | Chatbot Customization
-
-In this lesson, you'll learn how to customize your chatbot's behavior and look-and-feel. You'll learn how to display multiple chatbot instances.
-
-ai/lesson2.md -->
 # Lesson 2 | Chatbot Customization
 
 In this lesson, you'll learn how to customize your chatbot's behavior and look-and-feel. You'll learn how to display multiple chatbot instances.
@@ -1336,17 +1109,6 @@ Your chatbot should now look something like this:
 
 ![Themed chatbot](../../img/tutorial-genai/2-themed-chatbot.png 'Themed chatbot')
 
-welcomeText: false,
-      }}
-    />
-  </ThemeProvider>
-);
-```
-
-Your chatbot should now look something like this:
-
-![Themed chatbot](../../img/tutorial-genai/2-themed-chatbot.png 'Themed chatbot')
-
 ## Multiple chatbots
 
 It'd be nice to have 2 chatbots side-by-side, pointing to different contexts. Let's render another chatbot that uses Sample ECommerce as its default model.
@@ -1381,10 +1143,6 @@ return (
 ```
 
 With this code, the two chatbots are spaced apart on the same row. The Sample ECommerce chatbot is configured with the default behavior and styling.
-
-![Multiple chatbots](../../img/tutorial-genai/2-multiple-chatbots.png 'Multiple chatbots')
-
-d apart on the same row. The Sample ECommerce chatbot is configured with the default behavior and styling.
 
 ![Multiple chatbots](../../img/tutorial-genai/2-multiple-chatbots.png 'Multiple chatbots')
 
@@ -1464,27 +1222,17 @@ function App() {
 export default App;
 ```
 
-vider>
-      <Chatbot
-        width="600px"
-        height="600px"
-        config={{
-          defaultContextTitle: "Sample ECommerce",
-        }}
-      />
-    </div>
-  );
-}
-
-export default App;
-```
-
 ## Up next
 
 In the next lesson, you’ll learn how to display natural language textual insights from a query using Compose SDK. [Go to Lesson 3](./lesson3.md).
 
 
-<!-- Source: tutorials/tutorial-genai/lesson3.md -->
+---
+
+---
+title: Lesson 3 | NLG
+---
+
 # Lesson 3 | NLG
 
 In this lesson, we'll use Compose SDK to show natural language insights from a query. We won't be building on the code from the previous lessons, so feel free to create a new file for this lesson.
@@ -1500,11 +1248,6 @@ To generate the data model:
 
 ```sh
 npx @sisense/sdk-cli@latest get-data-model --token <api-token> --output src/models/sample-retail.ts --dataSource "Sample Retail" --url <your-instance-url>
-```
-
-Be sure to replace the placeholders with your API token and the URL of your Sisense instance.
-
--token> --output src/models/sample-retail.ts --dataSource "Sample Retail" --url <your-instance-url>
 ```
 
 Be sure to replace the placeholders with your API token and the URL of your Sisense instance.
@@ -1566,22 +1309,6 @@ This should be the result:
 
 ![Chart](../../img/tutorial-genai/3-chart.png 'Chart')
 
-}}
-        styleOptions={{
-          height: 400,
-        }}
-      />
-    </div>
-  );
-}
-
-export default App;
-```
-
-This should be the result:
-
-![Chart](../../img/tutorial-genai/3-chart.png 'Chart')
-
 ## Add NLG
 
 Let's supplement this chart with some insights using Sisense's natural language generation (NLG) API. We'll add the `GetNlgInsights` component underneath the chart we just made.
@@ -1600,10 +1327,6 @@ Let's supplement this chart with some insights using Sisense's natural language 
 The props into the `GetNlgInsights` component are pretty similar to what is passed into the `ExecuteQuery` component. The difference is that we're getting text in natural language instead of tabular data as a result.
 
 Depending on how your LLM is configured, the text output might be a little different, but it should look something like this:
-
-![Chart with summary](../../img/tutorial-genai/3-chart-with-summary.png 'Chart with summary')
-
-LLM is configured, the text output might be a little different, but it should look something like this:
 
 ![Chart with summary](../../img/tutorial-genai/3-chart-with-summary.png 'Chart with summary')
 
@@ -1658,10 +1381,6 @@ return (
 ```
 
 It's not the cleanest code, but we've effectively made all digits in the text summary bold, so here's the expected result:
-
-![Chart with formatted summary](../../img/tutorial-genai/3-chart-with-formatted-summary.png 'Chart with formatted summary')
-
-made all digits in the text summary bold, so here's the expected result:
 
 ![Chart with formatted summary](../../img/tutorial-genai/3-chart-with-formatted-summary.png 'Chart with formatted summary')
 
@@ -1732,17 +1451,3 @@ function App() {
 
 export default App;
 ```
-
-
-================================================================================
-
-{summaryMarkup && <div dangerouslySetInnerHTML={summaryMarkup} />}
-    </div>
-  );
-}
-
-export default App;
-```
-
-
-================================================================================

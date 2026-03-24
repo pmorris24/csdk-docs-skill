@@ -1,11 +1,13 @@
+---
+title: Quickstart Guide (Angular)
+---
+
 # Compose SDK with Angular: Quickstart Guide
 
 Follow this guide to get started developing applications with Compose SDK.
 
 > **Note**:
 > This guide is for [<img src="../img/angular-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 2px" /> Angular](./quickstart-angular.md). We also have a Quickstart Guide for [<img src="../img/react-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 3px" /> React](./quickstart.md) and [<img src="../img/vue-logo.png" height="14px" /> Vue](./quickstart-vue.md).
-
-/img/react-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 3px" /> React](./quickstart.md) and [<img src="../img/vue-logo.png" height="14px" /> Vue](./quickstart-vue.md).
 
 ## Prerequisites
 
@@ -23,8 +25,6 @@ Compose SDK contains a set of components needed to interface with your Sisense i
 >
 > You can opt to switch to `Yarn` by following the instructions in a [blog post](https://blog.angular-university.io/getting-started-with-angular-setup-a-development-environment-with-yarn-the-angular-cli-setup-an-ide/) from Angular University.
 
-ng the instructions in a [blog post](https://blog.angular-university.io/getting-started-with-angular-setup-a-development-environment-with-yarn-the-angular-cli-setup-an-ide/) from Angular University.
-
 ## Quickstart Application Setup
 
 For this quickstart guide we'll create a new Angular project using [comand line tool](https://angular.io/quick-start#create-a-new-angular-app-from-the-command-line).
@@ -41,24 +41,6 @@ npm init @angular compose-sdk-app
 3. When prompted, choose to add Angular routing, then press Enter to accept the default option.
    This creates a new Angular app in the `compose-sdk-app` directory.
 4. Run this command to navigate to the newly created directory.
-
-```sh
-cd compose-sdk-app
-```
-
-5. Install the dependencies.
-
-```sh
-npm install
-```
-
-6. To run the application, use:
-
-```sh
-npm start
-```
-
-Run this command to navigate to the newly created directory.
 
 ```sh
 cd compose-sdk-app
@@ -96,12 +78,6 @@ Package `@sisense/sdk-cli` is not needed to run your app. It will be installed o
 
 In order to retrieve data, you need to authenticate your application with your Sisense instance and set up CORS.
 
-ttps://docs.npmjs.com/cli/v10/commands/npx).
-
-## Sisense Authentication and Security
-
-In order to retrieve data, you need to authenticate your application with your Sisense instance and set up CORS.
-
 ### Authentication
 
 There are a number of different ways you can authenticate your application. To learn more, see [Authentication and Security](./authentication-security.md#authentication).
@@ -119,12 +95,6 @@ Hold on to the API Token. You'll need it later when adding Compose SDK code to y
 There are also a number of different ways you can set up CORS. To learn more, see [Authentication and Security](./authentication-security.md#cross-origin-resource-sharing-cors).
 
 Here we'll use the Sisense UI. To do so, in your Sisense instance, go to **Admin > Security & Access > Security Settings > General** and add your application's domain to the **CORS Allowed Origins** list.
-
-## Adding Sisense to Your Application
-
-This section describes how to add Compose SDK to your application to render charts from data in your Sisense instance.
-
-n to the **CORS Allowed Origins** list.
 
 ## Adding Sisense to Your Application
 
@@ -182,14 +152,6 @@ export const Admissions = createDimension({
 
 This works for any data model, including models you create. Just replace `"Sample Healthcare"` with the name of your data model.
 
-te',
-    expression: '[Admissions.Cost_of_admission]',
-  }),
-...
-```
-
-This works for any data model, including models you create. Just replace `"Sample Healthcare"` with the name of your data model.
-
 ## Embedding a Chart in your Application
 
 In this section, you will add a new component and modify the main app module to embed a chart visualizing data from the Sample Healthcare data source.
@@ -198,9 +160,6 @@ In this section, you will add a new component and modify the main app module to 
 > The following assumptions are made about your application:
 >
 > -   The `sample-healthcare.ts` file generated earlier resides in `src/`.
-> -   The URL to your application (e.g. http://localhost:4200) is already added as an entry to CORS Allowed Origins section on your Sisense instance
-
-are.ts` file generated earlier resides in `src/`.
 > -   The URL to your application (e.g. http://localhost:4200) is already added as an entry to CORS Allowed Origins section on your Sisense instance
 
 ### Connecting to a Sisense Instance
@@ -232,8 +191,6 @@ export const appConfig: ApplicationConfig = {
 > **Note:**
 > The above example uses the API token (also called _bearer authentication_) to connect to a Sisense instance. To generate an API token for your Sisense user account, see the Sisense Instance Authentication section above. The provider also supports other authentication mechanisms including WAT and SSO.
 
-ance. To generate an API token for your Sisense user account, see the Sisense Instance Authentication section above. The provider also supports other authentication mechanisms including WAT and SSO.
-
 ### Adding a component and routing
 
 To render a chart in your application that queries your data model, you need to create a new component that uses the data utilities along with your previously generated data model file.
@@ -257,17 +214,6 @@ The `app.routes.ts` file should look like this now:
 ```typescript
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [
-    {path: '', component: AnalyticsComponent}
-];
-```
-
-Replace the contents of the `app.component.html` file with:
-
-```typescript
-<router-outlet></router-outlet>
-```
 
 export const routes: Routes = [
     {path: '', component: AnalyticsComponent}
@@ -357,13 +303,8 @@ Your first Compose SDK chart with Angular should look something like this:
 
 See the [SISENSE_CONTEXT_CONFIG_TOKEN](../modules/sdk-ui-angular/contexts/variable.SISENSE_CONTEXT_CONFIG_TOKEN.md) and [ChartComponent](../modules/sdk-ui-angular/charts/class.ChartComponent.md) docs for more details on supported props.
 
-(../modules/sdk-ui-angular/contexts/variable.SISENSE_CONTEXT_CONFIG_TOKEN.md) and [ChartComponent](../modules/sdk-ui-angular/charts/class.ChartComponent.md) docs for more details on supported props.
-
 ## Next Steps
 
 The sample application in this quickstart guide is designed to give you a basis for what you can do with Compose SDK. Build on the code sample by using other components from Compose SDK to add Sisense analytical experiences to your applications.
 
 Check out our demo application for Compose SDK with [Angular](https://csdk-angular.sisense.com).
-
-
-<!-- Source: getting-started/quickstart-vue.md -->

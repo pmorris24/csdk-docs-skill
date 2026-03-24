@@ -1,3 +1,7 @@
+---
+title: Internationalization with Compose SDK
+---
+
 # Internationalization with Compose SDK
 The Compose SDK utilizes the [i18next](https://www.i18next.com/) internationalization framework, making it straightforward to load your own translations.
 
@@ -7,9 +11,6 @@ To facilitate language changes, the `AppConfig` of `SisenseContextProvider` incl
 <SisenseContextProvider appConfig={{ translationConfig: { language: 'fr-FR' }}}>
 ```
 ## Loading Additional Translations
-By default, the Compose SDK offers a limited number of translation resources. You can utilize `translationConfig` to load additional translation resources into the internationalization framework.
-
-ns
 By default, the Compose SDK offers a limited number of translation resources. You can utilize `translationConfig` to load additional translation resources into the internationalization framework.
 
 ### Pre-built translation submodules (`@sisense/sdk-ui/translations/*`)
@@ -80,12 +81,6 @@ const myOverrides: Partial<TranslationDictionary> = {
 
 Later bundles for the same language and namespace extend or override earlier ones, so custom keys will take precedence when registered after the pre-built bundle.
 
-*/}
-</SisenseContextProvider>
-```
-
-Later bundles for the same language and namespace extend or override earlier ones, so custom keys will take precedence when registered after the pre-built bundle.
-
 ### Preparing Translation Resources
 A translation resource consists of translation keys paired with their corresponding string values. This resource is typically structured as a nested object, making it easier to manage different translations. You can register multiple languages by creating separate translation resources for each language and then adding them to your configuration.
 
@@ -131,14 +126,6 @@ const spanishTranslationResources: Partial<TranslationDictionary> = {
 
 As these files may grow larger, consider storing translations in separate files and loading them as needed. JSON format is a suitable option for nested objects like these.
 
-ible',
-    },
-  },
-};
-```
-
-As these files may grow larger, consider storing translations in separate files and loading them as needed. JSON format is a suitable option for nested objects like these.
-
 ###  Configuring Custom Translations
 Similar to how we set the language, we can now provide additional translation resources through the `translationConfig`
 
@@ -168,9 +155,6 @@ Note that we specified the namespace for **Spanish**, as this translation is mea
 Translation namespace values can be found in `translationNamespace` constant exported from every package that has translations.
 If `namespace` is not specified, the translation resource will be registered for `sdkUi` namespace that corresponds to the `sdk-ui` package.
 
-nstant exported from every package that has translations.
-If `namespace` is not specified, the translation resource will be registered for `sdkUi` namespace that corresponds to the `sdk-ui` package.
-
 ## Advanced Configuration
 For more advanced internationalization configurations, the `i18n` instance is accessible through the [`useTranslation` hook](https://react.i18next.com/latest/usetranslation-hook) from the `react-i18next` package.
 
@@ -195,6 +179,3 @@ const MyComponent = () => {
 ```
 
 For further details, please refer to the [i18next API documentation](https://www.i18next.com/overview/api).
-
-
-<!-- Source: guides/jest-compatibility.md -->

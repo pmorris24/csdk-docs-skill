@@ -1,16 +1,6 @@
-# Interface AreaChartProps
-
-Props of the [AreaChart](../charts/function.AreaChart.md) component.
-
-## Properties
-
-reated each time the `Chatbot` comoponent initializes.
-
-#### Default
-
-```ts
-false
-```
+---
+title: AreaChartProps
+---
 
 # Interface AreaChartProps
 
@@ -110,11 +100,6 @@ To learn more about using filter factory functions to create highlights, see the
 (2) Array of [Filter](../../sdk-data/interfaces/interface.Filter.md) controlled by filter UI components – for example [`MemberFilterTile`](../filter-tiles/function.MemberFilterTile.md).
 
 Use this option for highlights that you want your users to set using pre-built UI components.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-ts.
 
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
@@ -138,16 +123,6 @@ see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-c
 
 Configurations for how to style and present a chart's data.
 
-e-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`AreaStyleOptions`](interface.AreaStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
 ### Callbacks
 
 #### onBeforeRender
@@ -213,25 +188,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
-
-# Interface AreaRangeChartProps
-
-Props of the [AreaRangeChart](../charts/function.AreaRangeChart.md) component.
-
-## Properties
-
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: AreaRangeChartProps
+---
 
 # Interface AreaRangeChartProps
 
@@ -335,11 +297,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -347,16 +304,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`RangeChartDataOptions`](interface.RangeChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`AreaRangeStyleOptions`](interface.AreaRangeStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-the data passed to the chart
 
 ***
 
@@ -431,15 +378,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: AreaRangeMeasureColumn
+---
 
 # Interface AreaRangeMeasureColumn
 
@@ -489,18 +433,6 @@ Color options for data bars for this measure in the pivot table
 ### lowerBound
 
 > **lowerBound**: [`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md)
-
-***
-
-### name
-
-> **name**?: `string`
-
-Name of the measure.
-
-***
-
-/sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md)
 
 ***
 
@@ -568,21 +500,16 @@ Boolean flag whether null values are treated as zeros in the chart
 
 ***
 
-ion for the totals of this measure in the pivot table.
-
-***
-
-### treatNullDataAsZeros
-
-> **treatNullDataAsZeros**?: `boolean`
-
-Boolean flag whether null values are treated as zeros in the chart
-
-***
-
 ### upperBound
 
 > **upperBound**: [`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md)
+
+
+---
+
+---
+title: AreaRangeStyleOptions
+---
 
 # Interface AreaRangeStyleOptions
 
@@ -615,18 +542,6 @@ Total height of the component, which is considered in the following order of pri
 > **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
 
 Configuration for legend - a key that provides information about the data series or colors used in chart
-
-***
-
-### line
-
-> **line**?: [`LineOptions`](../type-aliases/type-alias.LineOptions.md)
-
-Configuration that defines line style
-
-***
-
-provides information about the data series or colors used in chart
 
 ***
 
@@ -702,20 +617,6 @@ Configuration for X axis
 
 ***
 
-xels)
-2. Width of the container wrapping this component
-3. Default value of 400px
-
-***
-
-### xAxis
-
-> **xAxis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
-
-Configuration for X axis
-
-***
-
 ### y2Axis
 
 > **y2Axis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
@@ -729,6 +630,13 @@ Configuration for second Y axis
 > **yAxis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
 
 Configuration for Y axis
+
+
+---
+
+---
+title: AreaStyleOptions
+---
 
 # Interface AreaStyleOptions
 
@@ -761,18 +669,6 @@ Total height of the component, which is considered in the following order of pri
 > **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
 
 Configuration for legend - a key that provides information about the data series or colors used in chart
-
-***
-
-### line
-
-> **line**?: [`LineOptions`](../type-aliases/type-alias.LineOptions.md)
-
-Configuration that defines line style
-
-***
-
-provides information about the data series or colors used in chart
 
 ***
 
@@ -849,14 +745,6 @@ Total width of the component, which is considered in the following order of prio
 
 ***
 
-the component, which is considered in the following order of priority:
-
-1. Value passed to this property (in pixels)
-2. Width of the container wrapping this component
-3. Default value of 400px
-
-***
-
 ### xAxis
 
 > **xAxis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
@@ -879,6 +767,13 @@ Configuration for second Y axis
 
 Configuration for Y axis
 
+
+---
+
+---
+title: AreamapChartDataOptions
+---
+
 # Interface AreamapChartDataOptions
 
 Configuration for how to query aggregate data and assign data
@@ -900,15 +795,12 @@ Measure column (or measure) encoded by the color of the countries (or states) on
 
 Column or attribute representing the countries (or states) on the map.
 
-# Interface AreamapChartProps
 
-Props of the [AreamapChart](../charts/function.AreamapChart.md) component.
+---
 
-## Properties
-
-md)]
-
-Column or attribute representing the countries (or states) on the map.
+---
+title: AreamapChartProps
+---
 
 # Interface AreamapChartProps
 
@@ -1008,11 +900,6 @@ To learn more about using filter factory functions to create highlights, see the
 (2) Array of [Filter](../../sdk-data/interfaces/interface.Filter.md) controlled by filter UI components – for example [`MemberFilterTile`](../filter-tiles/function.MemberFilterTile.md).
 
 Use this option for highlights that you want your users to set using pre-built UI components.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-ts.
 
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
@@ -1060,13 +947,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-# Interface AreamapStyleOptions
 
-Configuration options that define functional style of the various elements of the AreamapChart component
+---
 
-## Properties
-
-../../sdk-data/interfaces/interface.Data.md)
+---
+title: AreamapStyleOptions
+---
 
 # Interface AreamapStyleOptions
 
@@ -1104,21 +990,12 @@ Total width of the component, which is considered in the following order of prio
 2. Width of the container wrapping this component
 3. Default value of 400px
 
-# Interface BarChartProps
 
-Props of the [BarChart](../charts/function.BarChart.md) component.
+---
 
-## Properties
-
-oint
-
-***
-
-### value
-
-> **value**: `number` \| `string`
-
-The raw value of the data point
+---
+title: BarChartProps
+---
 
 # Interface BarChartProps
 
@@ -1222,11 +1099,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1237,16 +1109,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`StackableStyleOptions`](interface.StackableStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-sdk-charts.html#dataoptions).
 
 ***
 
@@ -1321,27 +1183,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
-
-# Interface BoxplotChartProps
-
-Props of the [BoxplotChart](../charts/function.BoxplotChart.md) component.
-
-## Properties
-
-## value
-
-> **value**: `number` \| `string`
-
-The raw value of the data point
+---
+title: BoxplotChartProps
+---
 
 # Interface BoxplotChartProps
 
@@ -1445,11 +1292,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1457,16 +1299,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`BoxplotChartCustomDataOptions`](../type-aliases/type-alias.BoxplotChartCustomDataOptions.md) \| [`BoxplotChartDataOptions`](../type-aliases/type-alias.BoxplotChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`BoxplotStyleOptions`](interface.BoxplotStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-sent the data passed to the chart
 
 ***
 
@@ -1535,15 +1367,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: BoxplotStyleOptions
+---
 
 # Interface BoxplotStyleOptions
 
@@ -1584,18 +1413,6 @@ Configuration for legend - a key that provides information about the data series
 > **markers**?: [`Markers`](../type-aliases/type-alias.Markers.md)
 
 Configuration for markers - symbols or data points that highlight specific values
-
-***
-
-### navigator
-
-> **navigator**?: [`Navigator`](../type-aliases/type-alias.Navigator.md)
-
-Configuration for navigator - zoom/pan tool for large datasets in a chart
-
-***
-
-ighlight specific values
 
 ***
 
@@ -1657,6 +1474,13 @@ Configuration for second Y axis
 
 Configuration for Y axis
 
+
+---
+
+---
+title: CalendarHeatmapChartDataOptions
+---
+
 # Interface CalendarHeatmapChartDataOptions
 
 Configuration for how to query aggregate data and assign data
@@ -1672,29 +1496,18 @@ Date column representing dates on the calendar heatmap.
 
 ***
 
-operties
-
-### date
-
-> **date**: [`Column`](../../sdk-data/interfaces/interface.Column.md) \| [`StyledColumn`](interface.StyledColumn.md)
-
-Date column representing dates on the calendar heatmap.
-
-***
-
 ### value
 
 > **value**: [`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md)
 
 Measure column (or measure) assigned to the calendar cells.
 
-# Interface CalendarHeatmapChartProps
 
-Props of the [CalendarHeatmapChart](../charts/function.CalendarHeatmapChart.md) component.
+---
 
-## Properties
-
-column (or measure) assigned to the calendar cells.
+---
+title: CalendarHeatmapChartProps
+---
 
 # Interface CalendarHeatmapChartProps
 
@@ -1798,11 +1611,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1810,16 +1618,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CalendarHeatmapChartDataOptions`](interface.CalendarHeatmapChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`CalendarHeatmapStyleOptions`](interface.CalendarHeatmapStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-ssed to the chart
 
 ***
 
@@ -1888,25 +1686,266 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
+---
+title: CalendarHeatmapStyleOptions
+---
 
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+# Interface CalendarHeatmapStyleOptions
+
+Configuration options that define functional style of the various elements of calendar-heatmap chart
+
+## Properties
+
+### cellLabels
+
+> **cellLabels**?: [`CalendarHeatmapCellLabels`](../type-aliases/type-alias.CalendarHeatmapCellLabels.md)
+
+Configuration for day numbers (1-31) in calendar cells
+
+***
+
+### dayLabels
+
+> **dayLabels**?: `object`
+
+Configuration for weekday names in the header
+
+#### Type declaration
+
+> ##### `dayLabels.enabled`
+>
+> **enabled**?: `boolean`
+>
+> Boolean flag that defines if calendar weekday names should be shown
+>
+> ###### Default
+>
+> ```ts
+> true
+> ```
+>
+> ##### `dayLabels.style`
+>
+> **style**?: [`TextStyle`](../type-aliases/type-alias.TextStyle.md)
+>
+> Style configuration for calendar weekday names
+>
+> ::: warning Deprecated
+> Please use `textStyle` instead
+> :::
+>
+> ##### `dayLabels.textStyle`
+>
+> **textStyle**?: [`TextStyle`](../type-aliases/type-alias.TextStyle.md)
+>
+> Style configuration for calendar weekday names
+>
+>
+
+***
+
+### height
+
+> **height**?: `number`
+
+Total height of the component, which is considered in the following order of priority:
+
+1. Value passed to this property (in pixels).
+2. Height of the container wrapping this component
+3. Default value of 400px (for component without header) or 425px (for component with header).
+
+***
+
+### monthLabels
+
+> **monthLabels**?: `object`
+
+Configuration for month names in multi-month view types
+
+#### Type declaration
+
+> ##### `monthLabels.enabled`
+>
+> **enabled**?: `boolean`
+>
+> Boolean flag that defines if month names should be shown
+>
+> ###### Default
+>
+> ```ts
+> true
+> ```
+>
+> ##### `monthLabels.style`
+>
+> **style**?: [`TextStyle`](../type-aliases/type-alias.TextStyle.md)
+>
+> Style configuration for month names
+>
+> ::: warning Deprecated
+> Please use `textStyle` instead
+> :::
+>
+> ##### `monthLabels.textStyle`
+>
+> **textStyle**?: [`TextStyle`](../type-aliases/type-alias.TextStyle.md)
+>
+> Style configuration for month names
+>
+>
+
+***
+
+### pagination
+
+> **pagination**?: `object`
+
+Configuration for pagination controls in multi-month view types
+
+#### Type declaration
+
+> ##### `pagination.enabled`
+>
+> **enabled**?: `boolean`
+>
+> Boolean flag that defines if pagination controls should be shown
+>
+> ###### Default
+>
+> ```ts
+> true
+> ```
+>
+> ##### `pagination.startMonth`
+>
+> **startMonth**?: `Date`
+>
+> Start month to display when the chart is first rendered
+>
+> ##### `pagination.textStyle`
+>
+> **textStyle**?: [`TextStyle`](../type-aliases/type-alias.TextStyle.md)
+>
+> Style configuration for pagination controls text
+>
+>
+
+***
+
+### startOfWeek
+
+> **startOfWeek**?: [`CalendarDayOfWeek`](../type-aliases/type-alias.CalendarDayOfWeek.md)
+
+Determines which day of the week to start the calendar with
+
+#### Default
+
+```ts
+'sunday'
+```
+
+***
+
+### subtype
+
+> **subtype**?: [`CalendarHeatmapSubtype`](../type-aliases/type-alias.CalendarHeatmapSubtype.md)
+
+Calendar heatmap chart subtype
+
+#### Default
+
+```ts
+'calendar-heatmap/split'
+```
+
+***
+
+### viewType
+
+> **viewType**?: [`CalendarHeatmapViewType`](../type-aliases/type-alias.CalendarHeatmapViewType.md)
+
+View type determines how many months to display: 'month' (1), 'quarter' (3), 'half-year' (6), 'year' (12)
+
+***
+
+### weekends
+
+> **weekends**?: `object`
+
+Configuration for weekend days
+
+#### Type declaration
+
+> ##### `weekends.cellColor`
+>
+> **cellColor**?: `string`
+>
+> Calendar cell color for weekend days
+>
+> ###### Default
+>
+> ```ts
+> '#e6e6e6'
+> ```
+>
+> ##### `weekends.days`
+>
+> **days**?: [`CalendarDayOfWeek`](../type-aliases/type-alias.CalendarDayOfWeek.md)[]
+>
+> Weekend days - defaults to ['saturday', 'sunday']
+>
+> ##### `weekends.enabled`
+>
+> **enabled**?: `boolean`
+>
+> Boolean flag that enables/disables weekend highlighting
+>
+> ###### Default
+>
+> ```ts
+> false
+> ```
+>
+> ##### `weekends.hideValues`
+>
+> **hideValues**?: `boolean`
+>
+> Whether to hide values in tooltip for weekend days
+>
+> ###### Default
+>
+> ```ts
+> false
+> ```
+>
+>
+
+***
+
+### width
+
+> **width**?: `number`
+
+Total width of the component, which is considered in the following order of priority:
+
+1. Value passed to this property (in pixels)
+2. Width of the container wrapping this component
+3. Default value of 400px
+
+
+---
+
+---
+title: CartesianChartDataOptions
+---
 
 # Interface CartesianChartDataOptions
 
 Configuration for how to query aggregate data and assign data
 to axes of a [Cartesian chart](../type-aliases/type-alias.CartesianChartType.md).
-
-These charts can include multiple values on both the X and Y-axis,
-as well as a break-down by categories displayed on the Y-axis.
-
-Cartesian chart](../type-aliases/type-alias.CartesianChartType.md).
 
 These charts can include multiple values on both the X and Y-axis,
 as well as a break-down by categories displayed on the Y-axis.
@@ -1950,11 +1989,12 @@ Measure columns (or measures) whose values are scaled to the Y-axis of the chart
 
 Each measure is represented as a series in the chart.
 
-[`StyledMeasureColumn`](interface.StyledMeasureColumn.md))[]
 
-Measure columns (or measures) whose values are scaled to the Y-axis of the chart.
+---
 
-Each measure is represented as a series in the chart.
+---
+title: CategoricalChartDataOptions
+---
 
 # Interface CategoricalChartDataOptions
 
@@ -1982,13 +2022,6 @@ Optional mapping of each of the series to colors.
 
 ***
 
-lorMap.md)
-
-Optional mapping of each of the series to colors.
-([MultiColumnValueToColorMap](../type-aliases/type-alias.MultiColumnValueToColorMap.md) used only for the Sunburst Chart component)
-
-***
-
 ### value
 
 > **value**: ([`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md))[]
@@ -1998,15 +2031,12 @@ For example, the size of the pie slices of a pie chart.
 
 Values are typically used to represent numeric data.
 
-# Interface ChartEventProps
 
-Chart props to be able to react on chart events.
+---
 
-## Properties
-
-xample, the size of the pie slices of a pie chart.
-
-Values are typically used to represent numeric data.
+---
+title: ChartEventProps
+---
 
 # Interface ChartEventProps
 
@@ -2067,27 +2097,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
-
-# Interface ChartProps
-
-Props shared across [Chart](../charts/function.Chart.md) components.
-
-## Properties
-
-nterface.Data.md) |
-
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: ChartProps
+---
 
 # Interface ChartProps
 
@@ -2191,11 +2206,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### chartType
@@ -2222,11 +2232,6 @@ see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-c
 > **styleOptions**?: [`ChartStyleOptions`](../type-aliases/type-alias.ChartStyleOptions.md)
 
 Configurations for how to style and present a chart's data.
-
-To learn more about using style options,
-see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#styleoptions).
-
-tions for how to style and present a chart's data.
 
 To learn more about using style options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#styleoptions).
@@ -2284,15 +2289,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: ChartThemeSettings
+---
 
 # Interface ChartThemeSettings
 
@@ -2364,21 +2366,12 @@ Secondary text color - e.g., for the indicator chart's secondary value title
 
 Text color
 
-# Interface ChartWidgetProps
 
-Props for the [ChartWidget](../dashboards/function.ChartWidget.md) component
+---
 
-## Properties
-
-ary value title
-
-***
-
-### textColor
-
-> **textColor**?: `string`
-
-Text color
+---
+title: ChartWidgetProps
+---
 
 # Interface ChartWidgetProps
 
@@ -2428,16 +2421,6 @@ Default chart type of each series
 
 Configurations for how to interpret and present the data passed to the chart
 
-h series
-
-***
-
-#### dataOptions
-
-> **dataOptions**: [`ChartDataOptions`](../type-aliases/type-alias.ChartDataOptions.md)
-
-Configurations for how to interpret and present the data passed to the chart
-
 ### Widget
 
 #### description
@@ -2471,18 +2454,6 @@ If not specified, the default value is `false`
 #### styleOptions
 
 > **styleOptions**?: [`ChartWidgetStyleOptions`](../type-aliases/type-alias.ChartWidgetStyleOptions.md)
-
-Style options for both the chart and widget including the widget header
-
-***
-
-#### title
-
-> **title**?: `string`
-
-Title of the widget
-
-ptions`](../type-aliases/type-alias.ChartWidgetStyleOptions.md)
 
 Style options for both the chart and widget including the widget header
 
@@ -2547,25 +2518,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
-
-# Interface ColumnChartProps
-
-Props of the [ColumnChart](../charts/function.ColumnChart.md) component.
-
-## Properties
-
-idth of the chatbot
-
-If not specified, a default width of `500px` will be used.
+---
+title: ColumnChartProps
+---
 
 # Interface ColumnChartProps
 
@@ -2665,11 +2623,6 @@ To learn more about using filter factory functions to create highlights, see the
 (2) Array of [Filter](../../sdk-data/interfaces/interface.Filter.md) controlled by filter UI components – for example [`MemberFilterTile`](../filter-tiles/function.MemberFilterTile.md).
 
 Use this option for highlights that you want your users to set using pre-built UI components.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-ts.
 
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
@@ -2693,16 +2646,6 @@ see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-c
 
 Configurations for how to style and present a chart's data.
 
-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`StackableStyleOptions`](interface.StackableStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
 ### Callbacks
 
 #### onBeforeRender
@@ -2768,25 +2711,127 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
+---
+title: DateRangeFilterTileProps
+---
 
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+# Interface DateRangeFilterTileProps
 
-# Interface FunnelChartProps
-
-Props of the [FunnelChart](../charts/function.FunnelChart.md) component.
+Props of the [DateRangeFilterTile](../filter-tiles/function.DateRangeFilterTile.md) component.
 
 ## Properties
 
-fonts**: [`ThemeSettingsFont`](interface.ThemeSettingsFont.md)[]
+### attribute
 
-List of fonts
+> **attribute**: [`LevelAttribute`](../../sdk-data/interfaces/interface.LevelAttribute.md)
+
+Date level attribute the filter is based on
+
+***
+
+### dataSource
+
+> **dataSource**?: [`DataSource`](../../sdk-data/type-aliases/type-alias.DataSource.md)
+
+Data source the query is run against - e.g. `Sample ECommerce`
+
+If not specified, the query will use the `defaultDataSource` specified in the parent Sisense Context.
+
+***
+
+### earliestDate
+
+> **earliestDate**?: `string`
+
+Earliest allowed date for selection.
+
+If not specified, the earliest date of the target date-level attribute will be used.
+
+***
+
+### filter
+
+> **filter**: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)
+
+Date range filter.
+
+***
+
+### lastDate
+
+> **lastDate**?: `string`
+
+Latest allowed date for selection.
+
+If not specified, the latest date of the target date-level attribute will be used.
+
+***
+
+### onChange
+
+> **onChange**: (`filter`) => `void`
+
+Callback function that is called when the date range filter object should be updated.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `filter` | [`Filter`](../../sdk-data/interfaces/interface.Filter.md) | Date range filter |
+
+#### Returns
+
+`void`
+
+***
+
+### onDelete
+
+> **onDelete**?: () => `void`
+
+Filter delete callback
+
+#### Returns
+
+`void`
+
+***
+
+### onEdit
+
+> **onEdit**?: () => `void`
+
+Filter edit callback
+
+#### Returns
+
+`void`
+
+***
+
+### parentFilters
+
+> **parentFilters**?: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)[]
+
+List of filters this filter is dependent on.
+
+***
+
+### title
+
+> **title**: `string`
+
+Filter tile title
+
+
+---
+
+---
+title: FunnelChartProps
+---
 
 # Interface FunnelChartProps
 
@@ -2890,11 +2935,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -2902,16 +2942,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CategoricalChartDataOptions`](interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`FunnelStyleOptions`](interface.FunnelStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-resent the data passed to the chart
 
 ***
 
@@ -2986,15 +3016,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: FunnelSeriesLabels
+---
 
 # Interface FunnelSeriesLabels
 
@@ -3051,20 +3078,6 @@ Border radius in pixels applied to the labels border, if visible
 ***
 
 ### borderWidth
-
-> **borderWidth**?: `number`
-
-Border width of the series labels, in pixels
-
-***
-
-### enabled
-
-> **enabled**: `boolean`
-
-Boolean flag that defines if series labels should be shown on the chart
-
-***
 
 > **borderWidth**?: `number`
 
@@ -3156,20 +3169,6 @@ Styling for labels text
 
 ***
 
-`string`
-
-Text to be shown after the series labels
-
-***
-
-### textStyle
-
-> **textStyle**?: [`SeriesLabelsTextStyle`](../type-aliases/type-alias.SeriesLabelsTextStyle.md)
-
-Styling for labels text
-
-***
-
 ### verticalAlign
 
 > **verticalAlign**?: `"bottom"` \| `"middle"` \| `"top"`
@@ -3206,6 +3205,13 @@ Vertical offset of the labels in pixels, relative to its vertical alignment spec
 0
 ```
 
+
+---
+
+---
+title: FunnelStyleOptions
+---
+
 # Interface FunnelStyleOptions
 
 Configuration options that define functional style of the various elements of FunnelChart
@@ -3233,18 +3239,6 @@ Direction of FunnelChart narrowing
 > **funnelSize**?: `"narrow"` \| `"regular"` \| `"wide"`
 
 Visual size of the lowest slice (degree of funnel narrowing from highest to lowest slices)
-
-***
-
-### funnelType
-
-> **funnelType**?: `"pinched"` \| `"regular"`
-
-Visual type of the lowest slice of FunnelChart
-
-***
-
-f the lowest slice (degree of funnel narrowing from highest to lowest slices)
 
 ***
 
@@ -3314,11 +3308,12 @@ Total width of the component, which is considered in the following order of prio
 2. Width of the container wrapping this component
 3. Default value of 400px
 
-th of the component, which is considered in the following order of priority:
 
-1. Value passed to this property (in pixels)
-2. Width of the container wrapping this component
-3. Default value of 400px
+---
+
+---
+title: GaugeIndicatorStyleOptions
+---
 
 # Interface GaugeIndicatorStyleOptions
 
@@ -3358,6 +3353,13 @@ Boolean flag to force render indicator in ticker mode regardless of display size
 
 Bar height for gauge indicator in ticker mode
 
+
+---
+
+---
+title: IndicatorChartDataOptions
+---
+
 # Interface IndicatorChartDataOptions
 
 Configuration for how to query aggregate data and assign data
@@ -3368,12 +3370,6 @@ to a [Indicator chart](../type-aliases/type-alias.IndicatorChartType.md).
 ### max
 
 > **max**?: ([`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md))[]
-
-Measure columns (or measures) whose values are used for max value of indicator.
-
-***
-
-/sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md))[]
 
 Measure columns (or measures) whose values are used for max value of indicator.
 
@@ -3401,13 +3397,12 @@ Measure columns (or measures) whose values are used for secondary value of indic
 
 Measure columns (or measures) whose values are used for main value of indicator.
 
-# Interface IndicatorChartProps
 
-Props of the [IndicatorChart](../charts/function.IndicatorChart.md) component.
+---
 
-## Properties
-
-lumns (or measures) whose values are used for main value of indicator.
+---
+title: IndicatorChartProps
+---
 
 # Interface IndicatorChartProps
 
@@ -3511,11 +3506,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -3560,15 +3550,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: LegendItemsOptions
+---
 
 # Interface LegendItemsOptions
 
@@ -3591,11 +3578,6 @@ Distance between legend items in pixels
 Layout direction for legend items
 
 Can be one of 'horizontal' or 'vertical' or 'proximate'.
-When 'proximate', the legend items will be placed as close as possible to the graphs they're representing, except in inverted charts or when the legend position doesn't allow it.
-
-***
-
-r 'proximate'.
 When 'proximate', the legend items will be placed as close as possible to the graphs they're representing, except in inverted charts or when the legend position doesn't allow it.
 
 ***
@@ -3635,6 +3617,13 @@ Width of legend items, in pixels.
 ```ts
 undefined
 ```
+
+
+---
+
+---
+title: LegendSymbolsOptions
+---
 
 # Interface LegendSymbolsOptions
 
@@ -3686,21 +3675,12 @@ true
 
 Width of the legend symbol in pixels
 
-# Interface LegendTitleOptions
 
-Configuration for the legend title
+---
 
-## Properties
-
-### enabled
-
-> **enabled**?: `boolean`
-
-Whether the legend title is enabled
-
-***
-
-th of the legend symbol in pixels
+---
+title: LegendTitleOptions
+---
 
 # Interface LegendTitleOptions
 
@@ -3730,15 +3710,12 @@ The text content of the legend title
 
 Styling for the legend title
 
-# Interface LineChartProps
 
-Props of the [LineChart](../charts/function.LineChart.md) component.
+---
 
-## Properties
-
-[`TextStyle`](../type-aliases/type-alias.TextStyle.md)
-
-Styling for the legend title
+---
+title: LineChartProps
+---
 
 # Interface LineChartProps
 
@@ -3842,11 +3819,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -3857,16 +3829,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`LineStyleOptions`](interface.LineStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-e-compose-sdk-charts.html#dataoptions).
 
 ***
 
@@ -3941,15 +3903,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: LineStyleOptions
+---
 
 # Interface LineStyleOptions
 
@@ -4001,19 +3960,6 @@ Configuration that defines line width
 
 ::: warning Deprecated
 Use line.width instead
-:::
-
-***
-
-### markers
-
-> **markers**?: [`Markers`](../type-aliases/type-alias.Markers.md)
-
-Configuration for markers - symbols or data points that highlight specific values
-
-***
-
-e line.width instead
 :::
 
 ***
@@ -4093,25 +4039,18 @@ Configuration for second Y axis
 
 ***
 
-bel`](../type-aliases/type-alias.AxisLabel.md)
-
-Configuration for X axis
-
-***
-
-### y2Axis
-
-> **y2Axis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
-
-Configuration for second Y axis
-
-***
-
 ### yAxis
 
 > **yAxis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
 
 Configuration for Y axis
+
+
+---
+
+---
+title: LinearGradientColor
+---
 
 # Interface LinearGradientColor
 
@@ -4155,6 +4094,13 @@ Color stops along the gradient
 
 Type discriminator for linear gradients
 
+
+---
+
+---
+title: LinearGradientDirection
+---
+
 # Interface LinearGradientDirection
 
 Linear gradient direction configuration.
@@ -4194,33 +4140,18 @@ Y coordinate of the start point (0-1)
 
 ***
 
-**: `number`
-
-X coordinate of the start point (0-1)
-
-***
-
-### x2
-
-> **x2**: `number`
-
-X coordinate of the end point (0-1)
-
-***
-
-### y1
-
-> **y1**: `number`
-
-Y coordinate of the start point (0-1)
-
-***
-
 ### y2
 
 > **y2**: `number`
 
 Y coordinate of the end point (0-1)
+
+
+---
+
+---
+title: NumericBarIndicatorStyleOptions
+---
 
 # Interface NumericBarIndicatorStyleOptions
 
@@ -4252,19 +4183,12 @@ Boolean flag to force render indicator in ticker mode regardless of display size
 
 > **subtype**: `"indicator/numeric"`
 
-**?: [`IndicatorComponents`](../type-aliases/type-alias.IndicatorComponents.md)
 
-***
+---
 
-### numericSubtype
-
-> **numericSubtype**: `"numericBar"`
-
-***
-
-### subtype
-
-> **subtype**: `"indicator/numeric"`
+---
+title: NumericSimpleIndicatorStyleOptions
+---
 
 # Interface NumericSimpleIndicatorStyleOptions
 
@@ -4302,19 +4226,12 @@ Boolean flag to force render indicator in ticker mode regardless of display size
 
 > **subtype**: `"indicator/numeric"`
 
-# Interface PieChartProps
 
-Props of the [PieChart](../charts/function.PieChart.md) component.
+---
 
-## Properties
-
-: `"horizontal"` \| `"vertical"`
-
-***
-
-### subtype
-
-> **subtype**: `"indicator/numeric"`
+---
+title: PieChartProps
+---
 
 # Interface PieChartProps
 
@@ -4418,11 +4335,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4430,16 +4342,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CategoricalChartDataOptions`](interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`PieStyleOptions`](interface.PieStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-and present the data passed to the chart
 
 ***
 
@@ -4514,15 +4416,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: PieStyleOptions
+---
 
 # Interface PieStyleOptions
 
@@ -4579,14 +4478,6 @@ Configuration for legend - a key that provides information about the data series
 
 ***
 
-# legend
-
-> **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
-
-Configuration for legend - a key that provides information about the data series or colors used in chart
-
-***
-
 ### semiCircle
 
 > **semiCircle**?: `boolean`
@@ -4621,15 +4512,12 @@ Total width of the component, which is considered in the following order of prio
 2. Width of the container wrapping this component
 3. Default value of 400px
 
-# Interface PolarChartProps
 
-Props of the [PolarChart](../charts/function.PolarChart.md) component.
+---
 
-## Properties
-
-r.md)
-
-Callback function that is called when the pivot table cell is right-clicked
+---
+title: PolarChartProps
+---
 
 # Interface PolarChartProps
 
@@ -4733,11 +4621,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4748,16 +4631,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`PolarStyleOptions`](interface.PolarStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-compose-sdk-charts.html#dataoptions).
 
 ***
 
@@ -4832,15 +4705,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: PolarStyleOptions
+---
 
 # Interface PolarStyleOptions
 
@@ -4881,18 +4751,6 @@ Configuration for legend - a key that provides information about the data series
 > **markers**?: [`Markers`](../type-aliases/type-alias.Markers.md)
 
 Configuration for markers - symbols or data points that highlight specific values
-
-***
-
-### navigator
-
-> **navigator**?: [`Navigator`](../type-aliases/type-alias.Navigator.md)
-
-Configuration for navigator - zoom/pan tool for large datasets in a chart
-
-***
-
-ighlight specific values
 
 ***
 
@@ -4954,6 +4812,13 @@ Configuration for second Y axis
 
 Configuration for Y axis
 
+
+---
+
+---
+title: RangeChartDataOptions
+---
+
 # Interface RangeChartDataOptions
 
 Configuration for how to query aggregate data and assign data
@@ -4990,18 +4855,6 @@ Optional mapping of each of the series to colors.
 
 ***
 
-ents descriptive data.
-
-***
-
-### seriesToColorMap
-
-> **seriesToColorMap**?: [`ValueToColorMap`](../type-aliases/type-alias.ValueToColorMap.md)
-
-Optional mapping of each of the series to colors.
-
-***
-
 ### value
 
 > **value**: ([`AreaRangeMeasureColumn`](interface.AreaRangeMeasureColumn.md) \| [`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md))[]
@@ -5012,17 +4865,17 @@ in an area range chart.
 Each measure column defines the range of values by specifying a lower and an upper bound,
 providing the necessary data to visualize the area range on the chart.
 
+
+---
+
+---
+title: ScatterChartDataOptions
+---
+
 # Interface ScatterChartDataOptions
 
 Configuration for how to query aggregate data and assign data
 to axes of a [Scatter chart](../type-aliases/type-alias.ScatterChartType.md).
-
-These charts can include data points scattered on X-Y plane further broken down by categories
-and encoded by bubble sizes.
-
-## Properties
-
-ter chart](../type-aliases/type-alias.ScatterChartType.md).
 
 These charts can include data points scattered on X-Y plane further broken down by categories
 and encoded by bubble sizes.
@@ -5041,13 +4894,6 @@ Each member is represented by a different color.
 OR
 
 Select a column by which to color the columns in the chart.
-This must be a numeric column. If you select numeric data,
-then the point color is a gradient where the highest value is
-the darkest color and the lowest value is the lightest color.
-
-***
-
-the chart.
 This must be a numeric column. If you select numeric data,
 then the point color is a gradient where the highest value is
 the darkest color and the lowest value is the lightest color.
@@ -5082,12 +4928,6 @@ Column that determines the size of the circle. It must be numeric data.
 
 ***
 
-umn`](../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md)
-
-Column that determines the size of the circle. It must be numeric data.
-
-***
-
 ### x
 
 > **x**?: [`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`Column`](../../sdk-data/interfaces/interface.Column.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledColumn`](interface.StyledColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md)
@@ -5108,13 +4948,12 @@ A column or measure column whose values are placed on the Y-axis.
 Typically, the Y-axis of a Scatter Chart is used to represent numeric data.
 Alternatively, Descriptive data is also supported. At most one column is allowed.
 
-# Interface ScatterChartProps
 
-Props of the [ScatterChart](../charts/function.ScatterChart.md) component.
+---
 
-## Properties
-
-natively, Descriptive data is also supported. At most one column is allowed.
+---
+title: ScatterChartProps
+---
 
 # Interface ScatterChartProps
 
@@ -5218,11 +5057,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -5230,16 +5064,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`ScatterChartDataOptions`](interface.ScatterChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`ScatterStyleOptions`](interface.ScatterStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-sent the data passed to the chart
 
 ***
 
@@ -5308,15 +5132,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: ScatterStyleOptions
+---
 
 # Interface ScatterStyleOptions
 
@@ -5363,18 +5184,6 @@ Configuration for markers - symbols or data points that highlight specific value
 ### markerSize
 
 > **markerSize**?: [`ScatterMarkerSize`](../type-aliases/type-alias.ScatterMarkerSize.md)
-
-***
-
-### navigator
-
-> **navigator**?: [`Navigator`](../type-aliases/type-alias.Navigator.md)
-
-Configuration for navigator - zoom/pan tool for large datasets in a chart
-
-***
-
-as.ScatterMarkerSize.md)
 
 ***
 
@@ -5434,6 +5243,13 @@ Configuration for second Y axis
 
 Configuration for Y axis
 
+
+---
+
+---
+title: ScattermapChartDataOptions
+---
+
 # Interface ScattermapChartDataOptions
 
 Configuration for how to query aggregate data and assign data
@@ -5444,12 +5260,6 @@ to axes of a Scattermap chart.
 ### colorBy
 
 > **colorBy**?: [`CalculatedMeasureColumn`](../../sdk-data/interfaces/interface.CalculatedMeasureColumn.md) \| [`MeasureColumn`](../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md)
-
-Measure column (or measure) representing the color of the points on the map.
-
-***
-
-(../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md)
 
 Measure column (or measure) representing the color of the points on the map.
 
@@ -5479,17 +5289,12 @@ To visualize latitude and longitude data, you have to add one field containing l
 
 Measure column (or measure) representing the size of the points on the map.
 
-lumn`](../../sdk-data/interfaces/interface.MeasureColumn.md) \| [`StyledMeasureColumn`](interface.StyledMeasureColumn.md)
 
-Measure column (or measure) representing the size of the points on the map.
+---
 
-# Interface ScattermapChartProps
-
-Props of the [ScattermapChart](../charts/function.ScattermapChart.md) component.
-
-## Properties
-
-column (or measure) representing the size of the points on the map.
+---
+title: ScattermapChartProps
+---
 
 # Interface ScattermapChartProps
 
@@ -5589,11 +5394,6 @@ To learn more about using filter factory functions to create highlights, see the
 (2) Array of [Filter](../../sdk-data/interfaces/interface.Filter.md) controlled by filter UI components – for example [`MemberFilterTile`](../filter-tiles/function.MemberFilterTile.md).
 
 Use this option for highlights that you want your users to set using pre-built UI components.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-ts.
 
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
@@ -5641,13 +5441,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-# Interface ScattermapStyleOptions
 
-Configuration options that define functional style of the various elements of ScattermapChart
+---
 
-## Properties
-
-`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: ScattermapStyleOptions
+---
 
 # Interface ScattermapStyleOptions
 
@@ -5689,18 +5488,18 @@ Total width of the component, which is considered in the following order of prio
 2. Width of the container wrapping this component
 3. Default value of 400px
 
+
+---
+
+---
+title: StreamgraphChartProps
+---
+
 # Interface StreamgraphChartProps
 
 Props of the [StreamgraphChart](../charts/function.StreamgraphChart.md) component.
 
 A streamgraph is a type of stacked area chart where areas are displaced around
-a central axis. It is often used for displaying compound volume across different
-categories or over time with a relative scale that emphasizes overall patterns
-and trends.
-
-## Properties
-
-aced around
 a central axis. It is often used for displaying compound volume across different
 categories or over time with a relative scale that emphasizes overall patterns
 and trends.
@@ -5803,11 +5602,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -5822,16 +5616,6 @@ value measures.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`StreamgraphStyleOptions`](interface.StreamgraphStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-charts.html#dataoptions).
 
 ***
 
@@ -5906,15 +5690,135 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
+---
+title: StreamgraphStyleOptions
+---
 
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+# Interface StreamgraphStyleOptions
+
+Configuration options that define the visual style of a Streamgraph chart.
+
+Streamgraphs are centered stacked area charts that emphasize flowing patterns
+and overall trends. The Y-axis is typically hidden or minimal, and series labels
+are often displayed directly on the areas for identification.
+
+## Properties
+
+### dataLimits
+
+> **dataLimits**?: [`DataLimits`](interface.DataLimits.md)
+
+Data limit for series or categories that will be plotted
+
+***
+
+### height
+
+> **height**?: `number`
+
+Total height of the component, which is considered in the following order of priority:
+
+1. Value passed to this property (in pixels).
+2. Height of the container wrapping this component
+3. Default value of 400px (for component without header) or 425px (for component with header).
+
+***
+
+### legend
+
+> **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
+
+Configuration for legend - a key that provides information about the data series or colors used in chart
+
+***
+
+### line
+
+> **line**?: [`LineOptions`](../type-aliases/type-alias.LineOptions.md)
+
+Configuration that defines line style for area boundaries.
+
+***
+
+### lineWidth
+
+> **lineWidth**?: [`LineWidth`](../type-aliases/type-alias.LineWidth.md)
+
+Configuration that defines line width for area boundaries.
+
+::: warning Deprecated
+Use line.width instead
+:::
+
+***
+
+### markers
+
+> **markers**?: [`Markers`](../type-aliases/type-alias.Markers.md)
+
+Configuration for markers - symbols or data points that highlight specific values
+
+***
+
+### navigator
+
+> **navigator**?: [`Navigator`](../type-aliases/type-alias.Navigator.md)
+
+Configuration for navigator - zoom/pan tool for large datasets in a chart
+
+***
+
+### seriesLabels
+
+> **seriesLabels**?: [`SeriesLabels`](../type-aliases/type-alias.SeriesLabels.md)
+
+Configuration for series labels - titles/names identifying data series in a chart.
+
+***
+
+### width
+
+> **width**?: `number`
+
+Total width of the component, which is considered in the following order of priority:
+
+1. Value passed to this property (in pixels)
+2. Width of the container wrapping this component
+3. Default value of 400px
+
+***
+
+### xAxis
+
+> **xAxis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
+
+Configuration for X axis
+
+***
+
+### y2Axis
+
+> **y2Axis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
+
+Configuration for second Y axis
+
+***
+
+### yAxis
+
+> **yAxis**?: [`AxisLabel`](../type-aliases/type-alias.AxisLabel.md)
+
+Configuration for Y axis
+
+
+---
+
+---
+title: StyledColumn
+---
 
 # Interface StyledColumn
 
@@ -5957,20 +5861,6 @@ Also, see [StyledMeasureColumn](interface.StyledMeasureColumn.md).
 ### color
 
 > **color**?: [`DataColorOptions`](../type-aliases/type-alias.DataColorOptions.md)
-
-All possible color options for data.
-
-***
-
-### column
-
-> **column**: [`Column`](../../sdk-data/interfaces/interface.Column.md)
-
-Wrapped Column
-
-***
-
-](../type-aliases/type-alias.DataColorOptions.md)
 
 All possible color options for data.
 
@@ -6053,26 +5943,6 @@ Name of the column.
 
 ***
 
-lean`
-
-***
-
-### isHtml
-
-> **isHtml**?: `boolean`
-
-Boolean flag whether to render category/column value as HTML in the Table component.
-
-***
-
-### name
-
-> **name**?: `string`
-
-Name of the column.
-
-***
-
 ### numberFormatConfig
 
 > **numberFormatConfig**?: [`NumberFormatConfig`](../type-aliases/type-alias.NumberFormatConfig.md)
@@ -6087,12 +5957,12 @@ Configuration for number formatting.
 
 Sorting configuration that represents either [SortDirection](../type-aliases/type-alias.SortDirection.md) or [PivotRowsSort](../type-aliases/type-alias.PivotRowsSort.md) for the pivot table
 
-# Interface StyledMeasureColumn
 
-Wrapped [Measure Column](../../sdk-data/interfaces/interface.MeasureColumn.md) with styles
-controlling how the measure is visualized in a chart.
+---
 
-for the pivot table
+---
+title: StyledMeasureColumn
+---
 
 # Interface StyledMeasureColumn
 
@@ -6141,19 +6011,6 @@ See also [StyledColumn](interface.StyledColumn.md).
 > **chartType**?: [`SeriesChartType`](../type-aliases/type-alias.SeriesChartType.md)
 
 Series chart type, which is used with [StyledMeasureColumn](interface.StyledMeasureColumn.md) to customize
-series in a mixed chart.
-
-***
-
-### color
-
-> **color**?: [`DataColorOptions`](../type-aliases/type-alias.DataColorOptions.md)
-
-All possible color options for data.
-
-***
-
-MeasureColumn.md) to customize
 series in a mixed chart.
 
 ***
@@ -6223,13 +6080,6 @@ Supported only for cartesian and polar charts.
 
 ***
 
-ns**?: [`SeriesStyleOptions`](../type-aliases/type-alias.SeriesStyleOptions.md)
-
-Specific style options to be applied to specific series in Chart.
-Supported only for cartesian and polar charts.
-
-***
-
 ### showOnRightAxis
 
 > **showOnRightAxis**?: `boolean`
@@ -6261,15 +6111,12 @@ Calculation for the totals of this measure in the pivot table.
 
 Boolean flag whether null values are treated as zeros in the chart
 
-# Interface SunburstChartProps
 
-Props of the [SunburstChart](../charts/function.SunburstChart.md) component.
+---
 
-## Properties
-
-lean`
-
-Boolean flag whether null values are treated as zeros in the chart
+---
+title: SunburstChartProps
+---
 
 # Interface SunburstChartProps
 
@@ -6373,11 +6220,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -6385,16 +6227,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CategoricalChartDataOptions`](interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`SunburstStyleOptions`](interface.SunburstStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-nt the data passed to the chart
 
 ***
 
@@ -6469,15 +6301,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: SunburstStyleOptions
+---
 
 # Interface SunburstStyleOptions
 
@@ -6530,14 +6359,6 @@ Please use `seriesLabels` instead
 ***
 
 ### legend
-
-> **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
-
-Configuration for legend - a key that provides information about the data series or colors used in chart
-
-***
-
-# legend
 
 > **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
 
@@ -6610,13 +6431,12 @@ Total width of the component, which is considered in the following order of prio
 2. Width of the container wrapping this component
 3. Default value of 400px
 
-# Interface TreemapChartProps
 
-Props of the [TreemapChart](../charts/function.TreemapChart.md) component.
+---
 
-## Properties
-
-ettingsFontSource`](../type-aliases/type-alias.ThemeSettingsFontSource.md)[]
+---
+title: TreemapChartProps
+---
 
 # Interface TreemapChartProps
 
@@ -6720,11 +6540,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -6732,16 +6547,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CategoricalChartDataOptions`](interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**?: [`TreemapStyleOptions`](interface.TreemapStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-sent the data passed to the chart
 
 ***
 
@@ -6816,15 +6621,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: TreemapStyleOptions
+---
 
 # Interface TreemapStyleOptions
 
@@ -6877,14 +6679,6 @@ Please use `seriesLabels` instead
 ***
 
 ### legend
-
-> **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
-
-Configuration for legend - a key that provides information about the data series or colors used in chart
-
-***
-
-# legend
 
 > **legend**?: [`LegendOptions`](../type-aliases/type-alias.LegendOptions.md)
 
@@ -6957,6 +6751,13 @@ Total width of the component, which is considered in the following order of prio
 2. Width of the container wrapping this component
 3. Default value of 400px
 
+
+---
+
+---
+title: WidgetsPanelColumn
+---
+
 # Interface WidgetsPanelColumn
 
 Part of Dashboard layout, which describes how widgets are arranged in a column
@@ -6972,6 +6773,13 @@ Part of Dashboard layout, which describes how widgets are arranged in a column
 ### widthPercentage
 
 > **widthPercentage**: `number`
+
+
+---
+
+---
+title: WidgetsPanelColumnLayout
+---
 
 # Interface WidgetsPanelColumnLayout
 

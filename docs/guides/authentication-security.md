@@ -1,3 +1,7 @@
+---
+title: Authentication & Security
+---
+
 # Authentication & Security
 
 There are some authentication and security concerns you need to address in order to start using Compose SDK in an application.
@@ -5,14 +9,6 @@ There are some authentication and security concerns you need to address in order
 ## Authentication
 
 To retrieve data using Compose SDK you need to authenticate your application against a Sisense instance.
-
-There are several ways you can authenticate your application:
-
-- [Single Sign On (SSO)](#single-sign-on)
-- [Web Access Token (WAT)](#web-access-token)
-- [API Token](#api-token)
-
-a Sisense instance.
 
 There are several ways you can authenticate your application:
 
@@ -75,19 +71,6 @@ export const SISENSE_CONTEXT_CONFIG: SisenseContextConfig = {
 >
 ```
 
-ue
-};
-```
-
-- For Vue apps use the `ssoEnabled` property of the `<SisenseContextProvider />` component:
-
-```ts
-<SisenseContextProvider
-  :url="https://sisense-instance-url"
-  :ssoEnabled="true"
->
-```
-
 ### Web Access Token
 
 Sisense Web Access Tokens (WATs) impersonate specific Sisense users. Typically, in a production environment you create a Sisense user specifically for using Compose SDK. You grant that user the permissions you want to expose in your application and use a WAT that impersonates that user.
@@ -125,19 +108,6 @@ Once you’ve created a WAT, you can use it to authenticate within your applicat
 export const SISENSE_CONTEXT_CONFIG: SisenseContextConfig = {
   url="http://sisense-instance-url"
   wat="eykZjkFhMGYzYmJl…"
-};
-```
-
-- For Vue apps use the `wat` property of the `<SisenseContextProvider />` component:
-
-```ts
-<SisenseContextProvider
-  :url="http://sisense-instance-url"
-  :wat="eykZjkFhMGYzYmJl…"
->
-```
-
-Jl…"
 };
 ```
 
@@ -206,15 +176,6 @@ export const SISENSE_CONTEXT_CONFIG: SisenseContextConfig = {
 >
 ```
 
-- For Vue apps use the `token` property of the `<SisenseContextProvider />` component:
-
-```ts
-<SisenseContextProvider
-  :url="http://sisense-instance-url"
-  :token="eRykZjVxkFdhMaGYzYmqJl..."
->
-```
-
 ## Cross-Origin Resource Sharing (CORS)
 
 By default, browser same-origin policy prevents client-side web applications located in one domain from obtaining data from a different domain. That means an application you build with Compose SDK can't get data from your Sisense instance without some initial setup.
@@ -244,18 +205,6 @@ Set up CORS on your Sisense instance using one of the following:
 
 :::
 
-lication-url"
-  ]
-}
-```
-
-::: tip Notes
-
-- **Do not** include the trailing slash (`/`) when adding a domain to the **CORS Allowed Origins**
-- Save your settings changes after adding your domain.
-
-:::
-
 ## Third-Party Cookies
 
 Most modern browsers block third-party cookies. This affects cookie-based authentications such as SSO.
@@ -269,12 +218,3 @@ Therefore, the best practice is either to:
 :::warning
 The Cookies Having Independent Partitioned State ([CHIPS](https://developers.google.com/privacy-sandbox/cookies/chips)) solution is not compatible with Compose SDK.
 :::
-
-
-<!-- Source: getting-started/quickstart.md -->
-
-Independent Partitioned State ([CHIPS](https://developers.google.com/privacy-sandbox/cookies/chips)) solution is not compatible with Compose SDK.
-:::
-
-
-<!-- Source: getting-started/quickstart.md -->

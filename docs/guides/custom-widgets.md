@@ -1,21 +1,7 @@
-# Custom Widgets
+---
+title: Custom Widgets (Angular)
+---
 
-Here you'll find guides that will help get started with the custom widgets in Compose SDK.
-
-<SectionIndex />
-
-
-<!-- Source: guides/custom-widgets/custom-widgets-angular.md -->
-
-d -->
-# Custom Widgets
-
-Here you'll find guides that will help get started with the custom widgets in Compose SDK.
-
-<SectionIndex />
-
-
-<!-- Source: guides/custom-widgets/custom-widgets-angular.md -->
 # Custom Widgets
 
 > **Note**:
@@ -25,17 +11,9 @@ This guide explains how to define your own custom widget component and register 
 
 **Note:** It is assumed that the application is [already configured correctly](../../getting-started/quickstart-angular.md) for use with Compose SDK.
 
-lace Fusion plugins when displaying dashboards.
-
-**Note:** It is assumed that the application is [already configured correctly](../../getting-started/quickstart-angular.md) for use with Compose SDK.
-
 ## Sample dashboard
 
 The `histogramwidget` plugin is included with Sisense Fusion, so we'll be using it as our example. We'll start by creating a dashboard in Fusion, containing a single `histogramwidget` widget with `Sample ECommerce` as its data source.
-
-![Dashboard in Fusion](../../img/plugins-guide/dashboard-in-fusion.png 'Dashboard in Fusion')
-
-ard in Fusion, containing a single `histogramwidget` widget with `Sample ECommerce` as its data source.
 
 ![Dashboard in Fusion](../../img/plugins-guide/dashboard-in-fusion.png 'Dashboard in Fusion')
 
@@ -54,8 +32,6 @@ Since Compose SDK does not support the `histogramwidget` plugin out of the box, 
 ![Dashboard in Compose SDK (no registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-unregistered.png 'Dashboard in Compose SDK (no registered custom widget)')
 
 In order to resolve this, we will explore how to define a custom widget component and register it with Compose SDK, so that it knows what to do when it encounters a `histogramwidget` plugin from Fusion.
-
-rder to resolve this, we will explore how to define a custom widget component and register it with Compose SDK, so that it knows what to do when it encounters a `histogramwidget` plugin from Fusion.
 
 ## Defining a custom widget using Compose SDK
 
@@ -143,15 +119,6 @@ ngOnInit() {
 }
 ```
 
-const { dimensions, measures } = extractDimensionsAndMeasures(this.dataOptions);
-  this.data$ = this.queryService.executeQuery({
-    dimensions,
-    measures,
-    filters: this.filters,
-  });
-}
-```
-
 ## Registering the custom widget with Compose SDK
 
 To register the custom widget, we need to inject the `CustomWidgetsService` and call `registerCustomWidget`.
@@ -180,10 +147,6 @@ If we refresh our application, instead of seeing the error in place of the widge
 
 ![Dashboard in Compose SDK (registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-registered.png 'Dashboard in Compose SDK (registered custom widget)')
 
-d now see something like this:
-
-![Dashboard in Compose SDK (registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-registered.png 'Dashboard in Compose SDK (registered custom widget)')
-
 ## Summary
 
 Here's what we accomplished:
@@ -194,12 +157,12 @@ Here's what we accomplished:
 Obviously, we didn't end up with a new histogram component in Angular (yet), but hopefully the simplicity of this guide gives you the tools you need to make that, or anything else, happen!
 
 
-<!-- Source: guides/custom-widgets/custom-widgets-react.md -->
+---
 
-nent in Angular (yet), but hopefully the simplicity of this guide gives you the tools you need to make that, or anything else, happen!
+---
+title: Custom Widgets (React)
+---
 
-
-<!-- Source: guides/custom-widgets/custom-widgets-react.md -->
 # Custom Widgets
 
 > **Note**:
@@ -209,17 +172,9 @@ This guide explains how to define your own custom widget component and register 
 
 **Note:** It is assumed that the application is [already configured correctly](../../getting-started/quickstart.md) for use with Compose SDK.
 
-d to replace Fusion plugins when displaying dashboards.
-
-**Note:** It is assumed that the application is [already configured correctly](../../getting-started/quickstart.md) for use with Compose SDK.
-
 ## Sample dashboard
 
 The `histogramwidget` plugin is included with Sisense Fusion, so we'll be using it as our example. We'll start by creating a dashboard in Fusion, containing a single `histogramwidget` widget with `Sample ECommerce` as its data source.
-
-![Dashboard in Fusion](../../img/plugins-guide/dashboard-in-fusion.png 'Dashboard in Fusion')
-
-ard in Fusion, containing a single `histogramwidget` widget with `Sample ECommerce` as its data source.
 
 ![Dashboard in Fusion](../../img/plugins-guide/dashboard-in-fusion.png 'Dashboard in Fusion')
 
@@ -246,8 +201,6 @@ Since Compose SDK does not support the `histogramwidget` plugin out of the box, 
 ![Dashboard in Compose SDK (no registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-unregistered.png 'Dashboard in Compose SDK (no registered custom widget)')
 
 In order to resolve this, we will explore how to define a custom widget component and register it with Compose SDK, so that it knows what to do when it encounters a `histogramwidget` plugin from Fusion.
-
-rder to resolve this, we will explore how to define a custom widget component and register it with Compose SDK, so that it knows what to do when it encounters a `histogramwidget` plugin from Fusion.
 
 ## Defining a custom widget using Compose SDK
 
@@ -314,16 +267,6 @@ const { data } = useExecuteQuery({
 });
 ```
 
-m '@sisense/sdk-ui';
-
-const { dimensions, measures } = extractDimensionsAndMeasures(props.dataOptions);
-const { data } = useExecuteQuery({
-  dimensions,
-  measures,
-  filters: props.filters,
-});
-```
-
 ## Registering the custom widget with Compose SDK
 
 To register the custom widget, we need to call `registerCustomWidget`, which is returned from the `useCustomWidgets` hook.
@@ -347,10 +290,6 @@ If we refresh our application, instead of seeing the error in place of the widge
 
 ![Dashboard in Compose SDK (registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-registered.png 'Dashboard in Compose SDK (registered custom widget)')
 
-d now see something like this:
-
-![Dashboard in Compose SDK (registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-registered.png 'Dashboard in Compose SDK (registered custom widget)')
-
 ## Summary
 
 Here's what we accomplished:
@@ -364,8 +303,6 @@ Obviously, we didn't end up with a new histogram component in React (yet), but h
 
 If you have existing code that uses the [previous Compose SDK "plugin" interface](https://developer.sisense.com/guides/sdkPrevious/v1/guides/chart-plugins.html), here's how to migrate to the new "custom widget" interface.
 
-de that uses the [previous Compose SDK "plugin" interface](https://developer.sisense.com/guides/sdkPrevious/v1/guides/chart-plugins.html), here's how to migrate to the new "custom widget" interface.
-
 ### API Changes
 
 | Previous (Compose SDK Plugin Interface) | New (ComposeSDK Custom Widget Interface) |
@@ -374,11 +311,6 @@ de that uses the [previous Compose SDK "plugin" interface](https://developer.sis
 | `registerPlugin()` | `registerCustomWidget()` |
 | `PluginComponent` | `CustomWidgetComponent` |
 | `PluginComponentProps` | `CustomWidgetComponentProps` |
-| `useExecutePluginQuery()` | `useExecuteCustomWidgetQuery()` |
-| `widget.pluginType` | `widget.customWidgetType` |
-| `widget.widgetType -> 'plugin'` | `widget.widgetType -> 'custom'` |
-
-nentProps` |
 | `useExecutePluginQuery()` | `useExecuteCustomWidgetQuery()` |
 | `widget.pluginType` | `widget.customWidgetType` |
 | `widget.widgetType -> 'plugin'` | `widget.widgetType -> 'custom'` |
@@ -427,12 +359,6 @@ function App() {
 }
 ```
 
-sterCustomWidget } = useCustomWidgets();
-  registerCustomWidget('my-widget', MyWidget); // 'my-widget' represents a Fusion plugin
-  return <DashboardById dashboardOid={'your-dashboard-id'} />;
-}
-```
-
 ### Migration Steps
 
 1. **Update imports**: Change all Compose SDK plugin-related imports to their custom widget equivalents
@@ -443,12 +369,12 @@ sterCustomWidget } = useCustomWidgets();
 The functionality remains the same - only the Compose SDK naming convention has changed, while adding support for [Angular](custom-widgets-angular.md) and [Vue](custom-widgets-vue.md). Custom widgets in Compose SDK still serve as replacements for Fusion plugins when displaying dashboards.
 
 
-<!-- Source: guides/custom-widgets/custom-widgets-vue.md -->
+---
 
-d [Vue](custom-widgets-vue.md). Custom widgets in Compose SDK still serve as replacements for Fusion plugins when displaying dashboards.
+---
+title: Custom Widgets (Vue)
+---
 
-
-<!-- Source: guides/custom-widgets/custom-widgets-vue.md -->
 # Custom Widgets
 
 > **Note**:
@@ -458,17 +384,9 @@ This guide explains how to define your own custom widget component and register 
 
 **Note:** It is assumed that the application is [already configured correctly](../../getting-started/quickstart-vue.md) for use with Compose SDK.
 
-replace Fusion plugins when displaying dashboards.
-
-**Note:** It is assumed that the application is [already configured correctly](../../getting-started/quickstart-vue.md) for use with Compose SDK.
-
 ## Sample dashboard
 
 The `histogramwidget` plugin is included with Sisense Fusion, so we'll be using it as our example. We'll start by creating a dashboard in Fusion, containing a single `histogramwidget` widget with `Sample ECommerce` as its data source.
-
-![Dashboard in Fusion](../../img/plugins-guide/dashboard-in-fusion.png 'Dashboard in Fusion')
-
-ard in Fusion, containing a single `histogramwidget` widget with `Sample ECommerce` as its data source.
 
 ![Dashboard in Fusion](../../img/plugins-guide/dashboard-in-fusion.png 'Dashboard in Fusion')
 
@@ -493,8 +411,6 @@ Since Compose SDK does not support the `histogramwidget` plugin out of the box, 
 ![Dashboard in Compose SDK (no registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-unregistered.png 'Dashboard in Compose SDK (no registered custom widget)')
 
 In order to resolve this, we will explore how to define a custom widget component and register it with Compose SDK, so that it knows what to do when it encounters a `histogramwidget` plugin from Fusion.
-
-rder to resolve this, we will explore how to define a custom widget component and register it with Compose SDK, so that it knows what to do when it encounters a `histogramwidget` plugin from Fusion.
 
 ## Defining a custom widget using Compose SDK
 
@@ -568,18 +484,6 @@ const { data } = useExecuteQuery({
 </script>
 ```
 
-Array
-});
-
-const { dimensions, measures } = extractDimensionsAndMeasures(props.dataOptions);
-const { data } = useExecuteQuery({
-  dimensions,
-  measures,
-  filters: props.filters,
-});
-</script>
-```
-
 ## Registering the custom widget with Compose SDK
 
 To register the custom widget, we need to use the `useCustomWidgets` composable and call `registerCustomWidget`.
@@ -604,10 +508,6 @@ If we refresh our application, instead of seeing the error in place of the widge
 
 ![Dashboard in Compose SDK (registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-registered.png 'Dashboard in Compose SDK (registered custom widget)')
 
-d now see something like this:
-
-![Dashboard in Compose SDK (registered custom widget)](../../img/plugins-guide/dashboard-in-csdk-registered.png 'Dashboard in Compose SDK (registered custom widget)')
-
 ## Summary
 
 Here's what we accomplished:
@@ -616,6 +516,3 @@ Here's what we accomplished:
 - Registered that table component as a custom widget to be shown in place of the `histogramwidget` Fusion plugin when it is rendered inside of a `DashboardById` component
 
 Obviously, we didn't end up with a new histogram component in Vue (yet), but hopefully the simplicity of this guide gives you the tools you need to make that, or anything else, happen!
-
-
-<!-- Source: guides/dashboards/index.md -->

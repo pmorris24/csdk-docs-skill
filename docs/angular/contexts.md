@@ -1,20 +1,6 @@
-# Contexts
-
-Angular context modules, services, and variables
-
-- [SdkUiModule](class.SdkUiModule.md)
-- [SISENSE\_CONTEXT\_CONFIG\_TOKEN](variable.SISENSE_CONTEXT_CONFIG_TOKEN.md)
-- [SisenseContextService](class.SisenseContextService.md)
-- [THEME\_CONFIG\_TOKEN](variable.THEME_CONFIG_TOKEN.md)
-- [ThemeService](class.ThemeService.md)
-
-# Class SdkUiModule
-
-SDK UI Module, which is a container for components.
-
-s.SisenseContextService.md)
-- [THEME\_CONFIG\_TOKEN](variable.THEME_CONFIG_TOKEN.md)
-- [ThemeService](class.ThemeService.md)
+---
+title: SdkUiModule
+---
 
 # Class SdkUiModule
 
@@ -54,15 +40,16 @@ export const SISENSE_CONTEXT_CONFIG: SisenseContextConfig = {
 
 [`SdkUiModule`](class.SdkUiModule.md)
 
+
+---
+
+---
+title: SisenseContextService
+---
+
 # Class SisenseContextService
 
 Service for managing Sisense Fusion context and client application lifecycle.
-
-This service provides a centralized way to configure and manage the connection to a Sisense instance within Angular applications.
-
-## Constructors
-
-e Fusion context and client application lifecycle.
 
 This service provides a centralized way to configure and manage the connection to a Sisense instance within Angular applications.
 
@@ -89,16 +76,6 @@ This service provides a centralized way to configure and manage the connection t
 > **getConfig**(): [`SisenseContextConfig`](../interfaces/interface.SisenseContextConfig.md) \| `undefined`
 
 Retrieves the current [SisenseContextConfig](../interfaces/interface.SisenseContextConfig.md) configuration object.
-
-#### Returns
-
-[`SisenseContextConfig`](../interfaces/interface.SisenseContextConfig.md) \| `undefined`
-
-The current configuration object, or undefined if not yet configured
-
-***
-
-nfiguration object.
 
 #### Returns
 
@@ -140,17 +117,12 @@ await SisenseContextService.setConfig({
 });
 ```
 
-# Class ThemeService
 
-Service for working with Sisense Fusion themes.
+---
 
-If no theme service is used, the current Fusion theme is applied by default.
-
-## Constructors
-
-urce: 'Sample ECommerce'
-});
-```
+---
+title: ThemeService
+---
 
 # Class ThemeService
 
@@ -191,13 +163,16 @@ If no theme service is used, the current Fusion theme is applied by default.
 
 `Promise`\< `void` \>
 
+
+---
+
+---
+title: SISENSE_CONTEXT_CONFIG_TOKEN
+---
+
 # Variable SISENSE\_CONTEXT\_CONFIG\_TOKEN
 
 > **`const`** **SISENSE\_CONTEXT\_CONFIG\_TOKEN**: `InjectionToken`\< [`SisenseContextConfig`](../interfaces/interface.SisenseContextConfig.md) \>
-
-Token used to inject [SisenseContextConfig](../interfaces/interface.SisenseContextConfig.md) into your application
-
-en`\< [`SisenseContextConfig`](../interfaces/interface.SisenseContextConfig.md) \>
 
 Token used to inject [SisenseContextConfig](../interfaces/interface.SisenseContextConfig.md) into your application
 
@@ -225,13 +200,16 @@ export const SISENSE_CONTEXT_CONFIG: SisenseContextConfig = {
 })
 ```
 
+
+---
+
+---
+title: THEME_CONFIG_TOKEN
+---
+
 # Variable THEME\_CONFIG\_TOKEN
 
 > **`const`** **THEME\_CONFIG\_TOKEN**: `InjectionToken`\< [`ThemeConfig`](../type-aliases/type-alias.ThemeConfig.md) \>
-
-Token used to inject [ThemeConfig](../type-aliases/type-alias.ThemeConfig.md) into your application
-
-CONFIG\_TOKEN**: `InjectionToken`\< [`ThemeConfig`](../type-aliases/type-alias.ThemeConfig.md) \>
 
 Token used to inject [ThemeConfig](../type-aliases/type-alias.ThemeConfig.md) into your application
 
@@ -264,50 +242,3 @@ export const SISENSE_CONTEXT_CONFIG: SisenseContextConfig = {
   bootstrap: [AppComponent],
 })
 ```
-
-
-## Charts
-
-NSE_CONTEXT_CONFIG },
-    {
-      provide: THEME_CONFIG_TOKEN,
-      useValue: {
-        // initial theme settings
-      } as ThemeConfig,
-    },
-  ],
-  bootstrap: [AppComponent],
-})
-```
-
-
-## Charts
-
-# Charts
-
-Angular components and utilities for working with charts
-
-- [AreaChartComponent](class.AreaChartComponent.md)
-- [AreamapChartComponent](class.AreamapChartComponent.md)
-- [AreaRangeChartComponent](class.AreaRangeChartComponent.md)
-- [BarChartComponent](class.BarChartComponent.md)
-- [BoxplotChartComponent](class.BoxplotChartComponent.md)
-- [boxWhiskerProcessResult](function.boxWhiskerProcessResult.md) - Utility function that combines box whisker data and outliers data
-- [CalendarHeatmapChartComponent](class.CalendarHeatmapChartComponent.md)
-- [ChartComponent](class.ChartComponent.md) - Common component for rendering charts of different types including table
-- [ColumnChartComponent](class.ColumnChartComponent.md)
-- [FunnelChartComponent](class.FunnelChartComponent.md)
-- [IndicatorChartComponent](class.IndicatorChartComponent.md)
-- [LineChartComponent](class.LineChartComponent.md)
-- [PieChartComponent](class.PieChartComponent.md)
-- [PolarChartComponent](class.PolarChartComponent.md)
-- [ScatterChartComponent](class.ScatterChartComponent.md)
-- [ScattermapChartComponent](class.ScattermapChartComponent.md)
-- [StreamgraphChartComponent](class.StreamgraphChartComponent.md)
-- [SunburstChartComponent](class.SunburstChartComponent.md)
-- [TreemapChartComponent](class.TreemapChartComponent.md)
-
-tComponent.md)
-- [StreamgraphChartComponent](class.StreamgraphChartComponent.md)
-- [SunburstChartComponent](class.SunburstChartComponent.md)
-- [TreemapChartComponent](class.TreemapChartComponent.md)

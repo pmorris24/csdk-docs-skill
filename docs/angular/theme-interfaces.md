@@ -1,18 +1,10 @@
+---
+title: ThemeSettings
+---
+
 # Interface ThemeSettings
 
 Theme settings defining the look and feel of components.
-
-## Properties
-
-### aiChat
-
-> **aiChat**?: [`AiChatThemeSettings`](../../sdk-ui/interfaces/interface.AiChatThemeSettings.md)
-
-Theme settings specific to the AI Chatbot component
-
-***
-
-of components.
 
 ## Properties
 

@@ -1,11 +1,10 @@
+---
+title: AreaChart
+---
+
 # Function AreaChart
 
 > **AreaChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
-
-A React component similar to a [`LineChart`](function.LineChart.md),
-but with filled in areas under each line and an option to display them as stacked.
-
-): `ReactElement`\< `any`, `any` \> \| `null`
 
 A React component similar to a [`LineChart`](function.LineChart.md),
 but with filled in areas under each line and an option to display them as stacked.
@@ -38,6 +37,13 @@ Additional Area Chart examples:
 
 Area Chart component
 
+
+---
+
+---
+title: AreaRangeChart
+---
+
 # Function AreaRangeChart
 
 > **AreaRangeChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
@@ -50,20 +56,6 @@ It is particularly useful for visualizing the minimum and maximum values in a da
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `props` | [`AreaRangeChartProps`](../interfaces/interface.AreaRangeChartProps.md) | Area Range chart properties |
-
-## Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `props` | [`AreaRangeChartProps`](../interfaces/interface.AreaRangeChartProps.md) | Area Range chart properties |
-
-## Returns
-
-`ReactElement`\< `any`, `any` \> \| `null`
-
-Area Range Chart component
-
-`props` | [`AreaRangeChartProps`](../interfaces/interface.AreaRangeChartProps.md) | Area Range chart properties |
 
 ## Returns
 
@@ -128,17 +120,12 @@ An example of using the component to visualize the `Sample ECommerce` data sourc
 
 <img src="../../../img/area-range-chart-example-1.png" width="800"/>
 
-',
-          },
-          enabled: true,
-          gridLines: true,
-          logarithmic: false,
-        },
-      }}
-    />
-```
 
-<img src="../../../img/area-range-chart-example-1.png" width="800"/>
+---
+
+---
+title: AreamapChart
+---
 
 # Function AreamapChart
 
@@ -171,14 +158,16 @@ Areamap chart displaying total revenue per country from the Sample ECommerce dat
 
 Areamap Chart component
 
+
+---
+
+---
+title: BarChart
+---
+
 # Function BarChart
 
 > **BarChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
-
-A React component representing categorical data with horizontal rectangular bars,
-whose lengths are proportional to the values that they represent.
-
-ops`): `ReactElement`\< `any`, `any` \> \| `null`
 
 A React component representing categorical data with horizontal rectangular bars,
 whose lengths are proportional to the values that they represent.
@@ -211,6 +200,13 @@ Additional Bar Chart examples:
 
 Bar Chart component
 
+
+---
+
+---
+title: BoxplotChart
+---
+
 # Function BoxplotChart
 
 > **BoxplotChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
@@ -221,15 +217,6 @@ variability, and center of a data set along an axis.
 ## Example
 
 Boxplot chart displaying data from the Sample ECommerce data model.
-
-<iframe
- src='https://csdk-playground.sisense.com/?example=charts%2Fboxplot-chart&mode=docs'
- width=800
- height=870
- style='border:none;'
-/>
-
-rt displaying data from the Sample ECommerce data model.
 
 <iframe
  src='https://csdk-playground.sisense.com/?example=charts%2Fboxplot-chart&mode=docs'
@@ -249,6 +236,13 @@ rt displaying data from the Sample ECommerce data model.
 `ReactElement`\< `any`, `any` \> \| `null`
 
 Boxplot Chart component
+
+
+---
+
+---
+title: CalendarHeatmapChart
+---
 
 # Function CalendarHeatmapChart
 
@@ -286,13 +280,12 @@ Calendar Heatmap Chart component
 />
 ```
 
-# Function Chart
 
-> **Chart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
+---
 
-A React component used for easily switching chart types or rendering multiple series of different chart types.
-
-``
+---
+title: Chart
+---
 
 # Function Chart
 
@@ -323,16 +316,18 @@ A chart component displaying total revenue per quarter from the Sample ECommerce
 
 Chart component representing a chart type as specified in `ChartProps.`[chartType](../interfaces/interface.ChartProps.md#charttype)
 
+
+---
+
+---
+title: ColumnChart
+---
+
 # Function ColumnChart
 
 > **ColumnChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
 
 A React component representing categorical data with vertical rectangular bars
-whose heights are proportional to the values that they represent.
-
-The chart can include multiple values on both the X and Y-axis, as well as a break down by categories displayed on the Y-axis.
-
-bars
 whose heights are proportional to the values that they represent.
 
 The chart can include multiple values on both the X and Y-axis, as well as a break down by categories displayed on the Y-axis.
@@ -365,6 +360,13 @@ Additional Column Chart examples:
 
 Column Chart component
 
+
+---
+
+---
+title: FunnelChart
+---
+
 # Function FunnelChart
 
 > **FunnelChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
@@ -374,15 +376,6 @@ A React component representing data progressively decreasing in size or quantity
 ## Example
 
 Funnel chart displaying data from the Sample ECommerce data model.
-
-<iframe
- src='https://csdk-playground.sisense.com/?example=charts%2Ffunnel-chart&mode=docs'
- width=800
- height=870
- style='border:none;'
-/>
-
-art displaying data from the Sample ECommerce data model.
 
 <iframe
  src='https://csdk-playground.sisense.com/?example=charts%2Ffunnel-chart&mode=docs'
@@ -403,6 +396,13 @@ art displaying data from the Sample ECommerce data model.
 
 Funnel Chart component
 
+
+---
+
+---
+title: IndicatorChart
+---
+
 # Function IndicatorChart
 
 > **IndicatorChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
@@ -413,14 +413,6 @@ A React component that provides various options for displaying one or two numeri
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `props` | [`IndicatorChartProps`](../interfaces/interface.IndicatorChartProps.md) | Indicator chart properties |
-
-## Returns
-
-`ReactElement`\< `any`, `any` \> \| `null`
-
-Indicator Chart component
-
 | `props` | [`IndicatorChartProps`](../interfaces/interface.IndicatorChartProps.md) | Indicator chart properties |
 
 ## Returns
@@ -481,18 +473,12 @@ An example of using the component to visualize the `Sample ECommerce` data sourc
 
 <img src="../../../img/indicator-chart-example-1.png" width="400px" />
 
-},
-      labels: {
-        shouldBeShown: true,
-      },
-    },
-    subtype: 'indicator/gauge',
-    skin: 1,
-  }}
-/>
-```
 
-<img src="../../../img/indicator-chart-example-1.png" width="400px" />
+---
+
+---
+title: LineChart
+---
 
 # Function LineChart
 
@@ -528,14 +514,16 @@ Additional Line Chart examples:
 
 Line Chart component
 
+
+---
+
+---
+title: PieChart
+---
+
 # Function PieChart
 
 > **PieChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
-
-A React component representing data in a circular graph with the data shown as slices of a whole,
-with each slice representing a proportion of the total.
-
-`ReactElement`\< `any`, `any` \> \| `null`
 
 A React component representing data in a circular graph with the data shown as slices of a whole,
 with each slice representing a proportion of the total.
@@ -568,11 +556,12 @@ Additional Pie Chart examples:
 
 Pie Chart component
 
-# Function PolarChart
 
-> **PolarChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
+---
 
-A React component comparing multiple categories/variables with a spatial perspective in a radial chart.
+---
+title: PolarChart
+---
 
 # Function PolarChart
 
@@ -608,14 +597,12 @@ Additional Polar Chart examples:
 
 Polar Chart component
 
----- | :------ |
-| `props` | [`PolarChartProps`](../interfaces/interface.PolarChartProps.md) | Polar chart properties |
 
-## Returns
+---
 
-`ReactElement`\< `any`, `any` \> \| `null`
-
-Polar Chart component
+---
+title: ScatterChart
+---
 
 # Function ScatterChart
 
@@ -656,14 +643,12 @@ Additional Scatter Chart examples:
 
 Scatter Chart component
 
------- |
-| `props` | [`ScatterChartProps`](../interfaces/interface.ScatterChartProps.md) | Scatter chart properties |
 
-## Returns
+---
 
-`ReactElement`\< `any`, `any` \> \| `null`
-
-Scatter Chart component
+---
+title: ScattermapChart
+---
 
 # Function ScattermapChart
 
@@ -694,6 +679,13 @@ Scatter map chart displaying cost and revenue rank from the Sample ECommerce dat
 
 Scattermap Chart component
 
+
+---
+
+---
+title: StreamgraphChart
+---
+
 # Function StreamgraphChart
 
 > **StreamgraphChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
@@ -701,11 +693,6 @@ Scattermap Chart component
 A React component that displays a streamgraph chart.
 
 A streamgraph is a type of stacked area chart where areas are displaced around
-a central axis. It is particularly effective for displaying volume across
-different categories or over time with a relative scale that emphasizes
-overall patterns and trends.
-
-as are displaced around
 a central axis. It is particularly effective for displaying volume across
 different categories or over time with a relative scale that emphasizes
 overall patterns and trends.
@@ -749,15 +736,18 @@ function RevenueByCategoryStreamgraph() {
 
 Streamgraph Chart component
 
+
+---
+
+---
+title: SunburstChart
+---
+
 # Function SunburstChart
 
 > **SunburstChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
 
 A React component displaying hierarchical data in the form of nested circle slices.
-
-This type of chart can be used in different scenarios, for example, to compare both categories and sub-categories.
-
-React component displaying hierarchical data in the form of nested circle slices.
 
 This type of chart can be used in different scenarios, for example, to compare both categories and sub-categories.
 
@@ -784,6 +774,13 @@ Sunburst chart displaying total revenue, categorized by condition and age range,
 
 Sunburst Chart component
 
+
+---
+
+---
+title: TreemapChart
+---
+
 # Function TreemapChart
 
 > **TreemapChart**(`props`): `ReactElement`\< `any`, `any` \> \| `null`
@@ -803,15 +800,6 @@ Tree map chart displaying total revenue, categorized by condition and age range,
  style='border:none;'
 />
 
-ion and age range, from the Sample ECommerce data model.
-
-<iframe
- src='https://csdk-playground.sisense.com/?example=charts%2Ftreemap-chart&mode=docs'
- width=800
- height=870
- style='border:none;'
-/>
-
 ## Parameters
 
 | Parameter | Type | Description |
@@ -823,6 +811,13 @@ ion and age range, from the Sample ECommerce data model.
 `ReactElement`\< `any`, `any` \> \| `null`
 
 Treemap Chart component
+
+
+---
+
+---
+title: boxWhiskerProcessResult
+---
 
 # Function boxWhiskerProcessResult
 
@@ -846,73 +841,3 @@ Processes box whisker data and outliers data to combine them into a single data 
 [`QueryResultData`](../../sdk-data/interfaces/interface.QueryResultData.md)
 
 The combined data with outliers included in the box whisker plot.
-
-
-## Dashboards
-
-omizing data processing. |
-
-## Returns
-
-[`QueryResultData`](../../sdk-data/interfaces/interface.QueryResultData.md)
-
-The combined data with outliers included in the box whisker plot.
-
-
-## Dashboards
-
-# Dashboards
-
-React components and utilities for working with dashboards
-
-- [ChartWidget](function.ChartWidget.md)
-- [Dashboard](function.Dashboard.md)
-- [dashboardHelpers](namespace.dashboardHelpers/index.md) - Utility functions to manipulate dashboard elements
-- [extractDimensionsAndMeasures](function.extractDimensionsAndMeasures.md)
-- [PivotTableWidget](function.PivotTableWidget.md)
-- [useComposedDashboard](function.useComposedDashboard.md)
-- [useCustomWidgets](function.useCustomWidgets.md)
-- [useJtdWidget](function.useJtdWidget.md)
-- [Widget](function.Widget.md)
-
-# Namespace dashboardHelpers
-
-Utility functions to manipulate `DashboardProps`
-
-## Index
-
-### Dashboard Utilities
-
-- [applyJtdConfig](functions/function.applyJtdConfig.md)
-- [applyJtdConfigs](functions/function.applyJtdConfigs.md)
-
-### Functions
-
-- [addFilter](functions/function.addFilter.md)
-- [addFilters](functions/function.addFilters.md)
-- [removeFilter](functions/function.removeFilter.md)
-- [removeFilters](functions/function.removeFilters.md)
-- [replaceFilter](functions/function.replaceFilter.md)
-- [replaceFilters](functions/function.replaceFilters.md)
-
-Utility functions to manipulate `DashboardProps`
-
-functions/function.removeFilters.md)
-- [replaceFilter](functions/function.replaceFilter.md)
-- [replaceFilters](functions/function.replaceFilters.md)
-
-Utility functions to manipulate `DashboardProps`
-
-# Dashboard Utilities
-
-- [applyJtdConfig](function.applyJtdConfig.md)
-- [applyJtdConfigs](function.applyJtdConfigs.md)
-
-# Functions
-
-- [addFilter](function.addFilter.md)
-- [addFilters](function.addFilters.md)
-- [removeFilter](function.removeFilter.md)
-- [removeFilters](function.removeFilters.md)
-- [replaceFilter](function.replaceFilter.md)
-- [replaceFilters](function.replaceFilters.md)

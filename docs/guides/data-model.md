@@ -1,3 +1,7 @@
+---
+title: Data Model
+---
+
 # Data Model
 
 When using Compose SDK with data from a Sisense instance, you can use a TypeScript representation of your data model to easily reference the entities in your model. Although it’s not strictly necessary to use a TypeScript data model representation, using one will save you time and help minimize errors in your code.
@@ -7,8 +11,6 @@ TypeScript representations of Sisense data models are built using functionality 
 Typically, these data model representations are built using the Compose SDK CLI tool. The CLI tool reads a specified data model from your Sisense instance and uses the functionality of the `sdk-data` module to build your data model using TypeScript. The end result is a TypeScript file that exports your data model’s structure. You can then import the data model from that file and use it in your code.
 
 Theoretically, you can manually create a TypeScript representation of a Sisense data model using the functions exposed in `sdk-data`, but the need to do so is exceptionally rare. You may, however, want to edit the generated model to add sort on an attribute for example.
-
-Sisense data model using the functions exposed in `sdk-data`, but the need to do so is exceptionally rare. You may, however, want to edit the generated model to add sort on an attribute for example.
 
 ## Generating a Data Model
 
@@ -27,11 +29,6 @@ For example, you can create a TypeScript representation of the Sample ECommerce 
 
 ```sh
 npx @sisense/sdk-cli@latest get-data-model --username <username> --output src/sample-ecommerce.ts --dataSource "Sample ECommerce" --url https://myinstanceurl.com
-```
-
-If prompted, enter your password to authenticate and generate the data model representation.
-
-me> --output src/sample-ecommerce.ts --dataSource "Sample ECommerce" --url https://myinstanceurl.com
 ```
 
 If prompted, enter your password to authenticate and generate the data model representation.
@@ -82,15 +79,6 @@ export const Brand = createDimension({
 // for the Category, Commerce, and Country tables
 ```
 
--attribute',
-    expression: '[Brand.Brand ID]',
-  }),
-}) as BrandDimension;
-
-// Additional interface definitions and dimensions with attributes
-// for the Category, Commerce, and Country tables
-```
-
 ## Using a Data Model
 
 Once you’ve created a TypeScript data model representation, you can import and use it in code that refers to that data model. You can use it when creating visualizations, such as charts and tables, or when performing queries.
@@ -128,16 +116,3 @@ const { data, isLoading, isError } = useExecuteQuery({
   measures: [measureFactory.sum(DM.Commerce.Revenue)],
 });
 ```
-
-
-<!-- Source: guides/formatting.md -->
-
-Query({
-  dataSource: DM.DataSource,
-  dimensions: [DM.Commerce.AgeRange.sort(Sort.Descending)],
-  measures: [measureFactory.sum(DM.Commerce.Revenue)],
-});
-```
-
-
-<!-- Source: guides/formatting.md -->

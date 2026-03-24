@@ -1,3 +1,7 @@
+---
+title: DrilldownBreadcrumbsProps
+---
+
 # Interface DrilldownBreadcrumbsProps
 
 Props of the [DrilldownBreadcrumbsComponent](../drilldown/class.DrilldownBreadcrumbsComponent.md).

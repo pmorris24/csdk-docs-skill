@@ -1,25 +1,12 @@
-# Reference
+---
+title: Formula Functions
+---
 
-Additional reference material
-================================================================================
-
-
-<!-- Source: reference/index.md -->
-# Reference
-
-Here you'll find additional reference resources to be used with Compose SDK
-
-<SectionIndex />
-
-
-<!-- Source: reference/functions.md -->
 # Formula Functions
 
 For the most up to date formula functions reference, please check the [Sisense Fusion documentation](https://docs.sisense.com/main/SisenseLinux/dashboard-functions-reference.htm)
 
 For convenience, a reference of functions you may use within [`measureFactory.customFormula()`](../modules/sdk-data/factories/namespace.measureFactory/functions/function.customFormula.md) of Compose SDK is also included below.
-
-of functions you may use within [`measureFactory.customFormula()`](../modules/sdk-data/factories/namespace.measureFactory/functions/function.customFormula.md) of Compose SDK is also included below.
 
 ## Overview
 
@@ -131,12 +118,6 @@ The following functions are available:
     - [R Double (`RDOUBLE`)](#r-double-rdouble)
     - [R Integer (`RINT`)](#r-integer-rint)
 
--tangent-tanh)
-  - [Other Functions](#other-functions-1)
-    - [Ordering (`ORDERING`)](#ordering-ordering)
-    - [R Double (`RDOUBLE`)](#r-double-rdouble)
-    - [R Integer (`RINT`)](#r-integer-rint)
-
 ### Everything aggregative
 
 The Analytical Engine requires that every measure defined in a formula be aggregative. For example, instead of `DDiff([Discharge Time], [Admission Time])`, use `AVG(DDiff([Discharge Time], [Admission Time]))`.
@@ -158,12 +139,6 @@ Consider the following multi-pass call:
 
 ```
 AVG([Product], SUM(Revenue));
-
-```
-
-This call calculates the average total revenue per product. It does so by calculating the total revenue per product and then taking the average of all those totals.
-
-G([Product], SUM(Revenue));
 
 ```
 
@@ -219,18 +194,6 @@ However, if you query that same data model for difference in total cost and you 
 | 2023 Q1      | 8,594,218.7   | 1,623,325.44       |
 | 2023 Q2      | 9,408,611.73  | 1,859,492.17       |
 | 2023 Q3      | 10,169,728.63 | 2,033,532.90       |
-| 2023 Q4      | 9,550,137.52  | -1,499,560.17      |
-
-8,594,218.7   | 1,623,325.44       |
-| 2023 Q2      | 9,408,611.73  | 1,859,492.17       |
-| 2023 Q3      | 10,169,728.63 | 2,033,532.90       |
-| 2023 Q4      | 9,550,137.52  | -1,499,560.17      |
-
-## Universal Functions
-
-These functions may be used for both Live and ElastiCube models within the Sisense Fusion platform.
-
-,033,532.90       |
 | 2023 Q4      | 9,550,137.52  | -1,499,560.17      |
 
 ## Universal Functions
@@ -448,28 +411,6 @@ SUM([Cost]);
 
 ---
 
-`SUM`)
-
-Calculates the total of the given values.
-
-##### Syntax (`SUM`)
-
-```
-SUM(<numeric_field>)
-
-```
-
-##### Example (`SUM`)
-
-Calculates the total cost across all items.
-
-```
-SUM([Cost]);
-
-```
-
----
-
 ### Statistical Functions
 
 Functions that calculate statistical data.
@@ -653,26 +594,6 @@ VARP([Grade]);
 #### Variance - Sample (`VAR`)
 
 Gets the variance of the given values (sample). Variance (sample) is the average squared deviation from the mean, based on a random sample of the population.
-
-##### Syntax (`VAR`)
-
-```
-VAR(<numeric_field>)
-
-```
-
-##### Example (`VAR`)
-
-Gets the variance of grades in a random sample.
-
-```
-VAR([Grade]);
-
-```
-
----
-
-based on a random sample of the population.
 
 ##### Syntax (`VAR`)
 
@@ -1078,26 +999,6 @@ SQRT([Cost]);
 #### Tangent (`TAN`)
 
 Calculates the trigonometric tangent of a given angle (in radians).
-
-##### Syntax (`TAN`)
-
-```
-TAN(<numeric_field>)
-
-```
-
-##### Example (`TAN`)
-
-Calculate the trigonometric tangent of the average angle.
-
-```
-TAN([Average Angle])
-
-```
-
----
-
-a given angle (in radians).
 
 ##### Syntax (`TAN`)
 
@@ -2037,19 +1938,6 @@ YTDSUM([Total Sales])
 
 ---
 
-rter.
-
-##### Example (`YTDSUM`)
-
-Calculate the running sum of total sales starting from the beginning of the year up to the current day, week, month, or quarter.
-
-```
-YTDSUM([Total Sales])
-
-```
-
----
-
 ### Measured Value Functions
 
 Formulas often need to take into account specific criteria. To do this, Sisense provides a feature called Measured Values. A measured value only performs a calculation when the values in a field meet specific criteria. Criteria for measured values can be based on any logical operators in a filter.
@@ -2160,24 +2048,6 @@ Gets the time period member in a time field which matches the current query exec
 This function works will all [date resolutions](#date-resolution). However, the active date resolution of the query must match the date resolution in the function.
 
 ##### Syntax (`NOW`)
-
-```
-NOW(<datetime_field>)
-
-```
-
-##### Example (`NOW`)
-
-Get the total quantity for the current month when grouping by month.
-
-```
-(SUM([Quantity]), NOW([Months in Date]))
-
-```
-
----
-
-## Syntax (`NOW`)
 
 ```
 NOW(<datetime_field>)
@@ -2356,24 +2226,9 @@ RSUM([Total Revenue])
 
 ---
 
-accumulate the sum continuously when there are two or more dimensions. Defaults to `FALSE`.
-
-##### Example (`RSUM`)
-
-Get the running total of the total revenue.
-
-```
-RSUM([Total Revenue])
-
-```
-
----
-
 ## Fusion Elasticube-only Functions
 
 These functions can **only** be used with Fusion ElastiCube datamodels (see [documentation](https://docs.sisense.com/main/SisenseLinux/data-sources.htm?tocpath=Data%20Sources%7C_____1#DataSourceConnectionTypes) for further details).
-
-ed with Fusion ElastiCube datamodels (see [documentation](https://docs.sisense.com/main/SisenseLinux/data-sources.htm?tocpath=Data%20Sources%7C_____1#DataSourceConnectionTypes) for further details).
 
 ### Aggregative Functions
 
@@ -2549,21 +2404,6 @@ SLOPE([month.int], [Total Sales])
 
 ---
 
-ld>, <numeric_field>)
-
-```
-
-##### Example (`SLOPE`)
-
-Calculate the slope of the regression line that represents a trend of items sold for each month.
-
-```
-SLOPE([month.int], [Total Sales])
-
-```
-
----
-
 ### Statistical Functions
 
 Functions that calculate statistical data.
@@ -2705,19 +2545,6 @@ TDIST([Score], 3, TRUE);
 
 ---
 
-unction. `FALSE` for probability density function.
-
-##### Example (`TDIST`)
-
-Calculate a student's T-distribution of a given score, with 3 degrees of freedom.
-
-```
-TDIST([Score], 3, TRUE);
-
-```
-
----
-
 ### Mathematical Functions
 
 Functions that perform mathematical operations.
@@ -2769,26 +2596,6 @@ SINH([Total Revenue])
 #### Hyperbolic Tangent (`TANH`)
 
 Calculates the hyperbolic tangent of a given value.
-
-##### Syntax (`TANH`)
-
-```
-TANH(<numeric_field>)
-
-```
-
-##### Example (`TANH`)
-
-Calculates the hyperbolic tangent of the total revenue.
-
-```
-TANH([Total Revenue])
-
-```
-
----
-
-tangent of a given value.
 
 ##### Syntax (`TANH`)
 
@@ -2898,11 +2705,3 @@ RINT("m <-log(matrix(unlist(args), ncol=2)); kmeans (m,3)$cluster", [Total Cost]
 For additional discussion on using `RINT` and how to do advanced forecasting with R, see [this community post](https://community.sisense.com/kb/faqs/so-how-exactly-does-r-work-with-sisense/8817).
 
 ---
-
-================================================================================
-
-, see [this community post](https://community.sisense.com/kb/faqs/so-how-exactly-does-r-work-with-sisense/8817).
-
----
-
-================================================================================

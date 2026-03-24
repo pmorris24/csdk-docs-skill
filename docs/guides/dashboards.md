@@ -1,19 +1,3 @@
-# Embedded Dashboards
-
-Alternative to iFrame and Embed SDK, Compose SDK now allows you (1) to embed an existing Fusion dashboard into your application, (2) to customize the dashboard to your specific needs, or (3) to compose a dashboard fully in code. These capabilities are available in React, Angular, and Vue.
-
-<SectionIndex />
-
-
-<!-- Source: guides/dashboards/guide-1-embed-fusion-dashboard.md -->
-# 1 | Embed Fusion Dashboard
-
-oard fully in code. These capabilities are available in React, Angular, and Vue.
-
-<SectionIndex />
-
-
-<!-- Source: guides/dashboards/guide-1-embed-fusion-dashboard.md -->
 # 1 | Embed Fusion Dashboard
 
 ## Component `DashboardById`
@@ -73,9 +57,6 @@ const dashboardOid = ref<string>('your-dashboard-oid');
 Follow [this guide](../custom-widgets/index.md) to learn how to define your own custom widget component, and have it rendered in place of a corresponding Fusion widget plugin when using the `DashboardById` component.
 :::
 
-/custom-widgets/index.md) to learn how to define your own custom widget component, and have it rendered in place of a corresponding Fusion widget plugin when using the `DashboardById` component.
-:::
-
 ## Simple customization
 
 While `DashboardById` does not allow customizations, you can still use a `ThemeProvider` (React and Vue) or `ThemeService` (Angular) to apply a consistent look and feel to the dashboard elements including toolbar, widgets panel, and filters panel.
@@ -108,17 +89,8 @@ In this section you learned how to embed a Fusion dashboard using component `Das
 Go to the [next lesson](./guide-2-customize-fusion-dashboard.md).
 
 
+---
 
-<!-- Source: guides/dashboards/guide-2-customize-fusion-dashboard.md -->
-# 2 | Customize Fusion Dashboard
-
-dded Fusion dashboard.
-
-Go to the [next lesson](./guide-2-customize-fusion-dashboard.md).
-
-
-
-<!-- Source: guides/dashboards/guide-2-customize-fusion-dashboard.md -->
 # 2 | Customize Fusion Dashboard
 
 ## Generic `Dashboard` Component
@@ -245,8 +217,6 @@ On the other hand, `DashboardProps` is a set of properties for the generic `Dash
 Following the design principle of Separation of Concerns, `DashboardProps` and `Dashboard` are no longer coupled to the `DashboardModel`.
 
 It is still very simple to translate the `DashboardModel` to `DashboardProps` using the provided utilty function, `dashboardModelTranslator.toDashboardProps`, and you have access to all elements of the dashboard for manipulation, which we will demonstrate in the next example.
-
-using the provided utilty function, `dashboardModelTranslator.toDashboardProps`, and you have access to all elements of the dashboard for manipulation, which we will demonstrate in the next example.
 
 ## Customize Embedded Fusion Dashboard
 
@@ -433,13 +403,6 @@ const dashboardProps = computed(() => {
 Alternative to manipulating `DashboardProps.filters` directly, you can use dashboard helper functions available from each of the `sdk-ui-*` packages.
 :::
 
-hboard with Customizations')
-
-
-::: tip Note
-Alternative to manipulating `DashboardProps.filters` directly, you can use dashboard helper functions available from each of the `sdk-ui-*` packages.
-:::
-
 
 ## Next Up
 
@@ -448,8 +411,8 @@ In this section you learned how to embed a Fusion dashboard and customize it to 
 Go to the [next lesson](./guide-3-compose-dashboard-in-code.md).
 
 
+---
 
-<!-- Source: guides/dashboards/guide-3-compose-dashboard-in-code.md -->
 # 3 | Compose Dashboard In Code
 
 It’s time to detach ourselves from Fusion dashboards.
@@ -458,11 +421,6 @@ In the following examples, you'll learn how to programmatically create a dashboa
 
 ::: tip Note
 The examples below assume that the app is already set up to connect to the Sample ECommerce data model in a Sisense instance using `SisenseContextProvider` – see [Quickstart guides](../../getting-started/index.md).
-
-To keep the code concise, the examples are provided in React, but the same configurations can be adapted for Angular and Vue.
-:::
-
-rovider` – see [Quickstart guides](../../getting-started/index.md).
 
 To keep the code concise, the examples are provided in React, but the same configurations can be adapted for Angular and Vue.
 :::
@@ -486,14 +444,6 @@ const CodeExample = () => {
   }, []);
 
   return <Dashboard {...dashboardProps} />;
-};
-
-export default CodeExample;
-```
-
-![Empty Sample ECommerce Dashboard](../../img/dashboard-guides/generic-dashboard-empty.png 'Empty Sample ECommerce Dashboard')
-
-<Dashboard {...dashboardProps} />;
 };
 
 export default CodeExample;
@@ -548,10 +498,6 @@ Let's take a closer look at `WidgetProps`:
 - `widgetType` can be one of the four currently supported types: `chart`, `pivot`, `text`, and `plugin`.
 - `filters` is not provided as the dashboard does not have any filters yet.
 - `layoutOptions` helps to customize how `widgets` are laid out. If it is not provided, dashboard will use a simple vertical column layout by default.
-
-This isn't a very interesting dashboard. Let’s improve this in the next example.
-
-ze how `widgets` are laid out. If it is not provided, dashboard will use a simple vertical column layout by default.
 
 This isn't a very interesting dashboard. Let’s improve this in the next example.
 
@@ -854,22 +800,9 @@ The dashboard is fully interactive. Cross filtering and drilldown work as expect
 At first glance, this code may seem like a significant leap from the previous example. However, upon closer inspection, you'll notice there's no advanced coding or complex algorithms involved. It's simply a standard configuration of dashboard elements: 9 widgets, 3 dashboard filters, and a widget layout.
 The Compose SDK handles all the internal wiring and interactions for you.
 
-involved. It's simply a standard configuration of dashboard elements: 9 widgets, 3 dashboard filters, and a widget layout.
-The Compose SDK handles all the internal wiring and interactions for you.
-
 
 ## Learn More
 
 In this section you learned how to compose a dashboard fully in code using the `Dashboard` component.
 
 To deepen your understanding, check out [the API Doc](../../modules/index.md) and [Compose SDK Playground](https://www.sisense.com/developers/playground/?example=fusion-assets%2Ffusion-dashboard).
-
-
-
-<!-- Source: guides/drilldown/index.md -->
-
-e API Doc](../../modules/index.md) and [Compose SDK Playground](https://www.sisense.com/developers/playground/?example=fusion-assets%2Ffusion-dashboard).
-
-
-
-<!-- Source: guides/drilldown/index.md -->

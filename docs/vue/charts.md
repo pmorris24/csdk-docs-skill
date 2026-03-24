@@ -1,9 +1,6 @@
-# Class AreaChart
-
-A Vue component similar to a [LineChart](class.LineChart.md),
-but with filled in areas under each line and an option to display them as stacked.
-
-emapChart](class.TreemapChart.md)
+---
+title: AreaChart
+---
 
 # Class AreaChart
 
@@ -35,20 +32,6 @@ const areaChartProps = ref<AreaChartProps>({
   dataOptions: {
     category: [dimProductName],
     value: [{ column: measureTotalRevenue, sortType: 'sortDesc' }],
-    breakBy: [],
-  },
-  filters: [],
-});
-```
-<img src="../../../img/vue-area-chart-example.png" width="800"/>
-
-## Param
-
-Area chart properties
-
-## Properties
-
-reTotalRevenue, sortType: 'sortDesc' }],
     breakBy: [],
   },
   filters: [],
@@ -158,11 +141,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -173,16 +151,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`AreaStyleOptions`](../interfaces/interface.AreaStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-aoptions).
 
 ***
 
@@ -257,23 +225,16 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: AreaRangeChart
+---
 
 # Class AreaRangeChart
 
 A Vue component that displays a range of data over a given time period
-or across multiple categories. It is particularly useful for visualizing
-the minimum and maximum values in a dataset, along with the area between these values.
-
-range of data over a given time period
 or across multiple categories. It is particularly useful for visualizing
 the minimum and maximum values in a dataset, along with the area between these values.
 
@@ -324,23 +285,6 @@ Area chart properties
 
 ## Properties
 
-e'),
-        1.4,
-      ),
-    }],
-    breakBy: [],
-  },
-  filters: [],
-});
-```
-<img src="../../../img/vue-area-range-chart-example.png" width="800"/>
-
-## Param
-
-Area chart properties
-
-## Properties
-
 ### Data
 
 #### dataSet
@@ -437,11 +381,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -449,14 +388,6 @@ To learn more about using filter components to create highlights, see the
 > **`readonly`** **dataOptions**: [`RangeChartDataOptions`](../../sdk-ui/interfaces/interface.RangeChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`AreaRangeStyleOptions`](../interfaces/interface.AreaRangeStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
 
 ***
 
@@ -531,15 +462,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: AreamapChart
+---
 
 # Class AreamapChart
 
@@ -573,18 +501,6 @@ const measureTotalRevenue = measureFactory.sum(DM.Fact_Sale_orders.OrderRevenue,
      color: [{ column: measureTotalRevenue, title: 'Total Revenue' }],
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-</script>
-```
-<img src="../../../img/vue-areamap-chart-example.png" width="600px" />
-
-## Param
-
-Areamap chart properties
-
-## Properties
-
-ory.topRanking(dimProductName, measureTotalRevenue, 10)],
  });
 </script>
 ```
@@ -688,11 +604,6 @@ To learn more about using filter factory functions to create highlights, see the
 (2) Array of [Filter](../../sdk-data/interfaces/interface.Filter.md) controlled by filter UI components – for example [`MemberFilterTile`](../../sdk-ui/filter-tiles/function.MemberFilterTile.md).
 
 Use this option for highlights that you want your users to set using pre-built UI components.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-ts.
 
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
@@ -740,12 +651,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-# Class BarChart
 
-A Vue component representing categorical data with horizontal rectangular bars,
-whose lengths are proportional to the values that they represent.
+---
 
-ata/interfaces/interface.Data.md)
+---
+title: BarChart
+---
 
 # Class BarChart
 
@@ -780,18 +691,6 @@ const measureTotalRevenue = measureFactory.sum(DM.Fact_Sale_orders.OrderRevenue,
      breakBy: [],
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-</script>
-```
-<img src="../../../img/vue-bar-chart-example.png" width="800"/>
-
-## Param
-
-Bar chart properties
-
-## Properties
-
-[filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
  });
 </script>
 ```
@@ -899,11 +798,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -914,14 +808,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`StackableStyleOptions`](../interfaces/interface.StackableStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
 
 ***
 
@@ -996,15 +882,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: BoxplotChart
+---
 
 # Class BoxplotChart
 
@@ -1040,17 +923,6 @@ const boxplotChartProps = ref<BoxplotChartProps>({
      outliersEnabled: true,
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-boxplot-chart-example.png" width="600px" />
-
-## Param
-
-Boxplot chart properties
-
-## Properties
-
-filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
  });
 ```
 <img src="../../../img/vue-boxplot-chart-example.png" width="600px" />
@@ -1157,11 +1029,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1169,16 +1036,6 @@ To learn more about using filter components to create highlights, see the
 > **`readonly`** **dataOptions**: [`BoxplotChartCustomDataOptions`](../type-aliases/type-alias.BoxplotChartCustomDataOptions.md) \| [`BoxplotChartDataOptions`](../type-aliases/type-alias.BoxplotChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`BoxplotStyleOptions`](../interfaces/interface.BoxplotStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-hart
 
 ***
 
@@ -1247,15 +1104,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: CalendarHeatmapChart
+---
 
 # Class CalendarHeatmapChart
 
@@ -1289,20 +1143,6 @@ const calendarChartProps = ref<CalendarHeatmapChartProps>({
   },
   styleOptions: {
     viewType: 'quarter',
-  },
-  filters: [],
-});
-</script>
-```
-<img src="../../../img/vue-calendar-heatmap-chart-example.png" width="800"/>
-
-## Param
-
-Calendar heatmap chart properties
-
-## Properties
-
-viewType: 'quarter',
   },
   filters: [],
 });
@@ -1412,11 +1252,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1428,12 +1263,6 @@ Configurations for how to interpret and present the data passed to the chart
 ***
 
 #### styleOptions
-
-> **`readonly`** **styleOptions**?: [`CalendarHeatmapStyleOptions`](../interfaces/interface.CalendarHeatmapStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-styleOptions
 
 > **`readonly`** **styleOptions**?: [`CalendarHeatmapStyleOptions`](../interfaces/interface.CalendarHeatmapStyleOptions.md)
 
@@ -1498,25 +1327,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
-
-# Class Chart
-
-A Vue component used for easily switching chart types or rendering multiple series of different chart types.
-
-) |
-
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: Chart
+---
 
 # Class Chart
 
@@ -1576,29 +1392,6 @@ const chartProps = ref<ChartProps>({
 
 <img src="../../../img/vue-chart-example.png" width="800px" />
 
-ions="chartProps.dataOptions"
-      :filters="chartProps.filters"
-      :styleOptions="chartProps.styleOptions"
-    />
-</template>
-```
-
-<img src="../../../img/vue-chart-example.png" width="800px" />
-
-## Param
-
-Chart properties
-
-## Properties
-
-s="chartProps.filters"
-      :styleOptions="chartProps.styleOptions"
-    />
-</template>
-```
-
-<img src="../../../img/vue-chart-example.png" width="800px" />
-
 ## Param
 
 Chart properties
@@ -1701,11 +1494,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### chartType
@@ -1732,11 +1520,6 @@ see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-c
 > **`readonly`** **styleOptions**?: [`ChartStyleOptions`](../type-aliases/type-alias.ChartStyleOptions.md)
 
 Configurations for how to style and present a chart's data.
-
-To learn more about using style options,
-see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#styleoptions).
-
-tions for how to style and present a chart's data.
 
 To learn more about using style options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#styleoptions).
@@ -1794,15 +1577,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: ColumnChart
+---
 
 # Class ColumnChart
 
@@ -1848,17 +1628,6 @@ Column chart properties
 
 ## Properties
 
-ers: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
-});
-```
-<img src="../../../img/vue-column-chart-example.png" width="800"/>
-
-## Param
-
-Column chart properties
-
-## Properties
-
 ### Data
 
 #### dataSet
@@ -1955,11 +1724,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1970,14 +1734,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`StackableStyleOptions`](../interfaces/interface.StackableStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
 
 ***
 
@@ -2052,22 +1808,16 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: FunnelChart
+---
 
 # Class FunnelChart
 
 A Vue component that wraps the FunnelChart Preact component for use in Vue applications.
-It maintains compatibility with Vue's reactivity system while preserving the functionality of the FunnelChart.
-
-Vue component that wraps the FunnelChart Preact component for use in Vue applications.
 It maintains compatibility with Vue's reactivity system while preserving the functionality of the FunnelChart.
 
 ## Example
@@ -2111,16 +1861,6 @@ Funnel chart properties
 
 ## Properties
 
-rc="../../../img/vue-funnel-chart-example.png" width="800"/>
-
-Note that the chart sorts the measure, `Unique Users`, in descending order by default.
-
-## Param
-
-Funnel chart properties
-
-## Properties
-
 ### Data
 
 #### dataSet
@@ -2217,11 +1957,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -2229,16 +1964,6 @@ To learn more about using filter components to create highlights, see the
 > **`readonly`** **dataOptions**: [`CategoricalChartDataOptions`](../interfaces/interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`FunnelStyleOptions`](../interfaces/interface.FunnelStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-chart
 
 ***
 
@@ -2313,15 +2038,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: IndicatorChart
+---
 
 # Class IndicatorChart
 
@@ -2353,18 +2075,6 @@ const measureTotalRevenue = measureFactory.sum(DM.Fact_Sale_orders.OrderRevenue,
       value: [{ column: measureTotalRevenue, sortType: 'sortDesc' }],
     },
     filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
-  });
-</script>
-```
-<img src="../../../img/vue-indicator-chart-example.png" width="400px" />
-
-## Param
-
-Indicator chart properties
-
-## Properties
-
-opRanking(dimProductName, measureTotalRevenue, 10)],
   });
 </script>
 ```
@@ -2468,11 +2178,6 @@ To learn more about using filter factory functions to create highlights, see the
 (2) Array of [Filter](../../sdk-data/interfaces/interface.Filter.md) controlled by filter UI components – for example [`MemberFilterTile`](../../sdk-ui/filter-tiles/function.MemberFilterTile.md).
 
 Use this option for highlights that you want your users to set using pre-built UI components.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-ts.
 
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
@@ -2521,15 +2226,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: LineChart
+---
 
 # Class LineChart
 
@@ -2564,17 +2266,6 @@ const lineChartProps = ref<LineChartProps>({
      breakBy: [],
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-line-chart-example.png" width="800px" />
-
-## Param
-
-Line chart properties
-
-## Properties
-
-ers: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
  });
 ```
 <img src="../../../img/vue-line-chart-example.png" width="800px" />
@@ -2692,21 +2383,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`LineStyleOptions`](../interfaces/interface.LineStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-ng).
-
 ### Chart
 
 #### styleOptions
@@ -2780,15 +2456,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: PieChart
+---
 
 # Class PieChart
 
@@ -2822,17 +2495,6 @@ const pieChartProps = ref<PieChartProps>({
      value: [{ column: measureTotalRevenue, sortType: 'sortDesc' }],
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-pie-chart-example.png" width="800px" />
-
-## Param
-
-Pie chart properties
-
-## Properties
-
-lters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
  });
 ```
 <img src="../../../img/vue-pie-chart-example.png" width="800px" />
@@ -2947,21 +2609,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`PieStyleOptions`](../interfaces/interface.PieStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-ting).
-
 ### Chart
 
 #### styleOptions
@@ -3035,15 +2682,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: PolarChart
+---
 
 # Class PolarChart
 
@@ -3077,17 +2721,6 @@ const polarChartProps = ref<PolarChartProps>({
      breakBy: [],
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-polar-chart-example.png" width="600px" />
-
-## Param
-
-Polar chart properties
-
-## Properties
-
-s: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
  });
 ```
 <img src="../../../img/vue-polar-chart-example.png" width="600px" />
@@ -3205,21 +2838,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`PolarStyleOptions`](../interfaces/interface.PolarStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-).
-
 ### Chart
 
 #### styleOptions
@@ -3293,15 +2911,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: ScatterChart
+---
 
 # Class ScatterChart
 
@@ -3309,11 +2924,6 @@ A Vue component displaying the distribution of two variables on an X-Axis, Y-Axi
 and two additional fields of data that are shown as colored circles scattered across the chart.
 
 **Point**: A field that for each of its members a scatter point is drawn. The maximum amount of data points is 500.
-
-**Size**: An optional field represented by the size of the circles.
-If omitted, all scatter points are equal in size. If used, the circle sizes are relative to their values.
-
-of data points is 500.
 
 **Size**: An optional field represented by the size of the circles.
 If omitted, all scatter points are equal in size. If used, the circle sizes are relative to their values.
@@ -3345,17 +2955,6 @@ const scatterChartProps = ref<ScatterChartProps>({
      y: measureTotalRevenue,
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-scatter-chart-example.png" width="800px" />
-
-## Param
-
-Scatter chart properties
-
-## Properties
-
-filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
  });
 ```
 <img src="../../../img/vue-scatter-chart-example.png" width="800px" />
@@ -3470,19 +3069,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`ScatterStyleOptions`](../interfaces/interface.ScatterStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
 ### Chart
 
 #### styleOptions
@@ -3550,22 +3136,16 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: ScattermapChart
+---
 
 # Class ScattermapChart
 
 A Vue component that wraps the ScattermapChart Preact component for use in Vue applications.
-It maintains compatibility with Vue's reactivity system while preserving the functionality of the ScattermapChart.
-
-ponent that wraps the ScattermapChart Preact component for use in Vue applications.
 It maintains compatibility with Vue's reactivity system while preserving the functionality of the ScattermapChart.
 
 ## Example
@@ -3595,18 +3175,6 @@ const scattermapChartProps = ref<ScattermapChartProps>({
      size: { column: measureTotalRevenue, title: 'Total Revenue' },
    },
    filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-</script>
-```
-<img src="../../../img/vue-scattermap-chart-example.png" width="600px" />
-
-## Param
-
-Scattermap chart properties
-
-## Properties
-
-pRanking(dimProductName, measureTotalRevenue, 10)],
  });
 </script>
 ```
@@ -3710,11 +3278,6 @@ To learn more about using filter factory functions to create highlights, see the
 (2) Array of [Filter](../../sdk-data/interfaces/interface.Filter.md) controlled by filter UI components – for example [`MemberFilterTile`](../../sdk-ui/filter-tiles/function.MemberFilterTile.md).
 
 Use this option for highlights that you want your users to set using pre-built UI components.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-ts.
 
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
@@ -3762,26 +3325,18 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: StreamgraphChart
+---
 
 # Class StreamgraphChart
 
 A Vue component that displays a streamgraph chart.
 
 A streamgraph is a type of stacked area chart where areas are displaced around
-a central axis. It is particularly effective for displaying volume across
-different categories or over time with a relative scale that emphasizes
-overall patterns and trends.
-
-as are displaced around
 a central axis. It is particularly effective for displaying volume across
 different categories or over time with a relative scale that emphasizes
 overall patterns and trends.
@@ -3826,20 +3381,6 @@ Streamgraph chart properties
 
 ## Properties
 
-s: [filterFactory.members(DM.Category.Category, ['Electronics', 'Clothing'])],
-  styleOptions: {
-    width: 1200,
-    height: 500,
-  },
-});
-```
-
-## Param
-
-Streamgraph chart properties
-
-## Properties
-
 ### Data
 
 #### dataSet
@@ -3936,11 +3477,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -3957,14 +3493,6 @@ To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
 
 ***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`StreamgraphStyleOptions`](../interfaces/interface.StreamgraphStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-*
 
 #### styleOptions
 
@@ -4037,15 +3565,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: SunburstChart
+---
 
 # Class SunburstChart
 
@@ -4083,24 +3608,6 @@ const sunburstChartProps = ref<SunburstChartProps>({
 ```
 <img src="../../../img/vue-sunburst-chart-example.png" width="600px" />
 
-enue, sortType: 'sortDesc' }],
-   },
-   filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-sunburst-chart-example.png" width="600px" />
-
-## Param
-
-Sunburst Chart properties
-
-## Properties
-
-lterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-sunburst-chart-example.png" width="600px" />
-
 ## Param
 
 Sunburst Chart properties
@@ -4203,11 +3710,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4215,16 +3717,6 @@ To learn more about using filter components to create highlights, see the
 > **`readonly`** **dataOptions**: [`CategoricalChartDataOptions`](../interfaces/interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`SunburstStyleOptions`](../interfaces/interface.SunburstStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-rt
 
 ***
 
@@ -4299,15 +3791,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: TreemapChart
+---
 
 # Class TreemapChart
 
@@ -4346,24 +3835,6 @@ const treemapChartProps = ref<TreemapChartProps>({
 ```
 <img src="../../../img/vue-treemap-chart-example.png" width="600px" />
 
-venue, sortType: 'sortDesc' }],
-   },
-   filters: [filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-treemap-chart-example.png" width="600px" />
-
-## Param
-
-Treemap chart properties
-
-## Properties
-
-filterFactory.topRanking(dimProductName, measureTotalRevenue, 10)],
- });
-```
-<img src="../../../img/vue-treemap-chart-example.png" width="600px" />
-
 ## Param
 
 Treemap chart properties
@@ -4466,11 +3937,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4478,16 +3944,6 @@ To learn more about using filter components to create highlights, see the
 > **`readonly`** **dataOptions**: [`CategoricalChartDataOptions`](../interfaces/interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **`readonly`** **styleOptions**?: [`TreemapStyleOptions`](../interfaces/interface.TreemapStyleOptions.md)
-
-Configurations for how to style and present a chart's data.
-
-hart
 
 ***
 
@@ -4562,15 +4018,12 @@ It can be used to inject modification of queried data.
 
 [`Data`](../../sdk-data/interfaces/interface.Data.md)
 
-##### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `data` | [`Data`](../../sdk-data/interfaces/interface.Data.md) |
+---
 
-##### Returns
-
-[`Data`](../../sdk-data/interfaces/interface.Data.md)
+---
+title: boxWhiskerProcessResult
+---
 
 # Function boxWhiskerProcessResult
 
@@ -4594,63 +4047,3 @@ Processes box whisker data and outliers data to combine them into a single data 
 [`QueryResultData`](../../sdk-data/interfaces/interface.QueryResultData.md)
 
 The combined data with outliers included in the box whisker plot.
-
-
-## Dashboards
-
-omizing data processing. |
-
-## Returns
-
-[`QueryResultData`](../../sdk-data/interfaces/interface.QueryResultData.md)
-
-The combined data with outliers included in the box whisker plot.
-
-
-## Dashboards
-
-# Dashboards
-
-Vue components and utilities for working with dashboards
-
-- [ChartWidget](class.ChartWidget.md)
-- [Dashboard](class.Dashboard.md)
-- [dashboardHelpers](namespace.dashboardHelpers/index.md) - Utility functions to manipulate dashboard elements
-- [extractDimensionsAndMeasures](function.extractDimensionsAndMeasures.md)
-- [PivotTableWidget](class.PivotTableWidget.md)
-- [useComposedDashboard](function.useComposedDashboard.md)
-- [useCustomWidgets](function.useCustomWidgets.md)
-- [useJtdWidget](function.useJtdWidget.md)
-- [Widget](class.Widget.md)
-
-# Namespace dashboardHelpers
-
-Utility functions to manipulate `DashboardProps`
-
-## Index
-
-### Functions
-
-- [addFilter](functions/function.addFilter.md)
-- [addFilters](functions/function.addFilters.md)
-- [removeFilter](functions/function.removeFilter.md)
-- [removeFilters](functions/function.removeFilters.md)
-- [replaceFilter](functions/function.replaceFilter.md)
-- [replaceFilters](functions/function.replaceFilters.md)
-
-Utility functions to manipulate `DashboardProps`
-
-functions/function.removeFilters.md)
-- [replaceFilter](functions/function.replaceFilter.md)
-- [replaceFilters](functions/function.replaceFilters.md)
-
-Utility functions to manipulate `DashboardProps`
-
-# Functions
-
-- [addFilter](function.addFilter.md)
-- [addFilters](function.addFilters.md)
-- [removeFilter](function.removeFilter.md)
-- [removeFilters](function.removeFilters.md)
-- [replaceFilter](function.replaceFilter.md)
-- [replaceFilters](function.replaceFilters.md)

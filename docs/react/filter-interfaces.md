@@ -1,3 +1,7 @@
+---
+title: CriteriaFilterTileProps
+---
+
 # Interface CriteriaFilterTileProps
 
 Props of the [CriteriaFilterTile](../filter-tiles/function.CriteriaFilterTile.md) component.
@@ -9,18 +13,6 @@ Props of the [CriteriaFilterTile](../filter-tiles/function.CriteriaFilterTile.md
 > **arrangement**?: [`FilterVariant`](../type-aliases/type-alias.FilterVariant.md)
 
 Arrangement of the filter inputs. Use vertical for standard filter tiles and horizontal for toolbars
-
-***
-
-### filter
-
-> **filter**: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)
-
-Text or numeric filter object to initialize filter type and default values
-
-***
-
-and horizontal for toolbars
 
 ***
 
@@ -88,149 +80,14 @@ Callback returning updated filter object
 
 Title for the filter tile, which is rendered into the header
 
-# Interface DateRangeFilterTileProps
 
-Props of the [DateRangeFilterTile](../filter-tiles/function.DateRangeFilterTile.md) component.
+---
 
-## Properties
-
-### attribute
-
-> **attribute**: [`LevelAttribute`](../../sdk-data/interfaces/interface.LevelAttribute.md)
-
-Date level attribute the filter is based on
-
-***
-
-### dataSource
-
-> **dataSource**?: [`DataSource`](../../sdk-data/type-aliases/type-alias.DataSource.md)
-
-Data source the query is run against - e.g. `Sample ECommerce`
-
-If not specified, the query will use the `defaultDataSource` specified in the parent Sisense Context.
-
-***
-
-### earliestDate
-
-> **earliestDate**?: `string`
-
-Earliest allowed date for selection.
-
-If not specified, the earliest date of the target date-level attribute will be used.
-
-***
-
-### filter
-
-> **filter**: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)
-
-Date range filter.
-
-***
-
-f not specified, the earliest date of the target date-level attribute will be used.
-
-***
-
-### filter
-
-> **filter**: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)
-
-Date range filter.
-
-***
-
-### lastDate
-
-> **lastDate**?: `string`
-
-Latest allowed date for selection.
-
-If not specified, the latest date of the target date-level attribute will be used.
-
-***
-
-### onChange
-
-> **onChange**: (`filter`) => `void`
-
-Callback function that is called when the date range filter object should be updated.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `filter` | [`Filter`](../../sdk-data/interfaces/interface.Filter.md) | Date range filter |
-
-#### Returns
-
-`void`
-
-***
-
-### onDelete
-
-> **onDelete**?: () => `void`
-
-Filter delete callback
-
-#### Returns
-
-`void`
-
-***
-
-### onEdit
-
-> **onEdit**?: () => `void`
-
-Filter edit callback
-
-#### Returns
-
-`void`
-
-***
-
-### parentFilters
-
-> **parentFilters**?: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)[]
-
-List of filters this filter is dependent on.
-
-***
-
-### title
-
-> **title**: `string`
-
-Filter tile title
+---
+title: FilterMembersErrorState
+---
 
 # Interface FilterMembersErrorState
-
-State of a filter members load that has failed.
-
-## Properties
-
-### data
-
-> **data**: `undefined`
-
-The result data
-
-***
-
-### error
-
-> **error**: `Error`
-
-The error if any occurred
-
-***
-
-rsErrorState
 
 State of a filter members load that has failed.
 
@@ -281,6 +138,13 @@ Whether the data fetching has succeeded
 > **status**: `"error"`
 
 The status of the data fetching execution
+
+
+---
+
+---
+title: FilterMembersLoadingState
+---
 
 # Interface FilterMembersLoadingState
 
@@ -334,6 +198,13 @@ Whether the data fetching has succeeded
 
 The status of the data fetching execution
 
+
+---
+
+---
+title: FilterMembersSuccessState
+---
+
 # Interface FilterMembersSuccessState
 
 State of a filter members load that has succeeded.
@@ -343,28 +214,6 @@ State of a filter members load that has succeeded.
 ### data
 
 > **data**: [`GetFilterMembersData`](interface.GetFilterMembersData.md)
-
-The result data
-
-***
-
-### error
-
-> **error**: `undefined`
-
-The error if any occurred
-
-***
-
-### isError
-
-> **isError**: `false`
-
-Whether the data fetching has failed
-
-***
-
-ce.GetFilterMembersData.md)
 
 The result data
 
@@ -407,6 +256,13 @@ Whether the data fetching has succeeded
 > **status**: `"success"`
 
 The status of the data fetching execution
+
+
+---
+
+---
+title: FilterTileProps
+---
 
 # Interface FilterTileProps
 
@@ -460,26 +316,6 @@ Filter delete callback
 
 ***
 
-er` | [`Filter`](../../sdk-data/interfaces/interface.Filter.md) \| `null` |
-
-#### Returns
-
-`void`
-
-***
-
-### onDelete
-
-> **onDelete**?: () => `void`
-
-Filter delete callback
-
-#### Returns
-
-`void`
-
-***
-
 ### onEdit
 
 > **onEdit**?: (`levelIndex`?) => `void`
@@ -496,17 +332,12 @@ Filter edit callback
 
 `void`
 
-# Interface FiltersPanelConfig
 
-Configuration for the filters panel
+---
 
-## Properties
-
-dex of the filter level that triggers the onEdit action (in the case of a CascadingFilter) |
-
-#### Returns
-
-`void`
+---
+title: FiltersPanelConfig
+---
 
 # Interface FiltersPanelConfig
 
@@ -572,19 +403,12 @@ Configures the available actions within the filters panel.
 >
 >
 
-# Interface FiltersPanelProps
 
-Props of the [FiltersPanel](../filter-tiles/function.FiltersPanel.md) component
+---
 
-## Properties
-
-ed.
-> >
-> > If not specified, the default value is `false`.
-> >
-> >
->
->
+---
+title: FiltersPanelProps
+---
 
 # Interface FiltersPanelProps
 
@@ -632,6 +456,13 @@ Callback to handle changes in filters
 
 `void`
 
+
+---
+
+---
+title: GetFilterMembersData
+---
+
 # Interface GetFilterMembersData
 
 Result data of retrieving filter members.
@@ -676,21 +507,16 @@ Flag indicating if there is a background filter applied
 
 Array of members that are currently selected
 
+
+---
+
+---
+title: GetFilterMembersParams
+---
+
 # Interface GetFilterMembersParams
 
 Params for [useGetFilterMembers](../filter-tiles/function.useGetFilterMembers.md)
-
-## Properties
-
-### defaultDataSource
-
-> **defaultDataSource**?: [`DataSource`](../../sdk-data/type-aliases/type-alias.DataSource.md)
-
-Default data source to use if filter does not have one
-
-***
-
-md)
 
 ## Properties
 
@@ -726,6 +552,13 @@ Provided members filter
 
 List of filters this filter is dependent on
 
+
+---
+
+---
+title: Member
+---
+
 # Interface Member
 
 ## Properties
@@ -744,19 +577,12 @@ Key of the member
 
 Title of the member
 
-# Interface MemberFilterTileProps
 
-Props of the [MemberFilterTile](../filter-tiles/function.MemberFilterTile.md) component.
+---
 
-## Properties
-
-***
-
-### title
-
-> **title**: `string`
-
-Title of the member
+---
+title: MemberFilterTileProps
+---
 
 # Interface MemberFilterTileProps
 
@@ -840,27 +666,18 @@ List of filters this filter is dependent on
 
 ***
 
-ilter edit callback
-
-#### Returns
-
-`void`
-
-***
-
-### parentFilters
-
-> **parentFilters**?: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)[]
-
-List of filters this filter is dependent on
-
-***
-
 ### title
 
 > **title**: `string`
 
 Title for the filter tile, which is rendered into the header
+
+
+---
+
+---
+title: RelativeDateFilterTileProps
+---
 
 # Interface RelativeDateFilterTileProps
 
@@ -887,24 +704,6 @@ Relative date filter.
 ### limit
 
 > **limit**?: `object`
-
-Limit of the date range that can be selected.
-
-#### Type declaration
-
-> ##### `limit.maxDate`
->
-> **maxDate**: `string`
->
-> ##### `limit.minDate`
->
-> **minDate**: `string`
->
->
-
-***
-
-mit**?: `object`
 
 Limit of the date range that can be selected.
 
@@ -970,6 +769,13 @@ Callback function that is called when the relative date filter object should be 
 
 Filter tile title
 
+
+---
+
+---
+title: SelectedMember
+---
+
 # Interface SelectedMember
 
 ## Properties
@@ -979,26 +785,6 @@ Filter tile title
 > **inactive**?: `boolean`
 
 Boolean flag whether the member is inactive
-
-If not specified, the default value is `false`
-
-***
-
-### key
-
-> **key**: `string`
-
-Key of the member
-
-***
-
-### title
-
-> **title**: `string`
-
-Title of the member
-
-flag whether the member is inactive
 
 If not specified, the default value is `false`
 

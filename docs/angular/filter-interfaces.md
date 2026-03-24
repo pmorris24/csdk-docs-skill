@@ -1,3 +1,7 @@
+---
+title: CriteriaFilterTileProps
+---
+
 # Interface CriteriaFilterTileProps
 
 Props of the [CriteriaFilterTileComponent](../filter-tiles/class.CriteriaFilterTileComponent.md).
@@ -5,14 +9,6 @@ Props of the [CriteriaFilterTileComponent](../filter-tiles/class.CriteriaFilterT
 ## Properties
 
 ### arrangement
-
-> **arrangement**?: [`FilterVariant`](../type-aliases/type-alias.FilterVariant.md)
-
-Arrangement of the filter inputs. Use vertical for standard filter tiles and horizontal for toolbars
-
-***
-
-ngement
 
 > **arrangement**?: [`FilterVariant`](../type-aliases/type-alias.FilterVariant.md)
 
@@ -82,139 +78,12 @@ Filter edit callback
 
 Title for the filter tile, which is rendered into the header
 
-# Interface DateRangeFilterTileProps
 
-Props of the [DateRangeFilterTileComponent](../filter-tiles/class.DateRangeFilterTileComponent.md).
+---
 
-## Properties
-
-### attribute
-
-> **attribute**: [`LevelAttribute`](../../sdk-data/interfaces/interface.LevelAttribute.md)
-
-Date level attribute the filter is based on
-
-***
-
-geFilterTileComponent.md).
-
-## Properties
-
-### attribute
-
-> **attribute**: [`LevelAttribute`](../../sdk-data/interfaces/interface.LevelAttribute.md)
-
-Date level attribute the filter is based on
-
-***
-
-### dataSource
-
-> **dataSource**?: [`DataSource`](../../sdk-data/type-aliases/type-alias.DataSource.md)
-
-Data source the query is run against - e.g. `Sample ECommerce`
-
-If not specified, the query will use the `defaultDataSource` specified in the parent Sisense Context.
-
-***
-
-### earliestDate
-
-> **earliestDate**?: `string`
-
-Earliest allowed date for selection.
-
-If not specified, the earliest date of the target date-level attribute will be used.
-
-***
-
-### filter
-
-> **filter**: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)
-
-Date range filter.
-
-***
-
-### filterChange
-
-> **filterChange**?: (`filter`) => `void`
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `filter` | [`Filter`](../../sdk-data/interfaces/interface.Filter.md) |
-
-#### Returns
-
-`void`
-
-***
-
-### lastDate
-
-> **lastDate**?: `string`
-
-Latest allowed date for selection.
-
-If not specified, the latest date of the target date-level attribute will be used.
-
-***
-
-### onDelete
-
-> **onDelete**?: () => `void`
-
-Filter delete callback
-
-#### Returns
-
-`void`
-
-***
-
-### onEdit
-
-> **onEdit**?: () => `void`
-
-Filter edit callback
-
-#### Returns
-
-`void`
-
-***
-
-### parentFilters
-
-> **parentFilters**?: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)[]
-
-List of filters this filter is dependent on.
-
-***
-
-lter edit callback
-
-#### Returns
-
-`void`
-
-***
-
-### parentFilters
-
-> **parentFilters**?: [`Filter`](../../sdk-data/interfaces/interface.Filter.md)[]
-
-List of filters this filter is dependent on.
-
-***
-
-### title
-
-> **title**: `string`
-
-Filter tile title
+---
+title: FilterTileProps
+---
 
 # Interface FilterTileProps
 
@@ -246,20 +115,6 @@ Filter change event handler.
 
 ***
 
-ace.Filter.md)
-
-Filter to display
-
-***
-
-### filterChange
-
-> **filterChange**?: [`FilterChangeEventHandler`](../type-aliases/type-alias.FilterChangeEventHandler.md)
-
-Filter change event handler.
-
-***
-
 ### filterDelete
 
 > **filterDelete**?: [`FilterDeleteEventHandler`](../type-aliases/type-alias.FilterDeleteEventHandler.md)
@@ -274,15 +129,12 @@ Filter delete event handler.
 
 Filter edit event handler.
 
-# Interface FiltersPanelConfig
 
-Configuration for the filters panel
+---
 
-## Properties
-
-t**?: [`FilterEditEventHandler`](../type-aliases/type-alias.FilterEditEventHandler.md)
-
-Filter edit event handler.
+---
+title: FiltersPanelConfig
+---
 
 # Interface FiltersPanelConfig
 
@@ -348,18 +200,12 @@ Configures the available actions within the filters panel.
 >
 >
 
-# Interface FiltersPanelProps
 
-Props of the [FiltersPanelComponent](../filter-tiles/class.FiltersPanelComponent.md).
+---
 
-## Properties
-
->
-> > If not specified, the default value is `false`.
-> >
-> >
->
->
+---
+title: FiltersPanelProps
+---
 
 # Interface FiltersPanelProps
 
@@ -407,6 +253,13 @@ Callback to handle changes in filters
 
 `void`
 
+
+---
+
+---
+title: GetFilterMembersData
+---
+
 # Interface GetFilterMembersData
 
 Result data of retrieving filter members.
@@ -416,20 +269,6 @@ Result data of retrieving filter members.
 ### allMembers
 
 > **allMembers**: [`Member`](interface.Member.md)[]
-
-Array of all available members
-
-***
-
-### enableMultiSelection
-
-> **enableMultiSelection**: `boolean`
-
-Flag indicating if multiple selection is enabled
-
-***
-
-bers**: [`Member`](interface.Member.md)[]
 
 Array of all available members
 
@@ -465,6 +304,13 @@ Flag indicating if there is a background filter applied
 
 Array of members that are currently selected
 
+
+---
+
+---
+title: GetFilterMembersParams
+---
+
 # Interface GetFilterMembersParams
 
 Parameters for retrieving filter members.
@@ -493,6 +339,13 @@ Provided members filter
 
 List of filters this filter is dependent on
 
+
+---
+
+---
+title: Member
+---
+
 # Interface Member
 
 ## Properties
@@ -510,6 +363,13 @@ Key of the member
 > **title**: `string`
 
 Title of the member
+
+
+---
+
+---
+title: MemberFilterTileProps
+---
 
 # Interface MemberFilterTileProps
 
@@ -546,20 +406,6 @@ Source filter object. Caller is responsible for keeping track of filter state
 ### filterChange
 
 > **filterChange**?: (`filter`) => `void`
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `filter` | [`Filter`](../../sdk-data/interfaces/interface.Filter.md) \| `null` |
-
-#### Returns
-
-`void`
-
-***
-
-ge**?: (`filter`) => `void`
 
 #### Parameters
 
@@ -611,6 +457,13 @@ List of filters this filter is dependent on
 
 Title for the filter tile, which is rendered into the header
 
+
+---
+
+---
+title: RelativeDateFilterTileProps
+---
+
 # Interface RelativeDateFilterTileProps
 
 Props of the [RelativeDateFilterTileComponent](../filter-tiles/class.RelativeDateFilterTileComponent.md).
@@ -636,20 +489,6 @@ Relative date filter.
 ### filterChange
 
 > **filterChange**?: (`filter`) => `void`
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `filter` | [`Filter`](../../sdk-data/interfaces/interface.Filter.md) |
-
-#### Returns
-
-`void`
-
-***
-
-filterChange**?: (`filter`) => `void`
 
 #### Parameters
 

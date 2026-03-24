@@ -2,35 +2,57 @@
 
 Use this index to decide which file to read. Only read files relevant to the question.
 
-### ai-interfaces.md (3 KB)
-AiContextConfig, ChatbotProps, GetNlgInsightsParams, GetNlgInsightsProps, GetNlqResultParams
+### ai-interfaces.md (5 KB)
+# Interface ChatConfig,# Interface ChatbotProps # Interface GetNlgInsightsParams,# Interface GetNlgInsightsProps # Interface GetNlqResultParams
 
-### chart-interfaces.md (184 KB)
-AreaChartProps, AreaRangeChartProps, AreaRangeStyleOptions, AreaStyleOptions, AreamapChartDataOptions, AreamapChartProps, AreamapStyleOptions, BarChartProps, BoxplotChartProps, BoxplotStyleOptions, CalendarHeatmapChartDataOptions, CalendarHeatmapChartProps, CartesianChartDataOptions, CategoricalChartDataOptions, ChartProps, ChartWidgetProps, ColumnChartProps, FunnelChartProps, FunnelStyleOptions, labels, GaugeIndicatorStyleOptions, IndicatorChartDataOptions, IndicatorChartProps, LineChartProps, LineStyleOptions, NumericBarIndicatorStyleOptions, NumericSimpleIndicatorStyleOptions, PieChartProps, PieStyleOptions, PolarChartProps
+### chart-interfaces.md (174 KB)
+# Interface AreaChartProps,# Interface AreaRangeChartProps # Interface AreaRangeStyleOptions,# Interface AreaStyleOptions # Interface AreamapChartDataOptions,# Interface AreamapChartProps # Interface AreamapStyleOptions,# Interface BarChartProps # Interface BoxplotChartProps,# Interface BoxplotStyleOptions # Interface CalendarHeatmapChartDataOptions,# Interface CalendarHeatmapChartProps # Interface CalendarHeatmapStyleOptions,# Interface CartesianChartDataOptions # Interface CategoricalChartDataOptions,# Interface ChartProps # Interface ChartWidgetProps,# Interface ColumnChartProps # Interface DateRangeFilterTileProps,# Interface FunnelChartProps # Interface FunnelStyleOptions,# Interface GaugeIndicatorStyleOptions # Interface IndicatorChartDataOptions,# Interface IndicatorChartProps # Interface LineChartProps,# Interface LineStyleOptions # Interface NumericBarIndicatorStyleOptions,# Interface NumericSimpleIndicatorStyleOptions # Interface PieChartProps,# Interface PieStyleOptions
 
-### charts.md (176 KB)
-AreaChartComponent, Constructors, AreaRangeChartComponent, AreamapChartComponent, BarChartComponent, BoxplotChartComponent, CalendarHeatmapChartComponent, ChartComponent, ColumnChartComponent, FunnelChartComponent, IndicatorChartComponent, LineChartComponent, PieChartComponent, PolarChartComponent, ScatterChartComponent, ScattermapChartComponent, StreamgraphChartComponent, SunburstChartComponent, TreemapChartComponent, boxWhiskerProcessResult, Dashboards, dashboardHelpers, Functions
+### charts.md (156 KB)
+# Class AreaChartComponent,# Class AreaRangeChartComponent # Class AreamapChartComponent,# Class BarChartComponent # Class BoxplotChartComponent,# Class CalendarHeatmapChartComponent # Class ChartComponent,# Class ColumnChartComponent # Class FunnelChartComponent,# Class IndicatorChartComponent # Class LineChartComponent,# Class PieChartComponent # Class PolarChartComponent,# Class ScatterChartComponent # Class ScattermapChartComponent,# Class StreamgraphChartComponent # Class SunburstChartComponent,# Class TreemapChartComponent # Function boxWhiskerProcessResult
 
-### contexts.md (8 KB)
-Contexts, SdkUiModule, SisenseContextService, ThemeService, Variable SISENSE\_CONTEXT\_CONFIG\_TOKEN, Variable THEME\_CONFIG\_TOKEN, Charts
+### contexts.md (5 KB)
+# Class SdkUiModule,# Class SisenseContextService # Class ThemeService,# Variable SISENSE\_CONTEXT\_CONFIG\_TOKEN # Variable THEME\_CONFIG\_TOKEN
 
-### dashboard-interfaces.md (205 KB)
-DashboardModel <Badge type="fusionEmbed" text="Fusion Embed" />, WidgetModel <Badge type="fusionEmbed" text="Fusion Embed" />, Filter Tiles, CriteriaFilterTileComponent, DateRangeFilterTileComponent, FilterTileComponent, FiltersPanelComponent, MemberFilterTileComponent, RelativeDateFilterTileComponent, Drilldown, ContextMenuComponent, DrilldownBreadcrumbsComponent, DrilldownWidgetComponent, Queries, QueryService, Data Grids, PivotTableComponent, TableComponent, Generative AI, AiService, ChatbotComponent, GetNlgInsightsComponent, SdkAiModule, Variable AI\_CONTEXT\_CONFIG\_TOKEN, Interfaces, ComposableDashboardProps, CustomWidgetComponentProps`<DataOptions, StyleOptions, DataPoint>`, DashboardByIdConfig, DashboardByIdProps, DashboardConfig
+### dashboard-interfaces.md (41 KB)
+# Interface AiContextConfig,# Interface ComposableDashboardProps # Interface CustomWidgetComponentProps`<DataOptions, StyleOptions, DataPoint>`,# Interface DashboardByIdConfig # Interface DashboardByIdProps,# Interface DashboardConfig # Interface DashboardFiltersPanelConfig,# Interface DashboardLayoutOptions # Interface DashboardProps,# Interface ExecuteCustomWidgetQueryParams # Interface ExecutePivotQueryParams,# Interface ExecuteQueryByWidgetIdParams # Interface GetDashboardModelOptions,# Interface GetDashboardModelsOptions # Interface GetWidgetModelParams,# Interface JumpToDashboardConfig # Interface JumpToDashboardConfigForPivot,# Interface PivotTableDataOptions # Interface PivotTableProps,# Interface PivotTableStyleOptions # Interface PivotTableWidgetProps,# Interface SisenseContextConfig # Interface TextWidgetProps,# Interface WidgetByIdProps # Interface WidgetByIdStyleOptions
 
-### dashboards.md (76 KB)
-ChartWidgetComponent, CustomWidgetsService, DashboardComponent, PivotTableWidgetComponent, WidgetComponent, addFilter, addFilters, extractDimensionsAndMeasures, removeFilter, removeFilters, replaceFilter, replaceFilters, Fusion Assets, dashboardModelTranslator <Badge type="fusionEmbed" text="Fusion Embed" />, Functions, widgetModelTranslator <Badge type="fusionEmbed" text="Fusion Embed" />, DashboardByIdComponent <Badge type="fusionEmbed" text="Fusion Embed" />, DashboardService <Badge type="fusionEmbed" text="Fusion Embed" />, FormulaService <Badge type="fusionEmbed" text="Fusion Embed" />, HierarchyService <Badge type="fusionEmbed" text="Fusion Embed" />, WidgetByIdComponent <Badge type="fusionEmbed" text="Fusion Embed" />, WidgetService <Badge type="fusionEmbed" text="Fusion Embed" />, toChartProps, toChartWidgetProps, toDashboardProps, toExecutePivotQueryParams, toExecuteQueryParams, toPivotTableProps, toPivotTableWidgetProps, toTableProps
+### dashboards.md (28 KB)
+# Class ChartWidgetComponent,# Class CustomWidgetsService # Class DashboardComponent,# Class PivotTableWidgetComponent # Class WidgetComponent,# Function addFilter # Function addFilters,# Function extractDimensionsAndMeasures # Function removeFilter,# Function removeFilters # Function replaceFilter,# Function replaceFilters
 
-### data-interfaces.md (1 KB)
-DataLimits, TableDataOptions
+### data-grids.md (7 KB)
+# Class PivotTableComponent,# Class TableComponent
 
-### filter-interfaces.md (11 KB)
-CriteriaFilterTileProps, DateRangeFilterTileProps, FilterTileProps, FiltersPanelConfig, FiltersPanelProps, GetFilterMembersData, GetFilterMembersParams, Member, MemberFilterTileProps, RelativeDateFilterTileProps
+### data-interfaces.md (5 KB)
+# Interface DataLimits,# Interface ExecuteCsvQueryParams # Interface ExecuteQueryParams,# Interface GetQueryRecommendationsParams # Interface QueryRecommendation,# Interface TableDataOptions
+
+### drilldown.md (8 KB)
+# Class ContextMenuComponent,# Class DrilldownBreadcrumbsComponent # Class DrilldownWidgetComponent
+
+### filter-interfaces.md (8 KB)
+# Interface CriteriaFilterTileProps,# Interface FilterTileProps # Interface FiltersPanelConfig,# Interface FiltersPanelProps # Interface GetFilterMembersData,# Interface GetFilterMembersParams # Interface Member,# Interface MemberFilterTileProps # Interface RelativeDateFilterTileProps
+
+### filter-tiles.md (17 KB)
+# Class CriteriaFilterTileComponent,# Class DateRangeFilterTileComponent # Class FilterTileComponent,# Class FiltersPanelComponent # Class MemberFilterTileComponent,# Class RelativeDateFilterTileComponent
+
+### fusion-assets.md (36 KB)
+# Class DashboardByIdComponent <Badge type="fusionEmbed" text="Fusion Embed" />,# Class DashboardService <Badge type="fusionEmbed" text="Fusion Embed" /> # Class FormulaService <Badge type="fusionEmbed" text="Fusion Embed" />,# Class HierarchyService <Badge type="fusionEmbed" text="Fusion Embed" /> # Class WidgetByIdComponent <Badge type="fusionEmbed" text="Fusion Embed" />,# Class WidgetService <Badge type="fusionEmbed" text="Fusion Embed" /> # Function toChartProps,# Function toChartWidgetProps # Function toDashboardProps,# Function toExecutePivotQueryParams # Function toExecuteQueryParams,# Function toPivotTableProps # Function toPivotTableWidgetProps,# Function toTableProps # Function toTextWidgetProps,# Function toWidgetProps # Interface DashboardModel <Badge type="fusionEmbed" text="Fusion Embed" />,# Interface WidgetModel <Badge type="fusionEmbed" text="Fusion Embed" />
+
+### generative-ai.md (10 KB)
+# Class AiService,# Class ChatbotComponent # Class GetNlgInsightsComponent,# Class SdkAiModule # Variable AI\_CONTEXT\_CONFIG\_TOKEN
 
 ### interaction-interfaces.md (1 KB)
-DrilldownBreadcrumbsProps
+# Interface DrilldownBreadcrumbsProps
 
-### other-interfaces.md (29 KB)
-CalendarHeatmapStyleOptions, ChatConfig, ExecuteCsvQueryParams, ExecuteQueryParams, GetHierarchyModelsParams, GetQueryRecommendationsParams, GetSharedFormulaParams, Hierarchy, HierarchyModel, QueryRecommendation, SisenseContextConfig, StackableStyleOptions, StreamgraphStyleOptions, TableProps, TableStyleOptions
+### other-interfaces.md (9 KB)
+# Interface GetHierarchyModelsParams,# Interface GetSharedFormulaParams # Interface Hierarchy,# Interface HierarchyModel # Interface StackableStyleOptions,# Interface TableProps # Interface TableStyleOptions
+
+### queries.md (3 KB)
+# Class QueryService
 
 ### theme-interfaces.md (1 KB)
-ThemeSettings
+# Interface ThemeSettings
+
+### type-aliases.md (74 KB)
+# Type alias AppConfig,# Type alias AreaSubtype # Type alias AreamapChartType,# Type alias AreamapDataPointEvent # Type alias AreamapDataPointEventHandler,# Type alias AxisLabel # Type alias BeforeRenderHandler,# Type alias BoxWhiskerType # Type alias BoxplotChartCustomDataOptions,# Type alias BoxplotChartDataOptions # Type alias BoxplotChartType,# Type alias BoxplotDataPoint # Type alias BoxplotDataPointEvent,# Type alias BoxplotDataPointEventHandler # Type alias BoxplotDataPointsEvent,# Type alias BoxplotSubtype # Type alias CalendarDayOfWeek,# Type alias CalendarHeatmapChartType # Type alias CalendarHeatmapDataPoint,# Type alias CalendarHeatmapDataPointEvent # Type alias CalendarHeatmapDataPointEventHandler,# Type alias CalendarHeatmapDataPointsEvent # Type alias CalendarHeatmapDataPointsEventHandler,# Type alias CalendarHeatmapSubtype # Type alias CalendarHeatmapViewType,# Type alias CartesianChartType # Type alias CartesianWidgetType,# Type alias CategoricalChartType # Type alias CategoricalWidgetType,# Type alias ChartDataOptions
+

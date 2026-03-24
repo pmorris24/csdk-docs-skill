@@ -19,11 +19,6 @@ For each of these format types, you can customize the formatting using the follo
 
 Depending on which type of formatting you use, you can also customize the formatting using the properties described below.
 
-ts to `true`.
-- `decimalScale` (number): Number of decimal places to show.
-
-Depending on which type of formatting you use, you can also customize the formatting using the properties described below.
-
 ### Numbers
 
 Use the following properties to customize the formatting of regular numbers:
@@ -46,18 +41,6 @@ Use the following properties to customize the formatting of regular numbers:
     value: [
       {
         column: measureFactory.sum(DM.Commerce.Revenue),
-        numberFormatConfig: {
-          name: 'Numbers',
-          million: false,
-          decimalScale: 2,
-        },
-      },
-    ],
-  }}
-/>
-```
-
-column: measureFactory.sum(DM.Commerce.Revenue),
         numberFormatConfig: {
           name: 'Numbers',
           million: false,
@@ -106,20 +89,6 @@ Use the following properties to customize the formatting of numbers representing
 />
 ```
 
-ue),
-        numberFormatConfig: {
-          name: 'Currency',
-          million: false,
-          kilo: false,
-          prefix: false,
-          symbol: '¥',
-        },
-      },
-    ],
-  }}
-/>
-```
-
 ### Percent
 
 The percent type doesn't have any additional properties for further customization.
@@ -153,8 +122,6 @@ The percent type doesn't have any additional properties for further customizatio
 
 You can format dates in your chart categories using the `dateFormat` property of a `StyledColumn` or `StyledMeasureColumn` object. Provide the function with a format string using a [ECMAScript Date Time String Format](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format) string.
 
-reColumn` object. Provide the function with a format string using a [ECMAScript Date Time String Format](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format) string.
-
 ### Date Example
 
 ![Chart with date formatting](../img/chart-guides/formatting-dates.png 'Chart with date formatting')
@@ -173,6 +140,3 @@ reColumn` object. Provide the function with a format string using a [ECMAScript 
   }}
 />
 ```
-
-
-<!-- Source: guides/internationalization.md -->

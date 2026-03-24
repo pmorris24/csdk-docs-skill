@@ -180,12 +180,17 @@ Check out [csdk-docs-mcp](https://github.com/pmorris24/csdk-docs-mcp) — an MCP
 
 ## Updating docs
 
-When Sisense releases a new SDK version:
+Docs are pulled directly from the official [Sisense Compose SDK monorepo](https://github.com/sisense/compose-sdk-monorepo) (`docs-md/sdk/`). When Sisense releases a new SDK version:
 
 ```bash
-./scripts/update-docs.sh https://ai-playground-prod-2.vercel.app/rag_index/chunks.json
+./scripts/update-docs.sh
 ```
 
+To pull from a specific branch:
+
+```bash
+./scripts/update-docs.sh --branch dev
+```
 ## Supported frameworks
 
 - React

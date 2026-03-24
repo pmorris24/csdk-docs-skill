@@ -11,8 +11,6 @@ The CLI has the following commands:
 
 The `get-data-model` command creates a [TypeScript representation of a data model](./data-model.md). Use either a username/password, API token, or WAT token to authenticate when running this command.
 
-he `get-data-model` command creates a [TypeScript representation of a data model](./data-model.md). Use either a username/password, API token, or WAT token to authenticate when running this command.
-
 ### Options
 
 - `dataSource` - (`string`): The name of the data model to create a TypeScript representation of
@@ -26,12 +24,6 @@ he `get-data-model` command creates a [TypeScript representation of a data model
 ### Example
 
 This example command creates a data model file for the Sample ECommerce data model using username/password authentication. After running this command, the CLI will prompt you for your password. (Be sure to replace `<username>` and `<your_instance_url>` with your actual username and Sisense instance URL).
-
-```sh
-npx @sisense/sdk-cli@latest get-data-model --dataSource "Sample ECommerce" --url <your_instance_url> --output src/sample-ecommerce.ts --username <username>
-```
-
-name and Sisense instance URL).
 
 ```sh
 npx @sisense/sdk-cli@latest get-data-model --dataSource "Sample ECommerce" --url <your_instance_url> --output src/sample-ecommerce.ts --username <username>
@@ -54,7 +46,3 @@ This example gets an API Token using username/password authentication. After run
 ```sh
 npx @sisense/sdk-cli@latest get-api-token --username <username> --url <your_instance_url>
 ```
-
-
-
-<!-- Source: guides/client-query-caching.md -->

@@ -1,36 +1,3 @@
-# Drilldown
-
-Drilling down on a chart allows your users to see more detailed data by selecting a dimension to drill down on. This enables them to examine complex datasets in a more manageable and intuitive way.
-
-With Compose SDK you can create a drilldown experience using the charts in the `sdk-ui-*` modules:
-
-![Drilldown with Compose SDK chart](../../img/drilldown-guide/csdk-context-menu.png 'Drilldown with Compose SDK chart')
-
-You can also create a drilldown experience using third party charts:
-
-![Drilldown with third party chart](../../img/drilldown-guide/plotly-csdk-context-menu.png 'Drilldown with third party chart')
-
-With both types of charts, you can use the built in drilldown-related components to show drilldown context menus and drilldown breadcrumbs:
-
-![Drilldown with Compose SDK components](../../img/drilldown-guide/csdk-components.png 'Drilldown with Compose SDK components')
-
-Or you can provide your own custom context menu and breadcrumbs components:
-
-![Drilldown with custom components](../../img/drilldown-guide/custom-components.png 'Drilldown with custom components')
-
-If you're new to drilldown charts, start by learning how to create a [simple drilldown chart](./guide-1-simple-drilldown.md).
-
-<SectionIndex />
-
-
-<!-- Source: guides/drilldown/guide-1-simple-drilldown.md -->
-
-e new to drilldown charts, start by learning how to create a [simple drilldown chart](./guide-1-simple-drilldown.md).
-
-<SectionIndex />
-
-
-<!-- Source: guides/drilldown/guide-1-simple-drilldown.md -->
 # 1 | Simple Drilldown Chart
 
 To create a drilldown experience on a Compose SDK chart, you need to wrap the chart inside a `<DrilldownWidget>`.
@@ -46,19 +13,6 @@ The `<DrilldownWidget>` component allows you to specify which dimensions can be 
 To demonstrate how to add a drilldown experience to a Compose SDK chart, let's start with this simple column chart:
 
 ![Column chart](../../img/drilldown-guide/plain-chart.png 'Column chart')
-
-```ts
-<Chart
-  chartType="column"
-  dataSet={DM.DataSource}
-  dataOptions={{
-    category: [DM.Commerce.AgeRange],
-    value: [measureFactory.sum(DM.Commerce.Revenue)],
-  }}
-/>
-```
-
-'Column chart')
 
 ```ts
 <Chart
@@ -103,8 +57,6 @@ For example, wrapping a chart in a `<DrilldownWidget>` may look something like t
 ```
 
 Here you can see that the `initialDimension` is set to be **Age Range**, as it was in the chart before adding drilldown functionality. Also, the `drilldownDimensions` is set to a list of the drilldown options. In this case, users can drill down on the **Gender**, **Condition**, and **Category** dimensions.
-
-drilldown functionality. Also, the `drilldownDimensions` is set to a list of the drilldown options. In this case, users can drill down on the **Gender**, **Condition**, and **Category** dimensions.
 
 ## Apply to Chart
 
@@ -155,17 +107,6 @@ That should leave you with code that looks something like this:
 </DrilldownWidget>
 ```
 
-onDataPointsSelected([point], nativeEvent);
-        onContextMenu({
-          left: nativeEvent.clientX,
-          top: nativeEvent.clientY,
-        });
-      }}
-    />
-  )}
-</DrilldownWidget>
-```
-
 ## Results
 
 At this point, you have a chart that you can drill down on. You can start the drilldown process by either clicking a a data point or selecting a number of data points.
@@ -184,15 +125,9 @@ You can then continue to drill down. For example, you can click on the **Used** 
 
 As you drill down, the breadcrumbs keep track of the actions you've performed. You can use the breadcrumbs to go back up some of your drill hierarchy or to clear all the drilling down to return to the original chart.
 
-the breadcrumbs keep track of the actions you've performed. You can use the breadcrumbs to go back up some of your drill hierarchy or to clear all the drilling down to return to the original chart.
-
 ## Next Up
 
 In this section you learned how to create a drilldown experience using Compose SDK components. In the next section, you'll see how to customize the look and feel of a drilldown chart by providing custom context menu.
-
-Go to the [next lesson](./guide-2-custom-context-menu.md).
-
-SDK components. In the next section, you'll see how to customize the look and feel of a drilldown chart by providing custom context menu.
 
 Go to the [next lesson](./guide-2-custom-context-menu.md).
 
@@ -243,23 +178,8 @@ export const DrilldownChart = () => {
 ```
 
 
+---
 
-<!-- Source: guides/drilldown/guide-2-custom-context-menu.md -->
-
-lientY,
-            });
-          }}
-          styleOptions={{ width: 750 }}
-        />
-      )}
-    </DrilldownWidget>
-  );
-};
-```
-
-
-
-<!-- Source: guides/drilldown/guide-2-custom-context-menu.md -->
 # 2 | Custom Context Menu
 
 In this section, you'll learn how to customize the look and feel of a drilldown chart by providing a custom context menu.
@@ -288,19 +208,6 @@ export const CustomContextMenu = ({
 };
 ```
 
-omponent with these properties:
-
-```ts
-export const CustomContextMenu = ({
-  position,
-  itemSections,
-  children,
-  closeContextMenu
-}: ContextMenuProps) => {
-    // Component code goes here
-};
-```
-
 ## Menu Component
 
 Next, you can start to apply some of these properties in your component code:
@@ -317,17 +224,6 @@ const open = !!position;
 return (
   <Menu
     anchorReference="anchorPosition"
-    anchorPosition={position ?? { left: 0, top: 0 }}
-    open={open}
-    onClose={closeContextMenu}
-  >
-    {/* Menu items go here */}
-    {children}
-  </Menu>
-);
-```
-
-nchorReference="anchorPosition"
     anchorPosition={position ?? { left: 0, top: 0 }}
     open={open}
     onClose={closeContextMenu}
@@ -418,14 +314,6 @@ If there are no remaining drilldown dimensions, you may want to create a single 
 )}
 ```
 
-tions ||
-  !(itemSections as Array<{ items: Array<object> }>)[1].items.length) && (
-  <MenuItem key={'none'}>
-    <ListItemText> {'Cannot drill down any further'}</ListItemText>
-  </MenuItem>
-)}
-```
-
 ## Apply
 
 Once you have a custom context menu component, you need to apply it to your chart. All you need to do is to add a `config` property to the `<DrilldownWidget>` that wraps the chart. Within the `config` object, set the `contextMenuComponent` property to the component you created.
@@ -453,10 +341,6 @@ At this point, your custom context menu is ready for action. When you select a d
 ## Next Up
 
 In this section you learned how to create a custom context menu. In the next section, you'll continue to customize the drilldown experience by creating a custom breadcrumbs component.
-
-Go to the [next lesson](./guide-3-custom-breadcrumbs.md).
-
-custom context menu. In the next section, you'll continue to customize the drilldown experience by creating a custom breadcrumbs component.
 
 Go to the [next lesson](./guide-3-custom-breadcrumbs.md).
 
@@ -518,21 +402,8 @@ export const CustomContextMenu = ({
 ```
 
 
+---
 
-<!-- Source: guides/drilldown/guide-3-custom-breadcrumbs.md -->
-
-ListItemText> {'Cannot drill down any further'}</ListItemText>
-        </MenuItem>
-      )}
-      {children}
-    </Menu>
-  );
-};
-```
-
-
-
-<!-- Source: guides/drilldown/guide-3-custom-breadcrumbs.md -->
 # 3 | Custom Breadcrumbs
 
 In this section, you'll learn how to customize the look and feel of our drilldown chart by providing custom breadcrumbs.
@@ -552,16 +423,6 @@ So the first step in creating custom breadcrumbs is to create a component with t
 
 ```ts
 export const CustomBreadCrumbs = ({
-  currentDimension,
-  filtersDisplayValues,
-  clearDrilldownSelections,
-  sliceDrilldownSelections,
-}: DrilldownBreadcrumbsProps) => {
-  // Component code goes here
-};
-```
-
-nst CustomBreadCrumbs = ({
   currentDimension,
   filtersDisplayValues,
   clearDrilldownSelections,
@@ -602,13 +463,6 @@ return (
 );
 ```
 
-={<CancelIcon />} />
-    {/* Code for additional chips goes here */}
-    <Chip label={`${currentDimension.name || ''} (All)`} key="All" color="default" icon={<MoveDown />} />
-  </Breadcrumbs>
-);
-```
-
 ## Drilldown Chips
 
 Now you can fill in the remaining chips for the current drilldown hierarchy.
@@ -642,20 +496,6 @@ To create these chips, check the location of the current chip in `filtersDisplay
         onClick={() => sliceDrilldownSelections(i + 1)}
         color="primary"
         icon={<MoveDown />}
-      />
-    ) : (
-      <Chip
-        label={displayValue.join(' | ')}
-        key={displayValue.join(' | ')}
-        color="default"
-        icon={<MoveDown />}
-      />
-    );
-  });
-}
-```
-
-own />}
       />
     ) : (
       <Chip
@@ -717,16 +557,6 @@ For example, the following code shows the breadcrumbs component right below the 
 
 Note that you can also detach the default breadcrumbs component and place it wherever you want using the same process.
 
-{breadcrumbsComponent}
-        </>
-  )}
-    </DrilldownWidget>
-  );
-}
-```
-
-Note that you can also detach the default breadcrumbs component and place it wherever you want using the same process.
-
 ## Results
 
 At this point, your breadcrumbs component is ready for action. When you drill down on your chart, you should see a breadcrumbs component that looks like this:
@@ -736,10 +566,6 @@ At this point, your breadcrumbs component is ready for action. When you drill do
 ## Next Up
 
 In this section you learned how to create a breadcrumbs component. In the next section, you'll see how to create a drilldown experience on a third party chart.
-
-Go to the [next lesson](./guide-4-third-party-chart.md).
-
-learned how to create a breadcrumbs component. In the next section, you'll see how to create a drilldown experience on a third party chart.
 
 Go to the [next lesson](./guide-4-third-party-chart.md).
 
@@ -802,27 +628,11 @@ export const CustomBreadCrumbs = ({
 ```
 
 
+---
 
-<!-- Source: guides/drilldown/guide-4-third-party-chart.md -->
-
-ion.name || ''} (All)`}
-        key="All"
-        color="default"
-        icon={<MoveDown />}
-      />
-    </Breadcrumbs>
-  );
-};
-```
-
-
-
-<!-- Source: guides/drilldown/guide-4-third-party-chart.md -->
 # 4 | Third Party Drilldown Chart
 
 In this section, you'll how to drill down when using a 3rd party charting library. In this guide, we'll switch out our Compose SDK chart with a chart from [Plotly.js](https://plotly.com/javascript/).
-
-n this section, you'll how to drill down when using a 3rd party charting library. In this guide, we'll switch out our Compose SDK chart with a chart from [Plotly.js](https://plotly.com/javascript/).
 
 ## Plotly Wrapper
 
@@ -1054,20 +864,6 @@ export const PlotlyBarChart: React.FC<Props> = ({
 
 ```
 
-n (
-    <Plot
-      style={{ width: '700px', height: '450px' }}
-      data={[trace]}
-      layout={{
-        datarevision: Date.now(),
-      }}
-      onSelected={handleSelection}
-    />
-  );
-};
-
-```
-
 ## Apply Drilldown Widget
 
 Now that you have a Plotly chart properly wrapped, you can further wrap it in a `<DrilldownWidget>` component to add the drilldown functionality. To do so, you work exactly the same way as you would when wrapping a Compose SDK chart.
@@ -1186,26 +982,8 @@ export const PlotlyDrilldownChart = () => {
 };
 ```
 
-ted}
-                  />
-                  {breadcrumbsComponent}
-                </>
-              );
-            }
-          }}
-        </ExecuteQuery>
-      )}
-    </DrilldownWidget>
-  );
-};
-```
-
 ## Results
 
 At this point, your custom third party chart is ready for action. When you select data points and drill down, your chart should look something like this:
 
 ![Third party drilldown chart](../../img/drilldown-guide/third-party.png 'Third party drilldown chart')
-
-
-
-================================================================================

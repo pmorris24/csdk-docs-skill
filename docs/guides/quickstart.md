@@ -1,12 +1,13 @@
+---
+title: Quickstart Guide (React)
+---
+
 # Compose SDK with React: Quickstart Guide
 
 Follow this guide to get started developing applications with Compose SDK.
 
 > **Note**:
 > This guide is for [<img src="../img/react-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 3px" /> React](./quickstart.md). We also have a Quickstart Guide for [<img src="../img/angular-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 2px" /> Angular](./quickstart-angular.md)
-> and [<img src="../img/vue-logo.png" height="14px" /> Vue](./quickstart-vue.md).
-
-ogo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 2px" /> Angular](./quickstart-angular.md)
 > and [<img src="../img/vue-logo.png" height="14px" /> Vue](./quickstart-vue.md).
 
 ## Prerequisites
@@ -19,8 +20,6 @@ Compose SDK contains a set of React components needed to interface with your Sis
 4. A Node package manager such as [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [Yarn](https://yarnpkg.com/getting-started/install).
 5. Access to a [Sisense](https://sisense.com) instance with a queryable data source (for example, Sample ECommerce).
 6. React application **with TypeScript**. You can use your existing application, or if you do not have one, you can follow the [Vite tutorial](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) to create one.
-
-*with TypeScript**. You can use your existing application, or if you do not have one, you can follow the [Vite tutorial](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) to create one.
 
 ## Quickstart Application Setup
 
@@ -80,26 +79,6 @@ yarn dev
   </div>
 </div>
 
-alc(50% - 5px);">
-
-For npm:
-
-```sh
-npm run dev
-```
-
-  </div>
-  <div style="flex: 1; margin-left: 10px; overflow-x: auto; max-width: calc(50% - 5px);">
-
-For Yarn:
-
-```sh
-yarn dev
-```
-
-  </div>
-</div>
-
 ## Installing the SDK Packages
 
 Compose SDK contains three packages for public use:
@@ -133,13 +112,6 @@ yarn add @sisense/sdk-ui @sisense/sdk-data
 
 Package `@sisense/sdk-cli` is not needed to run your app. It will be installed on the fly as you execute CLI commands using [npx](https://docs.npmjs.com/cli/v10/commands/npx).
 
-```
-
-  </div>
-</div>
-
-Package `@sisense/sdk-cli` is not needed to run your app. It will be installed on the fly as you execute CLI commands using [npx](https://docs.npmjs.com/cli/v10/commands/npx).
-
 ## Sisense Authentication and Security
 
 In order to retrieve data, you need to authenticate your application with your Sisense instance and set up CORS.
@@ -161,12 +133,6 @@ Hold on to the API Token. You'll need it later when adding Compose SDK code to y
 There are also a number of different ways you can set up CORS. To learn more, see [Authentication and Security](./authentication-security.md#cross-origin-resource-sharing-cors).
 
 Here we'll use the Sisense UI. To do so, in your Sisense instance, go to **Admin > Security & Access > Security Settings > General** and add your application's domain to the **CORS Allowed Origins** list.
-
-## Adding Sisense to Your Application
-
-This section describes how to add Compose SDK to your application to render charts from data in your Sisense instance.
-
-n to the **CORS Allowed Origins** list.
 
 ## Adding Sisense to Your Application
 
@@ -218,13 +184,6 @@ export const Brand = createDimension({
 
 This works for any data model, including models you create. Just replace `"Sample ECommerce"` with the name of your data model.
 
-expression: '[Brand.Brand ID]',
-    }),
-}) as BrandDimension;
-```
-
-This works for any data model, including models you create. Just replace `"Sample ECommerce"` with the name of your data model.
-
 ## Embedding a Chart in your Application
 
 In this section, you will modify the main `app` component to embed a chart visualizing data from the Sample ECommerce data source.
@@ -237,8 +196,6 @@ Use the two components, `SisenseContextProvider` and `Chart`, from `@sisense/sdk
 > -   The `src/App.tsx` file is the main React component.
 > -   The `sample-ecommerce.ts` file generated earlier resides in `src/`.
 > -   The URL to your application (e.g. http://localhost:5173) is already added as an entry to CORS Allowed Origins section on your Sisense instance. If not, you can do so on your Sisense instance by going to _Admin_, then _Security Settings_.
-
-//localhost:5173) is already added as an entry to CORS Allowed Origins section on your Sisense instance. If not, you can do so on your Sisense instance by going to _Admin_, then _Security Settings_.
 
 ### Connecting to a Sisense Instance
 
@@ -266,8 +223,6 @@ export default App;
 
 > **Note:**
 > The above example uses the API token (also called _bearer authentication_) to connect to a Sisense instance. To generate an API token for your Sisense user account, see the Sisense Instance Authentication section above. The `SisenseContextProvider` also supports other authentication mechanisms including WAT and SSO.
-
-e an API token for your Sisense user account, see the Sisense Instance Authentication section above. The `SisenseContextProvider` also supports other authentication mechanisms including WAT and SSO.
 
 ### Adding a chart
 
@@ -335,10 +290,6 @@ Your chart should look like this:
 
 See the [SisenseContextProvider](../modules/sdk-ui/contexts/function.SisenseContextProvider.md) and [Chart](../modules/sdk-ui/charts/function.Chart.md) docs for more details on supported props.
 
-ng)
-
-See the [SisenseContextProvider](../modules/sdk-ui/contexts/function.SisenseContextProvider.md) and [Chart](../modules/sdk-ui/charts/function.Chart.md) docs for more details on supported props.
-
 ## Next Steps
 
 The sample application in this quickstart guide is designed to give you a basis for what you can do with Compose SDK. Build on the code sample by using other components from Compose SDK to add Sisense analytical experiences to your applications.
@@ -348,6 +299,3 @@ For some ideas and examples, check out:
 -   [Compose SDK Playground](https://www.sisense.com/developers/playground/)
 -   [Demo application for Compose SDK with React](https://csdk-react.sisense.com)
 -   [Chart Tutorial](../tutorials/tutorial-charts/index.md)
-
-
-<!-- Source: getting-started/quickstart-angular.md -->

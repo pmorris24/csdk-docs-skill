@@ -1,14 +1,6 @@
-# Interface DrilldownBreadcrumbsProps
-
-Props of the [DrilldownBreadcrumbs](../drilldown/function.DrilldownBreadcrumbs.md) component.
-
-## Properties
-
-# title
-
-> **title**: `string`
-
-Filter tile title
+---
+title: DrilldownBreadcrumbsProps
+---
 
 # Interface DrilldownBreadcrumbsProps
 

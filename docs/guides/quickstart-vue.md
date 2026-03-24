@@ -1,11 +1,13 @@
+---
+title: Quickstart Guide (Vue)
+---
+
 # Compose SDK with Vue: Quickstart Guide
 
 Follow this guide to get started developing applications with Compose SDK.
 
 > **Note**:
 > This guide is for [<img src="../img/vue-logo.png" height="14px" /> Vue](./quickstart-vue.md). We also have a Quickstart Guide for [<img src="../img/react-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 3px" /> React](./quickstart.md) and [<img src="../img/angular-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 2px" /> Angular](./quickstart-angular.md).
-
-; padding-bottom: 3px" /> React](./quickstart.md) and [<img src="../img/angular-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 2px" /> Angular](./quickstart-angular.md).
 
 ## Prerequisites
 
@@ -16,9 +18,6 @@ Compose SDK contains a set of components needed to interface with your Sisense i
 3. [Vue](https://vuejs.org) version **3.3.0** or higher.
 4. A Node package manager such as [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [Yarn](https://yarnpkg.com/getting-started/install).
 5. Access to a [Sisense](https://sisense.com) instance with a queryable data source (for example, Sample Retail).
-6. Vue application **with TypeScript**. You can use an existing application, or if you don't have one, you can follow the [tutorial](https://vuejs.org/guide/quick-start) to create one.
-
-mple Retail).
 6. Vue application **with TypeScript**. You can use an existing application, or if you don't have one, you can follow the [tutorial](https://vuejs.org/guide/quick-start) to create one.
 
 ## Quickstart Application Setup
@@ -110,26 +109,6 @@ yarn dev
   </div>
 </div>
 
-alc(50% - 5px);">
-
-For npm:
-
-```sh
-npm run dev
-```
-
-  </div>
-  <div style="flex: 1; margin-left: 10px; overflow-x: auto; max-width: calc(50% - 5px);">
-
-For Yarn:
-
-```sh
-yarn dev
-```
-
-  </div>
-</div>
-
 ## Installing the SDK Packages
 
 Compose SDK for Vue contains three packages for public use:
@@ -163,13 +142,6 @@ yarn add @sisense/sdk-ui-vue @sisense/sdk-data
 
 Package `@sisense/sdk-cli` is not needed to run your app. It will be installed on the fly as you execute CLI commands using [npx](https://docs.npmjs.com/cli/v10/commands/npx).
 
-```
-
-  </div>
-</div>
-
-Package `@sisense/sdk-cli` is not needed to run your app. It will be installed on the fly as you execute CLI commands using [npx](https://docs.npmjs.com/cli/v10/commands/npx).
-
 ## Sisense Authentication and Security
 
 In order to retrieve data, you need to authenticate your application with your Sisense instance and set up CORS.
@@ -191,12 +163,6 @@ Hold on to the API Token. You'll need it later when adding Compose SDK code to y
 There are also a number of different ways you can set up CORS. To learn more, see [Authentication and Security](./authentication-security.md#cross-origin-resource-sharing-cors).
 
 Here we'll use the Sisense UI. To do so, in your Sisense instance, go to **Admin > Security & Access > Security Settings > General** and add your application's domain to the **CORS Allowed Origins** list.
-
-## Adding Sisense to Your Application
-
-This section describes how to add Compose SDK to your application to render charts from data in your Sisense instance.
-
-n to the **CORS Allowed Origins** list.
 
 ## Adding Sisense to Your Application
 
@@ -249,14 +215,6 @@ export const DimCountries = createDimension({
 
 This works for any data model, including models you create. Just replace `"Sample Retail"` with the name of your data model.
 
-ion: '[DimCountries.Region]',
-  }),
-}) as DimCountriesDimension;
-...
-```
-
-This works for any data model, including models you create. Just replace `"Sample Retail"` with the name of your data model.
-
 ## Embedding a Chart in your Application
 
 In this section, you will add a new component and modify the main app to embed a chart visualizing data from the Sample Retail data source.
@@ -266,9 +224,6 @@ In this section, you will add a new component and modify the main app to embed a
 >
 > -   The `src/App.vue` file is the main Vue component.
 > -   The `sample-retail.ts` file generated earlier resides in `src/`.
-> -   The URL to your application (e.g. http://localhost:5173) is already added as an entry to CORS Allowed Origins section on your Sisense instance
-
-ail.ts` file generated earlier resides in `src/`.
 > -   The URL to your application (e.g. http://localhost:5173) is already added as an entry to CORS Allowed Origins section on your Sisense instance
 
 ### Connecting to a Sisense Instance
@@ -295,8 +250,6 @@ import { SisenseContextProvider } from '@sisense/sdk-ui-vue';
 
 > **Note:**
 > The above example uses the API token (also called _bearer authentication_) to connect to a Sisense instance. To generate an API token for your Sisense user account, see the Sisense Instance Authentication section above. The `SisenseContextProvider` also supports other authentication mechanisms including WAT and SSO.
-
-e an API token for your Sisense user account, see the Sisense Instance Authentication section above. The `SisenseContextProvider` also supports other authentication mechanisms including WAT and SSO.
 
 ### Adding a chart
 
@@ -354,13 +307,6 @@ Your first Compose SDK chart with Vue should look something like this:
 
 See the [SisenseContextProvider](../modules/sdk-ui-vue/contexts/class.SisenseContextProvider.md) and [Chart](../modules/sdk-ui-vue/charts/class.Chart.md) docs for more details on supported props.
 
-)
-
-See the [SisenseContextProvider](../modules/sdk-ui-vue/contexts/class.SisenseContextProvider.md) and [Chart](../modules/sdk-ui-vue/charts/class.Chart.md) docs for more details on supported props.
-
 ## Next Steps
 
 The sample application in this quickstart guide is designed to give you a basis for what you can do with Compose SDK. Build on the code sample by using other components from Compose SDK to add Sisense analytical experiences to your applications.
-
-
-================================================================================

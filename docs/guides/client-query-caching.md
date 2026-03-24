@@ -4,10 +4,6 @@ Compose SDK provides a client-side caching mechanism that enhances chart renderi
 
 If the results of an identical query already exist in the client-side cache, those results will be used automatically instead of making the same query request again to the Fusion API.
 
-data queries.
-
-If the results of an identical query already exist in the client-side cache, those results will be used automatically instead of making the same query request again to the Fusion API.
-
 ## Enabling Client Caching
 
 To enable client-side caching, set the `AppConfig.queryCacheConfig.enabled` property to `true` in your `SisenseContextProvider`.
@@ -35,10 +31,6 @@ cacheClient.clear();
 
 Refreshing the page in the browser also refreshes the cache (see below).
 
-de` is currently only supported in React. This current limitation is the reason the feature is currently in `alpha` status.
-
-Refreshing the page in the browser also refreshes the cache (see below).
-
 
 ## Query Caching Clarifications
 
@@ -54,13 +46,3 @@ Instead, it stores the results of JAQL queries in memory for quicker access with
 - It is designed to improve performance and user experience for data that is accessed frequently or multiple times in the UI.
 
 **Example:** A user frequently switches between tabs or sections of a UI which contain Compose SDK dashboards, widgets or other components that query data. Client-side caching will help avoid reloading the same data over the network each time a dashboard or widget is rendered, providing a more responsive user experience.
-
-
-
-<!-- Source: guides/data-model.md -->
-
-ide caching will help avoid reloading the same data over the network each time a dashboard or widget is rendered, providing a more responsive user experience.
-
-
-
-<!-- Source: guides/data-model.md -->

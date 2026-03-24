@@ -1,3 +1,7 @@
+---
+title: AiChatThemeSettings
+---
+
 # Interface AiChatThemeSettings
 
 Theme settings specific to the AI Chatbot component
@@ -49,28 +53,6 @@ Settings for the main chat body
 > **paddingTop**?: `string`
 >
 > Top padding of the chat body
->
->
-
-***
-
-### border
-
-> **border**?: `false` \| `string`
-
-Border of the chatbot
-
-***
-
-### borderRadius
-
-> **borderRadius**?: `false` \| `string`
-
-Border radius of the chatbot
-
-***
-
-g of the chat body
 >
 >
 
@@ -148,22 +130,6 @@ Settings for the chatbot clickable messages
 
 ***
 
-`
-> >
-> > Text color of the chatbot clickable messages on hover
-> >
-> >
->
-> ##### `clickableMessages.textColor`
->
-> **textColor**?: `string`
->
-> Text color of the chatbot clickable messages
->
->
-
-***
-
 ### dataTopics
 
 > **dataTopics**?: `object`
@@ -187,22 +153,6 @@ Settings for the data topics screen
 > > ###### `items.backgroundColor`
 > >
 > > **backgroundColor**?: `string`
-> >
-> > Background color of the data topic items
-> >
-> > ###### `items.textColor`
-> >
-> > **textColor**?: `string`
-> >
-> > Text color of the data topic items
-> >
-> >
->
->
-
-***
-
-roundColor**?: `string`
 > >
 > > Background color of the data topic items
 > >
@@ -287,24 +237,6 @@ Settings for chatbot dropup
 > > > ###### `hover.backgroundColor`
 > > >
 > > > **backgroundColor**?: `string`
-> > >
-> > > Background color of dropup items on hover
-> > >
-> > >
-> >
-> > ###### `items.textColor`
-> >
-> > **textColor**?: `string`
-> >
-> > Text color of the dropup items
-> >
-> >
->
->
-
-***
-
-: `string`
 > > >
 > > > Background color of dropup items on hover
 > > >
@@ -414,22 +346,6 @@ Settings for the chatbot icons
 
 ***
 
-kIcons**?: `object`
->
-> Settings for feedback icons
->
-> > ###### `feedbackIcons.hoverColor`
-> >
-> > **hoverColor**?: `string`
-> >
-> > Background color of the feedback icons on hover
-> >
-> >
->
->
-
-***
-
 ### input
 
 > **input**?: `object`
@@ -467,26 +383,6 @@ Settings for the chatbot input
 > **primaryFontSize**?: [`string`, `string`]
 
 Primary font size for text in the chatbot
-
-***
-
-### primaryTextColor
-
-> **primaryTextColor**?: `string`
-
-Text color of the chatbot
-
-***
-
-### secondaryTextColor
-
-> **secondaryTextColor**?: `string`
-
-Secondary text color of the chatbot
-
-***
-
-t
 
 ***
 
@@ -580,20 +476,6 @@ Settings for the chatbot suggestions
 
 ***
 
-ring`, `string`]
->
-> 2-color gradient to be applied on suggestions loading animation
->
-> ##### `suggestions.textColor`
->
-> **textColor**?: `string`
->
-> Text color of the chatbot suggestions
->
->
-
-***
-
 ### systemMessages
 
 > **systemMessages**?: `object`
@@ -658,6 +540,13 @@ Settings for user chat messages
 >
 >
 
+
+---
+
+---
+title: GeneralThemeSettings
+---
+
 # Interface GeneralThemeSettings
 
 General theme settings
@@ -694,6 +583,13 @@ Hover color for primary buttons
 
 Text color for primary buttons
 
+
+---
+
+---
+title: ThemeSettings
+---
+
 # Interface ThemeSettings
 
 Theme settings defining the look and feel of components.
@@ -703,20 +599,6 @@ Theme settings defining the look and feel of components.
 ### aiChat
 
 > **aiChat**?: [`AiChatThemeSettings`](interface.AiChatThemeSettings.md)
-
-Theme settings specific to the AI Chatbot component
-
-***
-
-### chart
-
-> **chart**?: [`ChartThemeSettings`](interface.ChartThemeSettings.md)
-
-Chart theme settings
-
-***
-
-terface.AiChatThemeSettings.md)
 
 Theme settings specific to the AI Chatbot component
 
@@ -768,6 +650,13 @@ Text theme settings
 
 Widget theme settings
 
+
+---
+
+---
+title: ThemeSettingsFont
+---
+
 # Interface ThemeSettingsFont
 
 Loading font details
@@ -796,17 +685,12 @@ Loading font details
 
 > **src**: [`ThemeSettingsFontSource`](../type-aliases/type-alias.ThemeSettingsFontSource.md)[]
 
-# Interface TypographyThemeSettings
 
-Text theme settings
+---
 
-## Properties
-
-ty:
-
-1. Value passed to this property (in pixels)
-2. Width of the container wrapping this component
-3. Default value of 400px
+---
+title: TypographyThemeSettings
+---
 
 # Interface TypographyThemeSettings
 

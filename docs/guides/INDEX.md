@@ -2,68 +2,66 @@
 
 Use this index to decide which file to read. Only read files relevant to the question.
 
-### authentication.md (10 KB)
-Authentication & Security
+### ai-features.md (8 KB)
+# Generative AI with React: Quickstart Guide
 
-### chart-types.md (29 KB)
-Chart Types, Compose SDK Charts
+### authentication-security.md (9 KB)
+# Authentication & Security
 
-### cli.md (3 KB)
-CLI
+### charts.md (36 KB)
+# Compose SDK Charts,# External Charts # Sisense Fusion Widgets
 
-### custom-widgets.md (29 KB)
-Custom Widgets
+### cli.md (2 KB)
+# CLI
 
-### data-model.md (5 KB)
-Data Model
+### client-query-caching.md (2 KB)
+# Client Query Caching (Alpha)
 
-### drilldown.md (38 KB)
-Drilldown, 1 | Simple Drilldown Chart, 2 | Custom Context Menu, 3 | Custom Breadcrumbs, 4 | Third Party Drilldown Chart
+### custom-widgets.md (24 KB)
+# Custom Widgets
 
-### embedded-dashboards.md (26 KB)
-Embedded Dashboards, 1 | Embed Fusion Dashboard, 2 | Customize Fusion Dashboard, 3 | Compose Dashboard In Code
+### dashboards.md (24 KB)
+# 1 | Embed Fusion Dashboard,# 2 | Customize Fusion Dashboard # 3 | Compose Dashboard In Code
 
-### external-charts.md (13 KB)
-External Charts, Sisense Fusion Widgets
+### data-model.md (4 KB)
+# Data Model
 
-### formula-functions.md (70 KB)
-Reference, Formula Functions
+### drilldown.md (32 KB)
+# 1 | Simple Drilldown Chart,# 2 | Custom Context Menu # 3 | Custom Breadcrumbs,# 4 | Third Party Drilldown Chart
 
-### generative-ai.md (11 KB)
-Generative AI powered by Sisense Intelligence, Generative AI with React: Quickstart Guide
+### formatting.md (4 KB)
+# Number & Date Formatting
 
-### internationalization.md (8 KB)
-Internationalization with Compose SDK
+### formula-functions.md (67 KB)
+# Formula Functions
 
-### jest-setup.md (3 KB)
-Setting Up Jest for Compatibility with Compose SDK
+### internationalization.md (7 KB)
+# Internationalization with Compose SDK
 
-### migration-0x-to-1x.md (7 KB)
-Migrating Compose SDK from 0.x.x to 1.0.0
+### jest-compatibility.md (2 KB)
+# Setting Up Jest for Compatibility with Compose SDK
 
-### migration-1x-to-2x.md (9 KB)
-Migrating Compose SDK from 1.x.x to 2.0.0
+### migration-guide-1.0.0.md (6 KB)
+# Migrating Compose SDK from 0.x.x to 1.0.0
 
-### number-date-formatting.md (5 KB)
-Number & Date Formatting
+### migration-guide-2.0.0.md (8 KB)
+# Migrating Compose SDK from 1.x.x to 2.0.0
 
-### query-caching.md (3 KB)
-Client Query Caching (Alpha)
+### quickstart-angular.md (13 KB)
+# Compose SDK with Angular: Quickstart Guide
 
-### quickstart-angular.md (15 KB)
-Compose SDK with Angular: Quickstart Guide
+### quickstart-vue.md (12 KB)
+# Compose SDK with Vue: Quickstart Guide
 
-### quickstart-react.md (14 KB)
-Compose SDK with React: Quickstart Guide
+### quickstart.md (12 KB)
+# Compose SDK with React: Quickstart Guide
 
-### quickstart-vue.md (14 KB)
-Compose SDK with Vue: Quickstart Guide
+### styling.md (5 KB)
+# Theming & Styling
 
-### theming.md (5 KB)
-Theming & Styling
+### troubleshooting.md (13 KB)
+# CLI Troubleshooting,# Dependency Version Troubleshooting # Generative AI Troubleshooting,# Runtime Troubleshooting # Setup and Infrastructure Troubleshooting
 
-### troubleshooting.md (16 KB)
-Troubleshooting, Compose SDK Troubleshooting, CLI Troubleshooting, Dependency Version Troubleshooting, Generative AI Troubleshooting, Runtime Troubleshooting, Setup and Infrastructure Troubleshooting
+### tutorials.md (47 KB)
+# Lesson 1 | Setup,# Lesson 2 | Chart data # Lesson 2 | Chatbot Customization,# Lesson 3 | Filters & Highlights # Lesson 3 | NLG,# Lesson 4 | Callbacks # Lesson 5 | Dynamic Charts
 
-### tutorials.md (57 KB)
-Tutorials, Tutorial, Lesson 1 | Setup, Lesson 2 | Chart data, Lesson 3 | Filters & Highlights, Lesson 4 | Callbacks, Lesson 5 | Dynamic Charts, Lesson 2 | Chatbot Customization, Lesson 3 | NLG

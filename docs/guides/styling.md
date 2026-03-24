@@ -44,18 +44,6 @@ function App() {
 export default App;
 ```
 
-ataOptions={{
-          category: [DM.Commerce.Condition],
-          value: [measureFactory.sum(DM.Commerce.Revenue, 'Total Revenue')],
-        }}
-      />
-    </div>
-  );
-}
-
-export default App;
-```
-
 ## ThemeProvider / ThemeService
 
 Use a `ThemeProvider` (React and Vue) or `ThemeService` (Angular) to apply a consistent look and feel to multiple charts at once. All charts nested under the `ThemeProvider` or `ThemeService` inherit its theme settings.
@@ -88,16 +76,6 @@ As an example, let's change the look and feel of our charts using the following 
     },
     palette: {
       variantColors: ['#FF0000', '#0000FF', '#006400', '#A020F0'],
-    },
-  }}
->
-  {/* Chart code nested in here */}
-</ThemeProvider>
-```
-
-![Theme Settings](../img/styling-guide/theme-settings.png 'Theme Settings')
-
-ors: ['#FF0000', '#0000FF', '#006400', '#A020F0'],
     },
   }}
 >
@@ -145,15 +123,6 @@ styleOptions={{
 
 ![Style Options](../img/styling-guide/style-options.png 'Style Options')
 
-idth: 400,
-  height: 400,
-  labels: { enabled: true, categories: false, value: false },
-  legend: { enabled: false },
-}}
-```
-
-![Style Options](../img/styling-guide/style-options.png 'Style Options')
-
 ## Highcharts Options
 
 Use the `HighChartsOptions` parameter of the `onBeforeRender()` callback to set [styling (and other) options of the underlying Highcharts chart](https://api.highcharts.com/highcharts/). With the `onBeforeRender()` callback function, you can read, modify, and return the options that will be used when rendering your chart.
@@ -192,18 +161,3 @@ onBeforeRender={(options: HighchartsOptions) => {
 ```
 
 ![Highcharts Options](../img/styling-guide/highcharts-options.png 'Highcharts Options')
-
-
-
-<!-- Source: guides/ai-features/index.md -->
-
-.plotOptions!.pie!.innerSize = '65%';
-  return options;
-}}
-```
-
-![Highcharts Options](../img/styling-guide/highcharts-options.png 'Highcharts Options')
-
-
-
-<!-- Source: guides/ai-features/index.md -->

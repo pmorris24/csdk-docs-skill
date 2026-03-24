@@ -1,9 +1,7 @@
-# Setting Up Jest for Compatibility with Compose SDK
+---
+title: Setting Up Jest for Compatibility with Compose SDK
+---
 
-r details, please refer to the [i18next API documentation](https://www.i18next.com/overview/api).
-
-
-<!-- Source: guides/jest-compatibility.md -->
 # Setting Up Jest for Compatibility with Compose SDK
 
 ## Overview
@@ -19,16 +17,10 @@ Starting with version 1.22.0, Compose SDK packages include a CommonJS build alon
 -   *Primary Package* (`sdk-ui`): Includes `.cjs` files alongside `.js` files within the `dist` folder.
 -   *Other Packages* (`sdk-common`, `sdk-data`, `sdk-modeling`, `sdk-query-client`, `sdk-rest-client`, `sdk-tracking`): Contain a `cjs` folder within the `dist` directory, which houses the CJS build files.
 
-her Packages* (`sdk-common`, `sdk-data`, `sdk-modeling`, `sdk-query-client`, `sdk-rest-client`, `sdk-tracking`): Contain a `cjs` folder within the `dist` directory, which houses the CJS build files.
-
 ## Configuring Jest to Use CJS Packages
 To direct Jest to the appropriate CJS files, you’ll use the [`moduleNameMapper`](https://jestjs.io/docs/tutorial-react-native#modulenamemapper) configuration in your Jest config. This maps the ESM package paths to the CJS equivalents.
 
 **Note**: Compose SDK uses the ESM version of [lodash](https://lodash.com/), so it’s also necessary to map lodash explicitly to its CJS version.
-
-Here are suggested configurations for common frameworks:
-
-te**: Compose SDK uses the ESM version of [lodash](https://lodash.com/), so it’s also necessary to map lodash explicitly to its CJS version.
 
 Here are suggested configurations for common frameworks:
 
@@ -58,15 +50,6 @@ Here are suggested configurations for common frameworks:
   "^lodash-es(.*)$": "<rootDir>/node_modules/lodash$1"
 }
 ```
-
-: "<rootDir>/node_modules/@sisense/sdk-$1/dist/cjs$2",
-  "^@sisense/sdk-ui-vue(.*)$": "<rootDir>/node_modules/@sisense/sdk-ui-vue/dist$1",
-  "^lodash-es(.*)$": "<rootDir>/node_modules/lodash$1"
-}
-```
 ## Conclusion
 
 By mapping the necessary Compose SDK packages to their CJS builds, Jest can effectively work with Compose SDK. This setup ensures that testing compatibility is maintained without impacting the main application’s use of ESM.
-
-
-<!-- Source: guides/migration-guide-1.0.0.md -->

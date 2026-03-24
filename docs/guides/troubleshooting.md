@@ -1,18 +1,3 @@
-# Troubleshooting
-
-Common issues and solutions
-================================================================================
-
-
-<!-- Source: troubleshooting/index.md -->
-# Compose SDK Troubleshooting
-
-These troubleshooting guides contain solutions to common issues you might encounter while using Compose SDK.
-
-<SectionIndex />
-
-
-<!-- Source: troubleshooting/troubleshooting-cli.md -->
 # CLI Troubleshooting
 
 This troubleshooting guide provides possible answers to common issues that may arise when using the Compose SDK CLI.
@@ -26,11 +11,6 @@ When running the CLI command, `get-data-model` to generate the TS/JS representat
 **Solution:**
 
 You may be using the wrong format for your arguments.
-
-* For *Windows Powershell* use double quotes for your string type arguments.
-* For Linux/MAC only use double quotes for string-type arguments that contain white spaces.
-
-g format for your arguments.
 
 * For *Windows Powershell* use double quotes for your string type arguments.
 * For Linux/MAC only use double quotes for string-type arguments that contain white spaces.
@@ -60,23 +40,11 @@ When using a token for authentication I still see the `Enter password for userna
 Don't provide the `--username` flag together with the `--token` flag.
 
 
+---
 
-<!-- Source: troubleshooting/troubleshooting-dependencies.md -->
-
-ee the `Enter password for username` message.
-
-**Solution:**
-
-Don't provide the `--username` flag together with the `--token` flag.
-
-
-
-<!-- Source: troubleshooting/troubleshooting-dependencies.md -->
 # Dependency Version Troubleshooting
 
 This troubleshooting guide provides possible answers to potential dependency version conflicts that may arise when using Compose SDK, especially when your application and `@sisense/sdk-ui` depend on different versions of the same library.
-
-ible answers to potential dependency version conflicts that may arise when using Compose SDK, especially when your application and `@sisense/sdk-ui` depend on different versions of the same library.
 
 ## MUI version conflicts when using `@sisense/sdk-ui`
 
@@ -97,8 +65,6 @@ After installing `@sisense/sdk-ui` (and related packages such as `@sisense/sdk-s
 Use your package manager's capability to **override** or **force-resolve** dependency versions so that **all** packages in your project (including `@sisense/sdk-ui` and `@sisense/sdk-shared-ui`) use a **single, consistent MUI version**.
 
 The exact configuration depends on whether you use `npm`, `yarn`, or `pnpm`. The examples below assume you want to standardize on MUI v5.17.1, but you can replace these versions with the MUI version used in your application.
-
-pends on whether you use `npm`, `yarn`, or `pnpm`. The examples below assume you want to standardize on MUI v5.17.1, but you can replace these versions with the MUI version used in your application.
 
 ## Using npm `overrides`
 
@@ -129,14 +95,6 @@ Then:
 
 All dependencies that depend on `@mui/*` packages (including `@sisense/sdk-ui`) should resolve to the same version.
 
-g the application’s dependencies via:
-
-   ```bash
-   npm ls <package name>
-   ```
-
-All dependencies that depend on `@mui/*` packages (including `@sisense/sdk-ui`) should resolve to the same version.
-
 ## Using Yarn `resolutions`
 
 If you use **Yarn** (classic v1 or modern v2+), you can use the `resolutions` field in your root `package.json` to force a single MUI version.
@@ -159,14 +117,6 @@ Then:
 1. Delete your lockfile (`yarn.lock`) and MUI-related folders from `.yarn/cache` or `node_modules` if applicable.
 2. Run `yarn install` again.
 3. Verify that only the desired MUI package version is installed by checking the application’s dependencies via:
-
-   ```bash
-   yarn why <package name>
-   ```
-
-All dependencies that depend on `@mui/*` packages (including `@sisense/sdk-ui`) should resolve to the same version.
-
-the application’s dependencies via:
 
    ```bash
    yarn why <package name>
@@ -210,10 +160,6 @@ Most package managers also support **package-scoped overrides/resolutions**, whi
 The examples above demonstrate how to change the version **globally** at the application level. For package-scoped configuration, please refer to your package manager’s documentation.
 :::
 
-plication.
-The examples above demonstrate how to change the version **globally** at the application level. For package-scoped configuration, please refer to your package manager’s documentation.
-:::
-
 ## Verifying that the conflict is resolved
 
 After applying overrides with your package manager:
@@ -231,17 +177,11 @@ If issues persist after enforcing a single MUI version, collect:
 Then contact Sisense Support and include this information to aid further investigation.
 
 
+---
 
-<!-- Source: troubleshooting/troubleshooting-genai.md -->
 # Generative AI Troubleshooting
 
 This troubleshooting guide provides possible answers to common issues that may arise when using the Compose SDK Generative AI components.
-
-::: tip Note
-For more information on requirements for enabling Generative AI features, please refer to the [Generative AI documentation](https://docs.sisense.com/main/SisenseLinux/genai.htm)
-:::
-
-s.
 
 ::: tip Note
 For more information on requirements for enabling Generative AI features, please refer to the [Generative AI documentation](https://docs.sisense.com/main/SisenseLinux/genai.htm)
@@ -264,8 +204,8 @@ Check that your app is wrapped in an `AiContextProvider`.
 Check that your app is wrapped in an `AiContextProvider`.
 
 
+---
 
-<!-- Source: troubleshooting/troubleshooting-runtime.md -->
 # Runtime Troubleshooting
 
 This troubleshooting guide provides possible solutions to common issues that may arise when executing Compose SDK code.
@@ -281,17 +221,6 @@ Use of invalid data options. - Solution is to validate data correctly.
 
 **Issue:**
 There are double labels in my chart.
-
-**Solution:**
-You may be using multiple categories with labels. Use only one category instead.
-
-<!--
-Additional categories of potential troubleshooting.
-### Filter configurations
-
--->
-
-s in my chart.
 
 **Solution:**
 You may be using multiple categories with labels. Use only one category instead.
@@ -322,13 +251,8 @@ When clicking a point in my chart nothing happens.
 2. Check to make sure that your callback affects the state of the chart.
 
 
+---
 
-<!-- Source: troubleshooting/troubleshooting-setup.md -->
-# Setup and Infrastructure Troubleshooting
-
-This troubleshooting guide provides possible answers to common issues that may arise when trying to install Compose SDK using `yarn` or `npm`.
-
-etup.md -->
 # Setup and Infrastructure Troubleshooting
 
 This troubleshooting guide provides possible answers to common issues that may arise when trying to install Compose SDK using `yarn` or `npm`.
@@ -341,8 +265,6 @@ This troubleshooting guide provides possible answers to common issues that may a
 | `yarn install`         | Invalid authentication (as an anonymous user)                                                                        | Configure your personal access token for the GitHub Packages Registry (GPR). <br /> Try deleting `yarn.lock` and running `yarn cache clean --all` before running `yarn install` again. <br /><br /> Note that since version `0.11.3`, the SDK packages are hosted on public NPM registry. Consider upgrading SDK to the latest version and removing the configuration for GPR.                                                                                                                        |
 | `yarn install`         | No `@sisense/sdk\*` modules installed in `node\_modules` causing the CLI command to fail to generate the data model  | Check if `Yarn Plug'n'Play` is enabled by checking to see if `pnp.cjs` is in the root folder after running `yarn install`. To fix, add `nodeLinker: node-modules` to your `.yarnrc.yml` file located in the root folder and run `yarn install` again.                                                                                                                                                                                                                                                 |
 | CLI command with `npx` | No output in the console and the data model file is not generated                                                    | Check if `Yarn Plug'n'Play` is enabled by checking to see if `pnp.cjs` is in the root folder after running `yarn install`. <br /><br />This feature is available in **Yarn 4.x**, which is not a stable version. To fix, switch to Yarn version 3.x (stable) by running the command `yarn set version stable`. Run `yarn -v` to see your current version, and verify that version 3.x is used. <br /><br />Run `yarn install` to install the packages again. <br /><br />Run the `npx` command again. |
-
-sion stable`. Run `yarn -v` to see your current version, and verify that version 3.x is used. <br /><br />Run `yarn install` to install the packages again. <br /><br />Run the `npx` command again. |
 
 ## Authentication
 
@@ -368,13 +290,3 @@ There is a warning saying that my app website is not secure.
 1. This warning is displayed on any page served over an insecure protocol such as HTTP. Contact your administrator to resolve it by enabling the HTTPS protocol.
 2. This may be an issue with SSL certificate. Contact your administrator to correct the certificate or to make a new one available for you to use.
 3. This may be a conflict with your anti-virus software and your corporate network. Contact your administrator for more assistance.
-
-
-
-================================================================================
-
-conflict with your anti-virus software and your corporate network. Contact your administrator for more assistance.
-
-
-
-================================================================================

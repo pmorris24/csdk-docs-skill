@@ -1,17 +1,6 @@
-# Contexts
-
-Vue context components
-
-- [SisenseContextProvider](class.SisenseContextProvider.md)
-- [ThemeProvider](class.ThemeProvider.md)
-
-# Class SisenseContextProvider
-
-Sisense Context Provider Component allowing you to connect to
-a Sisense instance and provide that context
-to all Compose SDK components in your application.
-
-ider.md)
+---
+title: SisenseContextProvider
+---
 
 # Class SisenseContextProvider
 
@@ -63,20 +52,6 @@ Sisense context provider props
 
 ## Properties
 
-onst appConfigurations = ref({});
-
-    return { sisenseUrl, defaultDataSource, authToken, watToken, appConfigurations };
-  }
-};
-</script>
-```
-
-## Param
-
-Sisense context provider props
-
-## Properties
-
 ### Sisense App
 
 #### appConfig
@@ -92,16 +67,6 @@ Application specific configurations such as locale and date formats.
 > **`readonly`** **defaultDataSource**?: [`DataSource`](../../sdk-data/type-aliases/type-alias.DataSource.md)
 
 Default data source explicitly set to be used by child components that are not defined with a data source.
-
-***
-
-#### url
-
-> **`readonly`** **url**: `string`
-
-URL of the Sisense environment the app connects to
-
-a source explicitly set to be used by child components that are not defined with a data source.
 
 ***
 
@@ -141,13 +106,14 @@ To signify that the token is pending (e.g., being generated), set the value to `
 
 To signify that the token is pending (e.g., being generated), set the value to `null`. This is supported for React and Vue only.
 
+
+---
+
+---
+title: ThemeProvider
+---
+
 # Class ThemeProvider
-
-Theme provider, which allows you to adjust the look and feel of child components.
-
-Components not wrapped in a theme provider use the current theme from the connected Fusion instance by default.
-
-er
 
 Theme provider, which allows you to adjust the look and feel of child components.
 
@@ -212,16 +178,6 @@ For comparison, indicator chart with default theme settings:
 
 Theme provider props
 
-cator-chart-example-1.png" width="400px" />
-
-## See
-
-[ThemeSettings](../interfaces/interface.ThemeSettings.md) and [IndicatorChart](../charts/class.IndicatorChart.md)
-
-## Param
-
-Theme provider props
-
 ## Properties
 
 ### theme
@@ -229,35 +185,3 @@ Theme provider props
 > **`readonly`** **theme**?: [`ThemeSettings`](../interfaces/interface.ThemeSettings.md) \| `string`
 
 Theme settings object for custom themes or a string identifier to fetch theme settings. When provided as an object, it merges with the default theme settings. When provided as a string, it attempts to fetch theme settings using the provided ID.
-
-
-## Charts
-
-fier to fetch theme settings. When provided as an object, it merges with the default theme settings. When provided as a string, it attempts to fetch theme settings using the provided ID.
-
-
-## Charts
-
-# Charts
-
-Vue components and utilities for working with charts
-
-- [AreaChart](class.AreaChart.md)
-- [AreamapChart](class.AreamapChart.md)
-- [AreaRangeChart](class.AreaRangeChart.md)
-- [BarChart](class.BarChart.md)
-- [BoxplotChart](class.BoxplotChart.md)
-- [boxWhiskerProcessResult](function.boxWhiskerProcessResult.md) - Utility function that combines box whisker data and outliers data
-- [CalendarHeatmapChart](class.CalendarHeatmapChart.md)
-- [Chart](class.Chart.md) - Common component for rendering charts of different types including table
-- [ColumnChart](class.ColumnChart.md)
-- [FunnelChart](class.FunnelChart.md)
-- [IndicatorChart](class.IndicatorChart.md)
-- [LineChart](class.LineChart.md)
-- [PieChart](class.PieChart.md)
-- [PolarChart](class.PolarChart.md)
-- [ScatterChart](class.ScatterChart.md)
-- [ScattermapChart](class.ScattermapChart.md)
-- [StreamgraphChart](class.StreamgraphChart.md)
-- [SunburstChart](class.SunburstChart.md)
-- [TreemapChart](class.TreemapChart.md)

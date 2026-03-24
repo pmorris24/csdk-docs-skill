@@ -1,3 +1,7 @@
+---
+title: ThemeProviderProps
+---
+
 # Interface ThemeProviderProps
 
 Configurations for Theme.
@@ -18,6 +22,13 @@ See [Customizing the Sisense User Interface](https://docs.sisense.com/main/Sisen
 > **theme**?: [`ThemeSettings`](interface.ThemeSettings.md) \| `string`
 
 Theme for visual styling of the various components
+
+
+---
+
+---
+title: ThemeSettings
+---
 
 # Interface ThemeSettings
 
@@ -44,20 +55,6 @@ Chart theme settings
 ### filter
 
 > **filter**?: [`FilterThemeSettings`](../../sdk-ui/type-aliases/type-alias.FilterThemeSettings.md)
-
-Filter theme settings
-
-***
-
-### general
-
-> **general**?: [`GeneralThemeSettings`](../../sdk-ui/interfaces/interface.GeneralThemeSettings.md)
-
-General theme settings
-
-***
-
-ias.FilterThemeSettings.md)
 
 Filter theme settings
 

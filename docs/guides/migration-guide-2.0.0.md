@@ -1,3 +1,6 @@
+---
+title: Migrating Compose SDK from 1.x.x to 2.0.0
+---
 # Migrating Compose SDK from 1.x.x to 2.0.0
 
 Released in April 2025, the major version `2.0.0` of the Compose SDK introduces several breaking changes.
@@ -6,12 +9,6 @@ If your application is still using a Compose SDK version earlier than `2.0.0`, f
 ## Minimum React Version
 
 The minimum supported version of <img src="./../img/react-logo.png" height="14px" style="vertical-align: text-bottom; padding-bottom: 3px" /> **React** is now v17.0.0.
-
-## Minimum Angular Version
-
-The minimum supported version of <img src="./../img/angular-logo.png" height="14px" style="vertical-align: text-bottom; padding-bottom: 3px" /> **Angular** is now v17.
-
-.
 
 ## Minimum Angular Version
 
@@ -165,11 +162,6 @@ The minimum supported version of <img src="./../img/angular-logo.png" height="14
 
 ---
 
-vertical-align: text-bottom; padding-bottom: 3px" /> **Angular**:
-   - The deprecated `onBeforeQuery` property in `ExecuteQueryParams` has been removed. Use the `beforeQuery` parameter instead.
-
----
-
 ## Type Fixes
 
    <img src="./../img/react-logo.png" height="14px" style="vertical-align: text-bottom; padding-bottom: 3px" /> <img src="./../img/vue-logo.png" height="14px" style="vertical-align: text-bottom; padding-bottom: 3px" /> <img src="./../img/angular-logo.png" height="14px" style="vertical-align: text-bottom; padding-bottom: 3px" /> **All frameworks**:
@@ -195,11 +187,3 @@ vertical-align: text-bottom; padding-bottom: 3px" /> **Angular**:
 
    - The `dataPointsSelect` prop for multiple charts has been renamed to `dataPointsSelected`.
    - The callbacks `dataPointClick`, `dataPointContextMenu`, `dataPointsSelect`, and `beforeRender` for specific charts are now strictly typed, referencing the values specific to each chart.
-
-
-<!-- Source: guides/styling.md -->
-
-tClick`, `dataPointContextMenu`, `dataPointsSelect`, and `beforeRender` for specific charts are now strictly typed, referencing the values specific to each chart.
-
-
-<!-- Source: guides/styling.md -->

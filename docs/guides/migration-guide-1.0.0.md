@@ -1,3 +1,7 @@
+---
+title: Migrating Compose SDK from 0.x.x to 1.0.0
+---
+
 # Migrating Compose SDK from 0.x.x to 1.0.0
 
 Released in December 2023, Compose SDK (C-SDK) major version `1.0.0` introduces a number of breaking changes.
@@ -5,9 +9,6 @@ If your application is still using C-SDK version less than `1.0.0`, follow this 
 
 >**Note**:
 >This guide is for <img src="./../img/react-logo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 3px" /> React.
->As of December 2023, C-SDK for other frameworks including Angular and Vue are still under internal testing.
-
-ogo.png" height="18px" style="vertical-align: text-bottom; padding-bottom: 3px" /> React.
 >As of December 2023, C-SDK for other frameworks including Angular and Vue are still under internal testing.
 
 ## Renamed
@@ -58,18 +59,6 @@ AFTER
     filters: [filterFactory.greaterThan(DM.Commerce.Revenue, 1000)],
   });
   if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  if (isError) {
-    return <div>Error</div>;
-  }
-  if (data) {
-    return <div>{`Total Rows: ${data.rows.length}`}</div>;
-  }
-  return null;
-```
-
-(isLoading) {
     return <div>Loading...</div>;
   }
   if (isError) {
@@ -186,20 +175,6 @@ AFTER
 />
 ```
 
-rs: {
-      enabled: true,
-      fill: 'hollow',
-    },
-    border: true,
-    borderColor: 'lightgray',
-    header: {
-      dividerLine: true,
-      dividerLineColor: 'lightgray',
-    },
-  }}
-/>
-```
-
 ## Updated
 
 (1) The return value of the `ExecuteQuery` component is now consistent with that of the `useExecuteQuery` hook.
@@ -299,19 +274,3 @@ AFTER
 }
 </ExecuteQueryByWidgetId>
 ```
-
-
-<!-- Source: guides/migration-guide-2.0.0.md -->
-
-) {
-      console.log(data);
-      return <div>{`Total Rows: ${data.rows.length}`}</div>;
-    }
-    return null;
-  }
-}
-</ExecuteQueryByWidgetId>
-```
-
-
-<!-- Source: guides/migration-guide-2.0.0.md -->

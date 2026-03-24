@@ -1,9 +1,6 @@
-# Class AreaChartComponent
-
-A component similar to a [LineChartComponent](class.LineChartComponent.md),
-but with filled in areas under each line and an option to display them as stacked.
-
-ponent.md)
+---
+title: AreaChartComponent
+---
 
 # Class AreaChartComponent
 
@@ -60,31 +57,7 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-area-chart-example.png" width="800px" />
 
-beforeRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-area-chart-example.png" width="800px" />
-
 ## Constructors
-
-### constructor
-
-> **new AreaChartComponent**(): [`AreaChartComponent`](class.AreaChartComponent.md)
-
-#### Returns
-
-[`AreaChartComponent`](class.AreaChartComponent.md)
-
-## Properties
-
-# Constructors
 
 ### constructor
 
@@ -192,11 +165,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -207,16 +175,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`AreaStyleOptions`](../interfaces/interface.AreaStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-taoptions).
 
 ***
 
@@ -281,18 +239,16 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: AreaRangeChartComponent
+---
 
 # Class AreaRangeChartComponent
 
 A component that displays a range of data over a given time period or across multiple categories.
-It is particularly useful for visualizing the minimum and maximum values in a dataset, along with
-the area between these values.
-
-range of data over a given time period or across multiple categories.
 It is particularly useful for visualizing the minimum and maximum values in a dataset, along with
 the area between these values.
 
@@ -358,31 +314,9 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-area-range-chart-example.png" width="800px" />
 
-Render');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-area-range-chart-example.png" width="800px" />
-
 ## Constructors
 
 ### constructor
-
-> **new AreaRangeChartComponent**(): [`AreaRangeChartComponent`](class.AreaRangeChartComponent.md)
-
-#### Returns
-
-[`AreaRangeChartComponent`](class.AreaRangeChartComponent.md)
-
-## Properties
-
-ructor
 
 > **new AreaRangeChartComponent**(): [`AreaRangeChartComponent`](class.AreaRangeChartComponent.md)
 
@@ -488,11 +422,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -500,16 +429,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`RangeChartDataOptions`](../interfaces/interface.RangeChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`AreaRangeStyleOptions`](../interfaces/interface.AreaRangeStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-t
 
 ***
 
@@ -574,10 +493,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: AreamapChartComponent
+---
 
 # Class AreamapChartComponent
 
@@ -624,26 +545,6 @@ export class AnalyticsComponent {
 <img src="../../../img/angular-areamap-chart-example.png" width="800px" />
 
 ## Constructors
-
-### constructor
-
-> **new AreamapChartComponent**(): [`AreamapChartComponent`](class.AreamapChartComponent.md)
-
-#### Returns
-
-[`AreamapChartComponent`](class.AreamapChartComponent.md)
-
-# Constructors
-
-### constructor
-
-> **new AreamapChartComponent**(): [`AreamapChartComponent`](class.AreamapChartComponent.md)
-
-#### Returns
-
-[`AreamapChartComponent`](class.AreamapChartComponent.md)
-
-## Properties
 
 ### constructor
 
@@ -751,11 +652,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -789,12 +685,12 @@ Click handler callback for a data point
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-# Class BarChartComponent
 
-A component representing categorical data with horizontal rectangular bars,
-whose lengths are proportional to the values that they represent.
+---
 
-odification of queried data.
+---
+title: BarChartComponent
+---
 
 # Class BarChartComponent
 
@@ -852,32 +748,6 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-bar-chart-example.png" width="800px" />
 
-'beforeRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-bar-chart-example.png" width="800px" />
-
-## Constructors
-
-### constructor
-
-> **new BarChartComponent**(): [`BarChartComponent`](class.BarChartComponent.md)
-
-#### Returns
-
-[`BarChartComponent`](class.BarChartComponent.md)
-
-## Properties
-
-/>
-
 ## Constructors
 
 ### constructor
@@ -986,11 +856,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1001,16 +866,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`StackableStyleOptions`](../interfaces/interface.StackableStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-.
 
 ***
 
@@ -1075,17 +930,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
 
-# Class BoxplotChartComponent
-
-An Angular component representing data in a way that visually describes the distribution
-variability, and center of a data set along an axis.
-
-ication of queried data.
+---
+title: BoxplotChartComponent
+---
 
 # Class BoxplotChartComponent
 
@@ -1137,28 +987,6 @@ export class AnalyticsComponent {
 <img src="../../../img/angular-boxplot-chart-example.png" width="800px" />
 
 ## Constructors
-
-n_name, ['Cardiology', 'Neurology'])],
- };
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-boxplot-chart-example.png" width="800px" />
-
-## Constructors
-
-### constructor
-
-> **new BoxplotChartComponent**(): [`BoxplotChartComponent`](class.BoxplotChartComponent.md)
-
-#### Returns
-
-[`BoxplotChartComponent`](class.BoxplotChartComponent.md)
-
-## Properties
 
 ### constructor
 
@@ -1266,11 +1094,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1278,16 +1101,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`BoxplotChartCustomDataOptions`](../type-aliases/type-alias.BoxplotChartCustomDataOptions.md) \| [`BoxplotChartDataOptions`](../type-aliases/type-alias.BoxplotChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`BoxplotStyleOptions`](../interfaces/interface.BoxplotStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-chart
 
 ***
 
@@ -1346,10 +1159,12 @@ Handler callback for selection of multiple data points
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: CalendarHeatmapChartComponent
+---
 
 # Class CalendarHeatmapChartComponent
 
@@ -1402,31 +1217,9 @@ export class AnalyticsComponent {
 
 ## Constructors
 
-',
-       '2009-12-15'
-     ),
-   ],
-   styleOptions: {
-     viewType: 'quarter',
-   },
- };
-}
-```
-<img src="../../../img/angular-calendar-heatmap-chart-example.png" width="800px" />
-
-## Constructors
-
 ### constructor
 
 > **new CalendarHeatmapChartComponent**(): [`CalendarHeatmapChartComponent`](class.CalendarHeatmapChartComponent.md)
-
-#### Returns
-
-[`CalendarHeatmapChartComponent`](class.CalendarHeatmapChartComponent.md)
-
-## Properties
-
-pChartComponent**(): [`CalendarHeatmapChartComponent`](class.CalendarHeatmapChartComponent.md)
 
 #### Returns
 
@@ -1530,11 +1323,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -1546,12 +1334,6 @@ Configurations for how to interpret and present the data passed to the chart
 ***
 
 #### styleOptions
-
-> **styleOptions**: [`CalendarHeatmapStyleOptions`](../interfaces/interface.CalendarHeatmapStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-styleOptions
 
 > **styleOptions**: [`CalendarHeatmapStyleOptions`](../interfaces/interface.CalendarHeatmapStyleOptions.md) \| `undefined`
 
@@ -1606,10 +1388,12 @@ Handler callback for selection of multiple data points
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: ChartComponent
+---
 
 # Class ChartComponent
 
@@ -1671,23 +1455,6 @@ chart = {
 
 ## Constructors
 
-enabled: true,
-      },
-    },
-  },
-};
-```
-
-<img src="../../../img/angular-chart-example.png" width="800px" />
-
-## Implements
-
-- `AfterViewInit`
-- `OnChanges`
-- `OnDestroy`
-
-## Constructors
-
 ### constructor
 
 > **new ChartComponent**(`sisenseContextService`, `themeService`): [`ChartComponent`](class.ChartComponent.md)
@@ -1699,15 +1466,6 @@ Constructor for the `Chart` component.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `sisenseContextService` | [`SisenseContextService`](../contexts/class.SisenseContextService.md) | Sisense context service |
-| `themeService` | [`ThemeService`](../contexts/class.ThemeService.md) | Theme service |
-
-#### Returns
-
-[`ChartComponent`](class.ChartComponent.md)
-
-## Properties
-
-ice.md) | Sisense context service |
 | `themeService` | [`ThemeService`](../contexts/class.ThemeService.md) | Theme service |
 
 #### Returns
@@ -1812,11 +1570,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### chartType
@@ -1843,11 +1596,6 @@ see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-c
 > **styleOptions**: [`ChartStyleOptions`](../type-aliases/type-alias.ChartStyleOptions.md) \| `undefined`
 
 Configurations for how to style and present a chart's data.
-
-To learn more about using style options,
-see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#styleoptions).
-
-tions for how to style and present a chart's data.
 
 To learn more about using style options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#styleoptions).
@@ -1895,11 +1643,6 @@ Handler callback for selection of multiple data points
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
-
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
-
 ### Constructor
 
 #### sisenseContextService
@@ -1916,14 +1659,12 @@ Sisense context service
 
 Theme service
 
-# Class ColumnChartComponent
 
-A component representing categorical data with vertical rectangular bars
-whose heights are proportional to the values that they represent.
+---
 
-meService.md)
-
-Theme service
+---
+title: ColumnChartComponent
+---
 
 # Class ColumnChartComponent
 
@@ -1980,31 +1721,7 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-column-chart-example.png" width="800px" />
 
-foreRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-column-chart-example.png" width="800px" />
-
 ## Constructors
-
-### constructor
-
-> **new ColumnChartComponent**(): [`ColumnChartComponent`](class.ColumnChartComponent.md)
-
-#### Returns
-
-[`ColumnChartComponent`](class.ColumnChartComponent.md)
-
-## Properties
-
-tors
 
 ### constructor
 
@@ -2112,11 +1829,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -2127,16 +1839,6 @@ Configurations for how to interpret and present a chart's data.
 
 To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`StackableStyleOptions`](../interfaces/interface.StackableStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-.
 
 ***
 
@@ -2201,17 +1903,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
 
-# Class FunnelChartComponent
-
-A component representing data progressively decreasing in size or quantity through a funnel shape.
-
-en retrieved.
-It can be used to inject modification of queried data.
+---
+title: FunnelChartComponent
+---
 
 # Class FunnelChartComponent
 
@@ -2266,31 +1963,7 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-funnel-chart-example.png" width="800px" />
 
-foreRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-funnel-chart-example.png" width="800px" />
-
 ## Constructors
-
-### constructor
-
-> **new FunnelChartComponent**(): [`FunnelChartComponent`](class.FunnelChartComponent.md)
-
-#### Returns
-
-[`FunnelChartComponent`](class.FunnelChartComponent.md)
-
-## Properties
-
-tors
 
 ### constructor
 
@@ -2398,11 +2071,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -2410,16 +2078,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CategoricalChartDataOptions`](../interfaces/interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`FunnelStyleOptions`](../interfaces/interface.FunnelStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-e chart
 
 ***
 
@@ -2484,16 +2142,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
 
-# Class IndicatorChartComponent
-
-A component that provides various options for displaying one or two numeric values as a number, gauge or ticker.
-
-can be used to inject modification of queried data.
+---
+title: IndicatorChartComponent
+---
 
 # Class IndicatorChartComponent
 
@@ -2554,31 +2208,9 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-indicator-chart-example.png" width="800px" />
 
-BeShown: true,
-       },
-     },
-     subtype: 'indicator/gauge',
-     skin: 2,
-   } as IndicatorStyleOptions,
- };
-
-}
-```
-<img src="../../../img/angular-indicator-chart-example.png" width="800px" />
-
 ## Constructors
 
 ### constructor
-
-> **new IndicatorChartComponent**(): [`IndicatorChartComponent`](class.IndicatorChartComponent.md)
-
-#### Returns
-
-[`IndicatorChartComponent`](class.IndicatorChartComponent.md)
-
-## Properties
-
-ructor
 
 > **new IndicatorChartComponent**(): [`IndicatorChartComponent`](class.IndicatorChartComponent.md)
 
@@ -2684,11 +2316,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -2723,12 +2350,12 @@ The returned options are then used when rendering the chart.
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-# Class LineChartComponent
 
-A component displaying data as a series of points connected by a line. Used to show trends or changes over time.
+---
 
-.
-It can be used to inject modification of queried data.
+---
+title: LineChartComponent
+---
 
 # Class LineChartComponent
 
@@ -2783,31 +2410,7 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-line-chart-example.png" width="800px" />
 
-beforeRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-line-chart-example.png" width="800px" />
-
 ## Constructors
-
-### constructor
-
-> **new LineChartComponent**(): [`LineChartComponent`](class.LineChartComponent.md)
-
-#### Returns
-
-[`LineChartComponent`](class.LineChartComponent.md)
-
-## Properties
-
-# Constructors
 
 ### constructor
 
@@ -2926,21 +2529,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **styleOptions**: [`LineStyleOptions`](../interfaces/interface.LineStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-ing).
-
 ### Chart
 
 #### styleOptions
@@ -3004,17 +2592,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
 
-# Class PieChartComponent
-
-A component representing data in a circular graph with the data shown as slices of a whole,
-with each slice representing a proportion of the total.
-
-ation of queried data.
+---
+title: PieChartComponent
+---
 
 # Class PieChartComponent
 
@@ -3070,32 +2653,6 @@ export class AnalyticsComponent {
 }
 ```
 <img src="../../../img/angular-pie-chart-example.png" width="800px" />
-
-'beforeRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-pie-chart-example.png" width="800px" />
-
-## Constructors
-
-### constructor
-
-> **new PieChartComponent**(): [`PieChartComponent`](class.PieChartComponent.md)
-
-#### Returns
-
-[`PieChartComponent`](class.PieChartComponent.md)
-
-## Properties
-
-/>
 
 ## Constructors
 
@@ -3213,21 +2770,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **styleOptions**: [`PieStyleOptions`](../interfaces/interface.PieStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-hting).
-
 ### Chart
 
 #### styleOptions
@@ -3291,17 +2833,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
 
-# Class PolarChartComponent
-
-A component comparing multiple categories/variables with a spacial perspective in a radial chart.
-
-been retrieved.
-It can be used to inject modification of queried data.
+---
+title: PolarChartComponent
+---
 
 # Class PolarChartComponent
 
@@ -3357,31 +2894,7 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-polar-chart-example.png" width="800px" />
 
-eforeRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-polar-chart-example.png" width="800px" />
-
 ## Constructors
-
-### constructor
-
-> **new PolarChartComponent**(): [`PolarChartComponent`](class.PolarChartComponent.md)
-
-#### Returns
-
-[`PolarChartComponent`](class.PolarChartComponent.md)
-
-## Properties
-
-structors
 
 ### constructor
 
@@ -3500,21 +3013,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **styleOptions**: [`PolarStyleOptions`](../interfaces/interface.PolarStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-g).
-
 ### Chart
 
 #### styleOptions
@@ -3578,10 +3076,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: ScatterChartComponent
+---
 
 # Class ScatterChartComponent
 
@@ -3589,11 +3089,6 @@ A component displaying the distribution of two variables on an X-Axis, Y-Axis,
 and two additional fields of data that are shown as colored circles scattered across the chart.
 
 **Point**: A field that for each of its members a scatter point is drawn. The maximum amount of data points is 500.
-
-**Size**: An optional field represented by the size of the circles.
-If omitted, all scatter points are equal in size. If used, the circle sizes are relative to their values.
-
-of data points is 500.
 
 **Size**: An optional field represented by the size of the circles.
 If omitted, all scatter points are equal in size. If used, the circle sizes are relative to their values.
@@ -3646,29 +3141,6 @@ export class AnalyticsComponent {
 <img src="../../../img/angular-scatter-chart-example.png" width="800px" />
 
 ## Constructors
-
-onsole.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-scatter-chart-example.png" width="800px" />
-
-## Constructors
-
-### constructor
-
-> **new ScatterChartComponent**(): [`ScatterChartComponent`](class.ScatterChartComponent.md)
-
-#### Returns
-
-[`ScatterChartComponent`](class.ScatterChartComponent.md)
-
-## Properties
 
 ### constructor
 
@@ -3784,19 +3256,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
-### Chart
-
-#### styleOptions
-
-> **styleOptions**: [`ScatterStyleOptions`](../interfaces/interface.ScatterStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
 ### Chart
 
 #### styleOptions
@@ -3854,17 +3313,12 @@ Handler callback for selection of multiple data points
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
 
-# Class ScattermapChartComponent
-
-An Angular component that allows to visualize geographical data as data points on a map.
-
-has been retrieved.
-It can be used to inject modification of queried data.
+---
+title: ScattermapChartComponent
+---
 
 # Class ScattermapChartComponent
 
@@ -3919,30 +3373,7 @@ export class AnalyticsComponent {
 
 ## Constructors
 
-},
-   } as ScattermapStyleOptions,
- };
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-scattermap-chart-example.png" width="800px" />
-
-## Constructors
-
 ### constructor
-
-> **new ScattermapChartComponent**(): [`ScattermapChartComponent`](class.ScattermapChartComponent.md)
-
-#### Returns
-
-[`ScattermapChartComponent`](class.ScattermapChartComponent.md)
-
-## Properties
-
-r
 
 > **new ScattermapChartComponent**(): [`ScattermapChartComponent`](class.ScattermapChartComponent.md)
 
@@ -4048,11 +3479,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4086,16 +3512,18 @@ Click handler callback for a data point
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
+
+---
+
+---
+title: StreamgraphChartComponent
+---
+
 # Class StreamgraphChartComponent
 
 A component that displays a streamgraph chart.
 
 A streamgraph is a type of stacked area chart where areas are displaced around
-a central axis. It is particularly effective for displaying volume across
-different categories or over time with a relative scale that emphasizes
-overall patterns and trends.
-
-as are displaced around
 a central axis. It is particularly effective for displaying volume across
 different categories or over time with a relative scale that emphasizes
 overall patterns and trends.
@@ -4154,35 +3582,11 @@ export class AnalyticsComponent {
 }
 ```
 
-height: 500,
-   },
- };
-
- onBeforeRender(options: any) {
-   console.log('beforeRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-
 ## Constructors
 
 ### constructor
 
 > **new StreamgraphChartComponent**(): [`StreamgraphChartComponent`](class.StreamgraphChartComponent.md)
-
-#### Returns
-
-[`StreamgraphChartComponent`](class.StreamgraphChartComponent.md)
-
-## Properties
-
-**new StreamgraphChartComponent**(): [`StreamgraphChartComponent`](class.StreamgraphChartComponent.md)
 
 #### Returns
 
@@ -4286,11 +3690,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4307,14 +3706,6 @@ To learn more about using data options,
 see the [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#dataoptions).
 
 ***
-
-#### styleOptions
-
-> **styleOptions**: [`StreamgraphStyleOptions`](../interfaces/interface.StreamgraphStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-**
 
 #### styleOptions
 
@@ -4377,17 +3768,14 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: SunburstChartComponent
+---
 
 # Class SunburstChartComponent
-
-A component displaying hierarchical data in the form of nested slices.
-This type of chart can be used instead of a pie chart for comparing a large number of categories and sub-categories.
-
-Component
 
 A component displaying hierarchical data in the form of nested slices.
 This type of chart can be used instead of a pie chart for comparing a large number of categories and sub-categories.
@@ -4442,31 +3830,9 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-sunburst-chart-example.png" width="800px" />
 
-reRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-sunburst-chart-example.png" width="800px" />
-
 ## Constructors
 
 ### constructor
-
-> **new SunburstChartComponent**(): [`SunburstChartComponent`](class.SunburstChartComponent.md)
-
-#### Returns
-
-[`SunburstChartComponent`](class.SunburstChartComponent.md)
-
-## Properties
-
-constructor
 
 > **new SunburstChartComponent**(): [`SunburstChartComponent`](class.SunburstChartComponent.md)
 
@@ -4572,11 +3938,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4584,16 +3945,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CategoricalChartDataOptions`](../interfaces/interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`SunburstStyleOptions`](../interfaces/interface.SunburstStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-art
 
 ***
 
@@ -4658,17 +4009,14 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: TreemapChartComponent
+---
 
 # Class TreemapChartComponent
-
-A component displaying hierarchical data in the form of nested rectangles.
-This type of chart can be used instead of a column chart for comparing a large number of categories and sub-categories.
-
-nt
 
 A component displaying hierarchical data in the form of nested rectangles.
 This type of chart can be used instead of a column chart for comparing a large number of categories and sub-categories.
@@ -4723,29 +4071,7 @@ export class AnalyticsComponent {
 ```
 <img src="../../../img/angular-treemap-chart-example.png" width="800px" />
 
-oreRender');
-   console.log(options);
-   return options;
- }
-
- logArguments(...args: any[]) {
-   console.log(args);
- }
-}
-```
-<img src="../../../img/angular-treemap-chart-example.png" width="800px" />
-
 ## Constructors
-
-### constructor
-
-> **new TreemapChartComponent**(): [`TreemapChartComponent`](class.TreemapChartComponent.md)
-
-#### Returns
-
-[`TreemapChartComponent`](class.TreemapChartComponent.md)
-
-## Properties
 
 ### constructor
 
@@ -4853,11 +4179,6 @@ Use this option for highlights that you want your users to set using pre-built U
 To learn more about using filter components to create highlights, see the
 [Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
 
-ts.
-
-To learn more about using filter components to create highlights, see the
-[Compose SDK Charts Guide](/guides/sdk/guides/charts/guide-compose-sdk-charts.html#filter-components-for-highlighting).
-
 ### Chart
 
 #### dataOptions
@@ -4865,16 +4186,6 @@ To learn more about using filter components to create highlights, see the
 > **dataOptions**: [`CategoricalChartDataOptions`](../interfaces/interface.CategoricalChartDataOptions.md)
 
 Configurations for how to interpret and present the data passed to the chart
-
-***
-
-#### styleOptions
-
-> **styleOptions**: [`TreemapStyleOptions`](../interfaces/interface.TreemapStyleOptions.md) \| `undefined`
-
-Configurations for how to style and present a chart's data.
-
-chart
 
 ***
 
@@ -4939,10 +4250,12 @@ To learn more about callbacks, see the [Compose SDK Charts Guide](/guides/sdk/gu
 A callback that allows to modify data immediately after it has been retrieved.
 It can be used to inject modification of queried data.
 
-a`](../../sdk-data/interfaces/interface.Data.md) \| `undefined`
 
-A callback that allows to modify data immediately after it has been retrieved.
-It can be used to inject modification of queried data.
+---
+
+---
+title: boxWhiskerProcessResult
+---
 
 # Function boxWhiskerProcessResult
 
@@ -4966,61 +4279,3 @@ Processes box whisker data and outliers data to combine them into a single data 
 [`QueryResultData`](../../sdk-data/interfaces/interface.QueryResultData.md)
 
 The combined data with outliers included in the box whisker plot.
-
-
-## Dashboards
-
-omizing data processing. |
-
-## Returns
-
-[`QueryResultData`](../../sdk-data/interfaces/interface.QueryResultData.md)
-
-The combined data with outliers included in the box whisker plot.
-
-
-## Dashboards
-
-# Dashboards
-
-Angular components and utilities for working with dashboards
-
-- [ChartWidgetComponent](class.ChartWidgetComponent.md)
-- [CustomWidgetsService](class.CustomWidgetsService.md)
-- [DashboardComponent](class.DashboardComponent.md)
-- [dashboardHelpers](namespace.dashboardHelpers/index.md) - Utility functions to manipulate dashboard elements
-- [extractDimensionsAndMeasures](function.extractDimensionsAndMeasures.md)
-- [PivotTableWidgetComponent](class.PivotTableWidgetComponent.md)
-- [WidgetComponent](class.WidgetComponent.md)
-
-# Namespace dashboardHelpers
-
-Utility functions to manipulate `DashboardProps`
-
-## Index
-
-### Functions
-
-- [addFilter](functions/function.addFilter.md)
-- [addFilters](functions/function.addFilters.md)
-- [removeFilter](functions/function.removeFilter.md)
-- [removeFilters](functions/function.removeFilters.md)
-- [replaceFilter](functions/function.replaceFilter.md)
-- [replaceFilters](functions/function.replaceFilters.md)
-
-Utility functions to manipulate `DashboardProps`
-
-# Functions
-
-- [addFilter](function.addFilter.md)
-- [addFilters](function.addFilters.md)
-- [removeFilter](function.removeFilter.md)
-- [removeFilters](function.removeFilters.md)
-- [replaceFilter](function.replaceFilter.md)
-- [replaceFilters](function.replaceFilters.md)
-
-ion.addFilters.md)
-- [removeFilter](function.removeFilter.md)
-- [removeFilters](function.removeFilters.md)
-- [replaceFilter](function.replaceFilter.md)
-- [replaceFilters](function.replaceFilters.md)

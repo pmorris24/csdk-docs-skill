@@ -1,28 +1,7 @@
-# Generative AI powered by Sisense Intelligence
+---
+title: Quickstart Guide (React)
+---
 
-Compose SDK contains generative AI (GenAI) components and hooks/services that enable the following possibilities:
-
-- **Deliver in-app analytics chat**: Enable business users to uncover data insights easily, by asking questions in a conversational interface using the `<Chatbot />` component. See how to [get started using the chatbot](./quickstart.md#chatbot) in your code.
-- **Suggest recommedend questions**: Encourage exploration of the data landscape with AI-generated recommended queries, either directly within the chatbot or as a standlone feature using the `useGetQueryRecommendations()` hook in React and Vue, or the `AiService.getQueryRecommendations` in Angular. See how to [get started using query recommendations](./quickstart.md#query-recommendations) in your code.
-- **Bring insights to life with data storytelling**: Enhance collaboration and add context to your data with auto-generated, natural language insights using the `<GetNlgInsights />` component (`GetNlgInsightsComponent` in Angular) or the `useGetNlgInsights()` hook (`AiService.getQueryRecommendations` in Angular). See how to [get started using natural language insights](./quickstart.md#natural-language-generation-nlg-insights) in your code.
-
-<SectionIndex />
-
-Visit the following API References to learn more about usage and examples:
-
-- Generative for [React](../../modules/sdk-ui/generative-ai/)
-- Generative for [Angular](../../modules/sdk-ui-angular/generative-ai/)
-- Generative for [Vue](../../modules/sdk-ui-vue/generative-ai/)
-
-
-<!-- Source: guides/ai-features/quickstart.md -->
-
-rative-ai/)
-- Generative for [Angular](../../modules/sdk-ui-angular/generative-ai/)
-- Generative for [Vue](../../modules/sdk-ui-vue/generative-ai/)
-
-
-<!-- Source: guides/ai-features/quickstart.md -->
 # Generative AI with React: Quickstart Guide
 
 This guide offers examples for getting started with:
@@ -37,9 +16,6 @@ This guide offers examples for getting started with:
 This guide assumes you already have a React project working with Compose SDK. If you don't already have a working project, follow the [Compose SDK Quickstart](../../getting-started) before continuing here. The additional prerequsities for Generative AI are listed below:
 
 - `@sisense/sdk-ui` version `2.0.0` or higher
-- Sisense Fusion version L2025.2 or higher, with Generative AI and LLM enabled per the [Sisense Documentation](https://docs.sisense.com/main/SisenseLinux/genai.htm)
-
-sdk-ui` version `2.0.0` or higher
 - Sisense Fusion version L2025.2 or higher, with Generative AI and LLM enabled per the [Sisense Documentation](https://docs.sisense.com/main/SisenseLinux/genai.htm)
 
 ## Project Setup
@@ -70,16 +46,6 @@ Here are some examples of how to work with the [`<Chatbot>`](../../modules/sdk-u
 ### Default Chatbot
 
 To display a chatbot with the default settings, simply add the [`<Chatbot />`](../../modules/sdk-ui/generative-ai/function.Chatbot.md) component to your code without specifying any props.
-
-```ts
-import { Chatbot } from '@sisense/sdk-ui/ai';
-
-// ...
-
-<Chatbot />
-```
-
-hatbot />`](../../modules/sdk-ui/generative-ai/function.Chatbot.md) component to your code without specifying any props.
 
 ```ts
 import { Chatbot } from '@sisense/sdk-ui/ai';
@@ -147,17 +113,6 @@ For more information refer to [AiChatThemeSettings](../../modules/sdk-ui/interfa
 ```
 <br />
 
-primaryTextColor: 'rgba(255, 255, 255, 0.7)',
-      secondaryTextColor: 'rgba(255, 255, 255, 0.7)',
-      primaryFontSize: ['14px', '16px'],
-    }
-  }}
->
-  <Chatbot />
-</ThemeProvider>
-```
-<br />
-
 ## Natural Language Generation (NLG Insights)
 
 Natural language textual insights generated from the data results of the provided query parameters.
@@ -178,19 +133,6 @@ import { useGetNlgInsights } from '@sisense/sdk-ui/ai';
 
 const { data, isLoading } = useGetNlgInsights({
   dataSource: DM.DataSource,
-  dimensions: [DM.Commerce.Date.Years],
-  measures: [measureFactory.sum(DM.Commerce.Revenue)],
-  verbosity: 'Low'
-});
-
-if (isLoading) {
-  return <div>Loading...</div>;
-}
-
-return <p>{data}</p>;
-```
-
-,
   dimensions: [DM.Commerce.Date.Years],
   measures: [measureFactory.sum(DM.Commerce.Revenue)],
   verbosity: 'Low'
@@ -234,22 +176,6 @@ import { useGetNlqResult } from '@sisense/sdk-ui/ai';
 
 const { data, isLoading} = useGetNlqResult({
   dataSource: 'Sample ECommerce',
-  query: 'total sales by month',
-});
-
-if (isLoading) {
-  return <div>Loading result</div>;
-}
-
-return (
-  <>
-    {data && <Widget {...data} /> }
-  </>
-);
-```
-<br />
-
-dataSource: 'Sample ECommerce',
   query: 'total sales by month',
 });
 
@@ -334,21 +260,3 @@ return (
   </ul>
 );
 ```
-
-
-<!-- Source: guides/charts/index.md -->
-
-ndex}>
-          <Widget
-            key={'widget-' + index}
-            {...item.widgetProps}
-          />
-        </div>
-      </li>
-    ))}
-  </ul>
-);
-```
-
-
-<!-- Source: guides/charts/index.md -->

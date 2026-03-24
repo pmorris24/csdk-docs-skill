@@ -1,13 +1,13 @@
 # CSDK Docs — Claude Code Skill
 
-A Claude Code slash command that gives Claude access to the full Sisense Compose SDK documentation for accurate, context-aware answers.
+Claude Code slash commands that give Claude access to the full Sisense Compose SDK documentation for accurate, context-aware answers.
 
 ## Install
 
 Clone this repo, then use Claude Code from within it:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/csdk-docs-skill.git
+git clone https://github.com/pmorris24/csdk-docs-skill.git
 cd csdk-docs-skill
 claude
 ```
@@ -15,41 +15,49 @@ claude
 Or add it to an existing project as a submodule:
 
 ```bash
-git submodule add https://github.com/YOUR_USERNAME/csdk-docs-skill.git .csdk-docs
+git submodule add https://github.com/pmorris24/csdk-docs-skill.git .csdk-docs
+cp -r .csdk-docs/.claude/commands/csdk-*.md .claude/commands/
 ```
 
-Then copy the command into your project:
+## Commands
 
-```bash
-mkdir -p .claude/commands
-cp .csdk-docs/.claude/commands/csdk-docs.md .claude/commands/
-```
+| Command | Use case | Context loaded |
+|---------|----------|----------------|
+| `/csdk-quick` | Fast lookups — "what does filterFactory.members do?" | ~20-50 KB |
+| `/csdk-react` | React-specific questions | Only relevant React docs |
+| `/csdk-vue` | Vue-specific questions | Only relevant Vue docs |
+| `/csdk-angular` | Angular-specific questions | Only relevant Angular docs |
+| `/csdk-docs` | General questions (auto-detects framework) | Only relevant docs |
 
-## Usage
-
-In Claude Code, type:
-
-```
-/csdk-docs how do I create a bar chart with filters?
-```
+## Examples
 
 ```
-/csdk-docs what props does DashboardById accept?
+/csdk-quick what props does useExecuteQuery accept?
 ```
 
 ```
-/csdk-docs how do I use useExecuteQuery with measures and dimensions?
+/csdk-react how do I embed a dashboard with custom filters?
 ```
 
-## What's included
+```
+/csdk-vue how do I create a bar chart with drilldown?
+```
 
-- `/docs` — Full Sisense Compose SDK documentation (API references, guides, examples)
-- `/.claude/commands/csdk-docs.md` — The slash command that reads the docs and answers questions
+```
+/csdk-docs how do I migrate from 1.x to 2.0?
+```
+
+## How it works
+
+Each command tells Claude which doc files to read based on your question — it only loads what's relevant instead of the entire 3 MB doc set. The docs are split into ~35 focused files organized by:
+
+- **Framework** (`docs/react/`, `docs/vue/`, `docs/angular/`) — charts, dashboards, contexts, interfaces
+- **Data API** (`docs/data/`) — factories, functions
+- **Guides** (`docs/guides/`) — quickstarts, theming, drilldown, dashboards, tutorials, etc.
+- **Design** — chart design, UX guidance, supplemental notes
 
 ## Supported frameworks
 
 - React
 - Vue
 - Angular
-
-Specify the framework in your question, or it defaults to React.

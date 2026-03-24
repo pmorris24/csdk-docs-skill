@@ -6,7 +6,7 @@ Claude Code slash commands that give Claude access to the full Sisense Compose S
 
 ```bash
 git clone https://github.com/pmorris24/csdk-docs-skill.git
-cd CSDK-Docs-Claude-Code-Skill-MCP-Server
+cd csdk-docs-skill
 claude
 ```
 

@@ -75,74 +75,110 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 
 ## Examples
 
-### Quick lookups
+### Quick lookups — fast answers to common questions
 
 ```
 /csdk-quick what props does useExecuteQuery accept
 ```
 
 ```
-/csdk-quick how do I filter revenue greater than 1000
+/csdk-quick how do I use filterFactory.members to filter by specific values
 ```
 
 ```
-/csdk-quick what is filterFactory.members
-```
-
-### React
-
-```
-/csdk-react how do I embed a dashboard with custom filters
+/csdk-quick what is the difference between measureFactory.sum and measureFactory.count
 ```
 
 ```
-/csdk-react create a bar chart showing revenue by country with a date range filter
+/csdk-quick how do I set dataOptions on a chart
+```
+
+### React — building dashboards and charts
+
+```
+/csdk-react how do I set up SisenseContextProvider with authentication
 ```
 
 ```
-/csdk-react how do I use useComposedDashboard for a custom layout
+/csdk-react how do I query data with useExecuteQuery and display it in a ColumnChart
 ```
 
 ```
-/csdk-react how do I style a chart using onBeforeRender
+/csdk-react how do I embed an existing Fusion dashboard using DashboardById
 ```
 
 ```
-/csdk-react how do I set up SisenseContextProvider with SSO authentication
-```
-
-### Vue
-
-```
-/csdk-vue how do I create a pie chart with drilldown
+/csdk-react how do I decompose a dashboard with useGetDashboardModel and dashboardModelTranslator
 ```
 
 ```
-/csdk-vue how do I use the DashboardById component
+/csdk-react how do I add drilldown to a chart
 ```
 
 ```
-/csdk-vue how do I apply a theme to all charts
-```
-
-### Angular
-
-```
-/csdk-angular how do I set up SdkUiModule in my app
+/csdk-react how do I customize chart colors and styling with styleOptions
 ```
 
 ```
-/csdk-angular how do I create an indicator chart with gauge styling
+/csdk-react how do I use onBeforeRender to modify Highcharts options directly
 ```
 
 ```
-/csdk-angular how do I use the DashboardComponent with custom widget panels
+/csdk-react how do I build a custom dashboard layout with useComposedDashboard
 ```
 
-### General
+```
+/csdk-react how do I use ChartWidget to render a widget from a Fusion dashboard
+```
 
 ```
-/csdk-docs what changed in the migration from 1.x to 2.0
+/csdk-react how do I add a PivotTable with custom dataOptions
+```
+
+```
+/csdk-react how do I set up the Chatbot component for natural language queries
+```
+
+### Vue — same features, Vue syntax
+
+```
+/csdk-vue how do I set up SisenseContextProvider in a Vue app
+```
+
+```
+/csdk-vue how do I embed a Fusion dashboard with DashboardById
+```
+
+```
+/csdk-vue how do I apply a custom theme using ThemeProvider
+```
+
+```
+/csdk-vue how do I create a PieChart with filterFactory.members
+```
+
+### Angular — same features, Angular syntax
+
+```
+/csdk-angular how do I configure SdkUiModule in my app module
+```
+
+```
+/csdk-angular how do I use the DashboardComponent with WidgetsPanelColumnLayout
+```
+
+```
+/csdk-angular how do I create an IndicatorChart with gauge styling
+```
+
+```
+/csdk-angular how do I use widgetModelTranslator to customize a Fusion widget
+```
+
+### General — guides, migration, troubleshooting
+
+```
+/csdk-docs how do I generate a data model from my Sisense instance
 ```
 
 ```
@@ -150,7 +186,15 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 ```
 
 ```
-/csdk-docs how do I set up the NLG chatbot
+/csdk-docs what changed in the migration from 1.x to 2.0
+```
+
+```
+/csdk-docs how do I troubleshoot CORS issues with my Sisense server
+```
+
+```
+/csdk-docs how do I set up the NLG chatbot with generative AI
 ```
 
 ```
@@ -158,18 +202,21 @@ The `search_csdk_docs` tool accepts a `code_context` parameter — pass in the c
 ```
 
 ```
-/csdk-docs how do I troubleshoot CORS issues
+/csdk-docs how do I add internationalization to my Compose SDK app
 ```
 
-### MCP server (automatic)
+### MCP server — automatic, no slash command needed
 
-With the MCP server running, Claude will automatically use `search_csdk_docs` when it needs SDK documentation — no slash command needed. Just ask naturally:
+With the MCP server running, Claude will automatically search the docs when it needs SDK information. Just ask naturally:
 
 ```
 "How do I create a scatter chart with custom tooltips?"
 "What are the props for ChartWidget?"
 "Show me how to use measureFactory.sum with useExecuteQuery"
 "How do I add cross-filtering between dashboard widgets?"
+"What's the difference between Dashboard and DashboardById?"
+"How do I use filterFactory.dateRange to filter the last 30 days?"
+"How do I customize the pivot table columns and styling?"
 ```
 
 ## Updating docs

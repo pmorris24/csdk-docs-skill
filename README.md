@@ -12,7 +12,7 @@ Claude Code slash commands and an MCP server that give Claude access to the full
 ## Install
 
 ```bash
-git clone https://github.com/pmorris24/csdk-docs-skill.git
+git clone https://github.com/pmorris24/CSDK-Docs-Claude-Code-Skill-MCP-Server.git
 cd csdk-docs-skill
 ```
 
